@@ -1,0 +1,10 @@
+{
+  "name": "ensiklopedia-suku-mandailing",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Landing page editorial dan inventaris awal bersumber untuk proyek Ensiklopedia Suku Mandailing.",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "content:generate": "python3 scripts/prepare-content.py"
+  }
+}
