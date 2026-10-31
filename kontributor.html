@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Komunitas Kontributor — Ensiklopedia Mandailing</title>
+<meta name="description" content="Ruang kontribusi komunitas untuk mengusulkan artikel, sumber, koreksi, dan dokumentasi budaya Mandailing melalui proses editorial.">
+<link rel="canonical" href="https://ensiklopediamandailing.github.io/kontributor.html">
+<link rel="stylesheet" href="styles.css">
+<style>
+.contributor-page{max-width:900px;margin:0 auto;padding:65px 24px 100px}.contributor-page h1{font:normal clamp(38px,6vw,68px)/1.1 Georgia,serif;color:#641e2b;margin:16px 0 20px}.contributor-page h2{font-size:28px;margin:38px 0 15px}.contributor-page p{margin:12px 0}.contributor-page ol{padding-left:24px}.contributor-page li{margin:10px 0}.contributor-form{display:grid;gap:18px;margin-top:20px}.contributor-form label{display:grid;gap:6px;font-weight:600}.contributor-form input,.contributor-form select,.contributor-form textarea{width:100%;padding:12px;border:1px solid #b9ada2;background:#fffdf8;border-radius:4px;color:#302824}.contributor-form textarea{min-height:125px}.contributor-form .check{display:flex;align-items:flex-start;font-weight:400;gap:10px}.contributor-form .check input{width:auto;margin-top:7px}.contributor-actions{display:flex;flex-wrap:wrap;gap:12px}.contributor-actions button{padding:12px 20px;border:1px solid #641e2b;background:#641e2b;color:white;border-radius:4px}.contributor-actions button.secondary{background:transparent;color:#641e2b}.contributor-note{padding:18px;border-left:4px solid #a9824c;background:#f0eadf}.contributor-status{min-height:1.5em;font-weight:600}.contributor-top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:18px 24px;border-bottom:1px solid #ddd4c7}.contributor-top a{text-decoration:underline}.contributor-page small{color:#6d625b}.contributor-page a{text-decoration:underline;text-underline-offset:3px}@media(max-width:600px){.contributor-page{padding-top:40px}.contributor-actions button{width:100%}}
+</style>
+<script defer src="kontributor.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#utama">Lewati ke isi utama</a>
+<header class="contributor-top"><a href="index.html"><strong>Ensiklopedia Mandailing</strong></a><nav aria-label="Navigasi halaman"><a href="index.html">Beranda</a> · <a href="index.html#metodologi">Metodologi</a></nav></header>
+<main id="utama" class="contributor-page">
+<p class="eyebrow">Ruang komunitas · tahap persiapan</p>
+<h1>Jadi Kontributor Ensiklopedia Mandailing</h1>
+<p>Pengetahuan Mandailing tumbuh bersama masyarakat di kampung dan perantauan. Kami mengundang penutur, peneliti, tokoh adat, pengarsip, generasi muda, dan siapa saja yang memiliki sumber atau pengetahuan yang dapat ditinjau.</p>
+<div class="contributor-note" role="note"><strong>Penting: pengiriman daring belum aktif.</strong> Formulir ini hanya menyimpan draf di perangkat Anda. Mengisi atau mengunduh draf <strong>tidak mengirimkannya kepada admin</strong> dan tidak memberikan izin mengedit website. Mekanisme pengiriman dan akun kontributor akan disediakan setelah sistem moderasi siap.</div>
+<h2>Jenis kontribusi</h2>
+<ul><li>Usulan artikel tentang sejarah, bahasa, adat, seni, tempat, dan kehidupan masyarakat.</li><li>Koreksi artikel dengan sumber yang bisa diperiksa.</li><li>Rujukan buku, arsip, penelitian, atau dokumentasi dengan informasi asal-usulnya.</li><li>Catatan variasi istilah dan praktik menurut lokasi, waktu, dan narasumber.</li></ul>
+<h2>Alur editorial yang direncanakan</h2>
+<ol><li>Kontributor menyiapkan usulan dan bukti pendukung.</li><li>Admin memeriksa kelengkapan, privasi, dan izin penggunaan.</li><li>Editor meninjau sumber dan meminta klarifikasi jika diperlukan.</li><li>Penutur atau ahli terkait meninjau klaim budaya yang memerlukan konteks.</li><li>Hanya admin/editor berizin yang menerbitkan perubahan, disertai atribusi dan status verifikasi.</li></ol>
+<h2>Siapkan draf kontribusi</h2>
+<p>Gunakan formulir berikut untuk menyiapkan usulan secara lokal. Hindari data pribadi orang yang masih hidup, silsilah sensitif, pengetahuan terbatas, atau materi tanpa izin.</p>
+<form id="community-form" class="contributor-form">
+<label for="contributor-kind">Jenis usulan<select id="contributor-kind" name="kind" required><option value="Artikel baru">Artikel baru</option><option value="Koreksi">Koreksi</option><option value="Sumber tertulis">Sumber tertulis</option><option value="Dokumentasi berizin">Dokumentasi berizin</option><option value="Bahasa dan istilah">Bahasa dan istilah</option></select></label>
+<label for="contributor-topic">Topik atau judul<input id="contributor-topic" name="topic" maxlength="180" required placeholder="Contoh: catatan tentang tradisi di wilayah tertentu"></label>
+<label for="contributor-region">Wilayah atau konteks umum (opsional)<input id="contributor-region" name="region" maxlength="150" placeholder="Kabupaten/kecamatan atau komunitas diaspora; tanpa alamat pribadi"></label>
+<label for="contributor-text">Usulan dan konteks<textarea id="contributor-text" name="text" minlength="20" maxlength="8000" required placeholder="Tuliskan informasi, batas pengetahuan, perbedaan versi, dan cara memeriksanya."></textarea></label>
+<label for="contributor-source">Rujukan atau lokasi sumber (opsional)<textarea id="contributor-source" name="source" maxlength="2000" placeholder="Judul, penulis, tahun, halaman, URL, atau informasi wawancara dengan izin."></textarea></label>
+<label for="contributor-credit">Nama atribusi atau nama samaran (opsional)<input id="contributor-credit" name="credit" maxlength="120" autocomplete="off"></label>
+<label class="check"><input id="contributor-consent" name="consent" type="checkbox" required><span>Saya tidak memasukkan informasi pribadi sensitif atau bahan yang dilarang dibagikan, dan akan menyebutkan izin penggunaan serta batasan sumber.</span></label>
+<div class="contributor-actions"><button type="submit">Simpan draf di perangkat</button><button class="secondary" type="button" id="export-contribution">Unduh draf (.txt)</button><button class="secondary" type="button" id="clear-contribution">Hapus draf</button></div>
+<p id="community-status" class="contributor-status" role="status" aria-live="polite"></p>
+<small>Privasi: data formulir tidak dikirim ke server. Draf tersimpan dalam penyimpanan browser ini jika tersedia; pengguna perangkat yang sama mungkin dapat membacanya. Hapus draf setelah selesai, terutama pada perangkat bersama.</small>
+</form>
+<h2>Aturan partisipasi</h2>
+<p>Usulan tidak otomatis menjadi fakta ensiklopedia. Informasi yang diperdebatkan diberi konteks dan sumber; tradisi lisan dibedakan dari dokumen tertulis. Hindari klaim asal-usul marga yang tidak dapat diuji dan jangan mengunggah foto atau rekaman tanpa izin pemilik hak maupun orang yang terlibat.</p>
+<p><a href="index.html">Kembali ke Ensiklopedia Mandailing</a></p>
+</main>
+</body></html>

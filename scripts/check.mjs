@@ -69,6 +69,8 @@ for (const [, tag] of html.matchAll(/(<img\b[^>]*>)/g)) {
   check(/\balt="[^"]+"/.test(tag), 'Gambar tanpa teks alternatif');
   check(/\bwidth="\d+"/.test(tag) && /\bheight="\d+"/.test(tag), 'Gambar tanpa dimensi');
 }
+check(html.includes('href="kontributor.html"') && fs.existsSync(path.join(root,'kontributor.html')), 'Halaman kontributor tidak tersedia');
+check(read('kontributor.html').includes('pengiriman daring belum aktif') && read('kontributor.html').includes('id="community-form"'), 'Batas pengiriman draf kontributor tidak jelas');
 check(html.includes('id="landing-language"') && html.includes('landing-language.js'), 'Pilihan bahasa landing page tidak tersedia');
 check(fs.existsSync(path.join(root,'landing-language.js')), 'Berkas penerjemahan landing page hilang');
 check(html.includes('<html lang="id">') && html.includes('<main id="utama">'), 'Bahasa atau landmark utama hilang');
@@ -103,6 +105,6 @@ for (const [label, foreground, background, minimum] of [
   check(ratio >= minimum, `Kontras ${label} kurang dari ${minimum}: ${ratio}`);
   contrast.push(`${label}: ${ratio.toFixed(2)}:1`);
 }
-for (const file of ['app.js', 'landing-language.js', 'data/content.js']) execFileSync(process.execPath, ['--check', path.join(root, file)], { stdio: 'pipe' });
+for (const file of ['app.js', 'landing-language.js', 'kontributor.js', 'data/content.js']) execFileSync(process.execPath, ['--check', path.join(root, file)], { stdio: 'pipe' });
 console.log(`Lulus ${checks} pemeriksaan integritas; ${data.entries.length} catatan, ${data.themes.length} tema, ${Object.keys(data.sources).length} sumber.`);
 console.log(contrast.join('\n'));
