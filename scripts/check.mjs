@@ -69,6 +69,8 @@ for (const [, tag] of html.matchAll(/(<img\b[^>]*>)/g)) {
   check(/\balt="[^"]+"/.test(tag), 'Gambar tanpa teks alternatif');
   check(/\bwidth="\d+"/.test(tag) && /\bheight="\d+"/.test(tag), 'Gambar tanpa dimensi');
 }
+check(html.includes('id="landing-language"') && html.includes('landing-language.js'), 'Pilihan bahasa landing page tidak tersedia');
+check(fs.existsSync(path.join(root,'landing-language.js')), 'Berkas penerjemahan landing page hilang');
 check(html.includes('<html lang="id">') && html.includes('<main id="utama">'), 'Bahasa atau landmark utama hilang');
 check(html.includes('name="description"') && html.includes('rel="canonical"'), 'Metadata SEO belum lengkap');
 check(html.includes('https://ensiklopediamandailing.github.io/') && !html.includes('chatgpt.site'), 'Canonical dan OG harus memakai alamat GitHub Pages');
@@ -101,6 +103,6 @@ for (const [label, foreground, background, minimum] of [
   check(ratio >= minimum, `Kontras ${label} kurang dari ${minimum}: ${ratio}`);
   contrast.push(`${label}: ${ratio.toFixed(2)}:1`);
 }
-for (const file of ['app.js', 'data/content.js']) execFileSync(process.execPath, ['--check', path.join(root, file)], { stdio: 'pipe' });
+for (const file of ['app.js', 'landing-language.js', 'data/content.js']) execFileSync(process.execPath, ['--check', path.join(root, file)], { stdio: 'pipe' });
 console.log(`Lulus ${checks} pemeriksaan integritas; ${data.entries.length} catatan, ${data.themes.length} tema, ${Object.keys(data.sources).length} sumber.`);
 console.log(contrast.join('\n'));
