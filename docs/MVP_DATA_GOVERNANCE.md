@@ -42,7 +42,7 @@ Aturan penerimaan: (1) kedua ID ada di data sumber masing-masing; (2) hubungan i
 
 ## Penerimaan kontribusi
 
-Formulir saat ini menyimpan draf lokal di browser, **bukan** mengirim usulan kepada pengelola. Sebelum mengaktifkan pengiriman, tetapkan kanal penerima, moderasi, kebijakan privasi, izin rekaman/foto, dan bukti penerimaan. Jangan menyimpan silsilah keluarga hidup, kontak pribadi atau bahan sensitif di data publik.
+Halaman `kontributor.html` di GitHub Pages menyimpan draf lokal di browser. Secara terpisah, prototipe formulir publik dan panel admin Google Apps Script telah di-deploy dan dilaporkan dapat dibuka, tetapi pengiriman ujicoba **belum terverifikasi menghasilkan berkas di folder intake Google Drive**. Jangan menyatakan sistem penerimaan daring sudah operasional sebelum uji ujung-ke-ujung (kirim → berkas masuk → antrean admin → moderasi) berhasil. Sebelum membuka kontribusi luas, tetapkan kebijakan privasi, izin rekaman/foto, bukti penerimaan, pembatasan penyalahgunaan, dan audit akses. Jangan menyimpan silsilah keluarga hidup, kontak pribadi atau bahan sensitif di data publik.
 
 ## Pemeriksaan sebelum rilis
 
@@ -50,7 +50,7 @@ Formulir saat ini menyimpan draf lokal di browser, **bukan** mengirim usulan kep
 2. Pastikan ID catatan unik dan `sourceIds` menunjuk referensi yang ada.
 3. Periksa kredit dan izin media serta batas penafsiran.
 4. Uji tautan ke `https://kamusmandailing.github.io/` dan URL ensiklopedia.
-5. Pastikan label kontribusi tetap menyebut draf lokal sampai pengiriman daring benar-benar berfungsi.
+5. Pastikan `kontributor.html` tetap menyebut draf lokal; bedakan dengan formulir Apps Script terpisah yang masih menunggu verifikasi penyimpanan dan moderasi.
 6. Catat hasil dan keterbatasan di folder Google Drive proyek `Audit dan Pengembangan`.
 
 ## Backlog
