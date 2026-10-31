@@ -12,7 +12,7 @@ function settings_() {
   const p=PropertiesService.getScriptProperties();
   const folderId=p.getProperty('INTAKE_FOLDER_ID');
   const admin=p.getProperty('ADMIN_EMAIL');
-  if(!folderId||!admin)throw Error('Backend not configured');
+  if(!folderId||!admin||!admin.includes('@'))throw Error('Backend not configured');
   return {folderId,admin:admin.toLowerCase(),mode:p.getProperty('MODE')||'disabled'};
 }
 function isAdmin_() {
@@ -36,6 +36,7 @@ function submitProposal(input) {
     if(!['Artikel baru','Koreksi','Sumber tertulis','Dokumentasi berizin','Bahasa dan istilah'].includes(value.kind))throw Error('Jenis tidak valid');
     if(value.topic.length<3||value.topic.length>180||value.text.length<20||value.text.length>8000||value.region.length>150||value.source.length>2000||value.credit.length>120)throw Error('Panjang isian tidak valid');
     if(input.consent!==true)throw Error('Persetujuan wajib');
+    if(JSON.stringify(input).length>15000)throw Error('Ukuran usulan terlalu besar');
     // Lightweight abuse protection; not a replacement for rate limiting and CAPTCHA.
     if(String(input.website||'').trim())throw Error('Isian tidak valid');
     const id=Utilities.getUuid();
