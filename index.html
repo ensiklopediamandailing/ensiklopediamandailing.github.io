@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="styles.css">
   <script defer src="data/content.js"></script>
   <script defer src="app.js"></script>
+  <script defer src="landing-language.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#utama">Lewati ke isi utama</a>
@@ -49,6 +50,7 @@
         <a href="https://kamusmandailing.github.io/">Kamus Mandailing</a>
         <a class="nav-contribute" href="#kontribusi">Kontribusi <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-up-right"/></svg></a>
       </nav>
+      <label class="landing-language-control" for="landing-language"><span class="sr-only">Bahasa / Language</span><select id="landing-language" aria-label="Bahasa antarmuka / Interface language"><option value="id">Indonesia</option><option value="ms">Malaysia</option><option value="en">English</option><option value="btm">Mandailing</option></select></label>
     </div>
   </header>
 
@@ -62,6 +64,7 @@
           <a class="button button-primary" href="#entri">Jelajahi Ensiklopedia <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
           <a class="text-link" href="#tentang">Tentang Proyek <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-up-right"/></svg></a>
         </div>
+        <p id="translation-status" class="translation-status" role="status" hidden></p>
         <p class="project-stage"><span class="status-dot"></span> Tahap awal dokumentasi <span class="stage-separator">/</span> Cetak biru v0.1</p>
       </div>
       <figure class="hero-visual">
