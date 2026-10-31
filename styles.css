@@ -25,3 +25,9 @@ dialog{border:1px solid #ccbeaa;border-radius:4px;background:var(--paper);color:
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 /* Ukuran baca dan sasaran sentuh pada layar kecil. */
 @media(max-width:760px){.hero-description,.about-copy>p:not(.lead),.kinship-intro>p:not(.eyebrow,.lead),.entry-summary,.reading-dialog p,.reading-dialog ul,.reading-dialog ol{font-size:14px}.section-side-note,.method-steps p,.contribute-layout>div>p:not(.eyebrow),.contribute-options p{font-size:13px}.theme-item .theme-description{font-size:12px}.theme-availability,.theme-number,.section-footnote,.role-note,.marga-note,.entry-status,.entry-source,.entry-source .inline-button,.reading-dialog .source-record p,.form-intro,.contribution-dialog .checkbox-label,.draft-status{font-size:11px}.marga-list>button{min-height:44px;font-size:12px}.search-button{min-height:44px}.icon-button{width:44px;height:44px}.contribution-availability{font-size:10px}.footer-about .footer-contact{font-size:11px}.footer-main>div:not(:first-child)>a,.footer-button{font-size:12px}.footer-bottom,.footer-bottom>.footer-button{font-size:10px}}
+
+/* Landing language selector */
+.landing-language-control{display:flex;align-items:center;flex-shrink:0}
+.landing-language-control select{max-width:135px;min-height:40px;padding:6px 8px;border:1px solid var(--line);border-radius:4px;background:var(--paper);color:var(--ink);font-size:13px}
+.translation-status{margin-top:12px;max-width:570px;color:var(--muted);font-size:13px;line-height:1.5}
+@media(max-width:760px){.landing-language-control{margin-left:auto}.landing-language-control select{max-width:112px;font-size:12px;padding-inline:4px}}
