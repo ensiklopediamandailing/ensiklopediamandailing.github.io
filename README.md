@@ -23,7 +23,7 @@ Buka `http://localhost:8080`. GitHub Pages menggunakan branch `main`, direktori 
 | `app.js` | Pencarian, filter, menu ponsel, tab kekerabatan, dialog bacaan, serta draf lokal |
 | `data/content.js` | Data publik: tema, catatan, marga, peran, sumber, dan kredit media |
 | `assets/` | Foto WebP lokal, favicon, serta catatan hak penggunaan |
-| `docs/reference-inventory.json` | 19 rekaman bibliografis dari cetak biru proyek |
+| `docs/reference-inventory.json` | Inventaris bibliografis dan status baca sumber proyek |
 | `scripts/prepare-content.py` | Generator data konten; membutuhkan Python 3, tanpa paket tambahan |
 | `scripts/check.mjs` | Pemeriksaan integritas konten, tautan internal, aset, dan kontras dasar |
 | `docs/TEST_REPORT.md` | Hasil pengujian dan batas pengujian |
@@ -56,7 +56,7 @@ Halaman tidak mengirim analitik atau memuat font/CDN pihak ketiga. Tautan sumber
 ## Asumsi dan status editorial
 
 - Dasar isi adalah cetak biru 26 Oktober 2026: 16 bab rencana, 19 rekaman referensi awal, dan 8 nama marga dari judul katalog. Angka ini bukan ukuran kelengkapan ensiklopedia.
-- Delapan pratinjau merupakan catatan editorial/inventaris awal, dengan status serta batas pemeriksaan. Belum ada tinjauan komunitas atau pembacaan penuh seluruh referensi.
+- Sepuluh catatan yang tersedia merupakan ringkasan terbatas, inventaris sumber, atau dokumentasi visual beratribusi. Status baca dan batas pemeriksaan dicatat; belum ada tinjauan komunitas atau pembacaan penuh seluruh referensi.
 - Tema yang belum memiliki catatan menampilkan keadaan kosong yang menjelaskan rencana kajian.
 - Kontak pengiriman belum ditetapkan dalam dokumen proyek. Halaman menampilkan status kanal sedang disiapkan.
 - Nama pemrakarsa mengikuti dokumen proyek. Tidak ada mitra, testimoni, statistik pengunjung, atau silsilah yang direkayasa.
