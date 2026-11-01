@@ -34,3 +34,8 @@ dialog{border:1px solid #ccbeaa;border-radius:4px;background:var(--paper);color:
 
 /* Keep header controls within narrow screens. */
 @media(max-width:360px){.header-inner{gap:8px}.brand{gap:7px}.brand-icon{width:32px;height:36px}.brand-type{font-size:16px}.brand-type>span{font-size:7px;letter-spacing:1.4px}.menu-toggle{gap:5px;font-size:10px;padding-inline:7px}.landing-language-control select{max-width:80px;padding-inline:4px}}
+
+/* Improve contrast for supporting labels and editorial step numbers. */
+.stage-separator{color:var(--muted)}
+.theme-number,.role-kicker{color:#79664f}
+.step-index{color:#79664f}
