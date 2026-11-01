@@ -125,7 +125,7 @@ window.MANDAILING_CONTENT = {
       "publisher": "Balai Pelestarian Sejarah dan Nilai Tradisional Banda Aceh",
       "url": "https://repositori.kemendikdasmen.go.id/21237/",
       "readStatus": "Bagian tertentu",
-      "locator": "PDF hlm. 7–9, 40–42, 63–64, dan 68–69: ruang lingkup/metode, sejarah HIKMA, dinamika organisasi, dan simpulan; sampel halaman pilihan.",
+      "locator": "PDF hlm. 7–9, 40–42, 63–64, dan 68–69: ruang lingkup/metode, sejarah HIKMA, dinamika organisasi, dan simpulan; sampel halaman pilihan",
       "limit": "Pembacaan hanya pada halaman pilihan; jumlah dan kriteria informan tidak dirinci. Kata pengantar mengakui masih ada bagian perjalanan organisasi yang kosong karena keterbatasan informasi. Tanggal pendirian belum dicocokkan dengan arsip organisasi; uraian satu organisasi dan konteks Medan tidak digeneralisasi ke semua komunitas Mandailing.",
       "checkedOn": "2026-11-01"
     },
