@@ -20,7 +20,7 @@ let checks = 0;
 function check(condition, message) { assert.ok(condition, message); checks++; }
 const projectDate = data.project?.updatedOn;
 const projectDateValue = new Date(String(projectDate) + 'T00:00:00Z');
-check(typeof projectDate === 'string' && /^\\d{4}-\\d{2}-\\d{2}$/.test(projectDate) && !Number.isNaN(projectDateValue.valueOf()) && projectDateValue.toISOString().slice(0, 10) === projectDate, 'Tanggal project.updatedOn harus berupa tanggal kalender ISO yang valid');
+check(typeof projectDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(projectDate) && !Number.isNaN(projectDateValue.valueOf()) && projectDateValue.toISOString().slice(0, 10) === projectDate, 'Tanggal project.updatedOn harus berupa tanggal kalender ISO yang valid');
 const appSourceForDate = read('app.js');
 check(appSourceForDate.includes('new Date(`${data.project.updatedOn}T00:00:00Z`)'), 'Tanggal editorial harus berasal dari project.updatedOn');
 check(appSourceForDate.includes("new Intl.DateTimeFormat('id-ID'") && appSourceForDate.includes("timeZone: 'UTC'"), 'Tanggal editorial harus memakai format lokal dan zona waktu UTC');
