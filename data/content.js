@@ -124,10 +124,10 @@ window.MANDAILING_CONTENT = {
       "year": "2012",
       "publisher": "Balai Pelestarian Sejarah dan Nilai Tradisional Banda Aceh",
       "url": "https://repositori.kemendikdasmen.go.id/21237/",
-      "readStatus": "Metadata dan katalog",
-      "locator": "Metadata repositori dan abstrak",
-      "limit": "ISBN katalog 9786029457117; teks lengkap belum diperiksa.",
-      "checkedOn": "2026-10-26"
+      "readStatus": "Bagian tertentu",
+      "locator": "PDF hlm. 7–9, 40–42, 63–64, dan 68–69: ruang lingkup/metode, sejarah HIKMA, dinamika organisasi, dan simpulan; sampel halaman pilihan.",
+      "limit": "Pembacaan hanya pada halaman pilihan; jumlah dan kriteria informan tidak dirinci. Kata pengantar mengakui masih ada bagian perjalanan organisasi yang kosong karena keterbatasan informasi. Tanggal pendirian belum dicocokkan dengan arsip organisasi; uraian satu organisasi dan konteks Medan tidak digeneralisasi ke semua komunitas Mandailing.",
+      "checkedOn": "2026-11-01"
     },
     "R003": {
       "id": "R003",
@@ -504,33 +504,32 @@ window.MANDAILING_CONTENT = {
       "id": "diaspora-dan-kampung",
       "title": "Diaspora dan hubungan dengan kampung asal",
       "category": "diaspora",
-      "summary": "Rujukan organisasi sosial di Medan dan sejarah diaspora menjadi arah penelitian kehidupan di perantauan.",
-      "status": "Inventaris sumber",
+      "summary": "Kajian HIKMA di Medan mencatat satu contoh organisasi perantau Mandailing dan hubungannya dengan kampung asal.",
+      "status": "Ringkasan terbatas",
       "art": "diaspora",
       "artText": "Rantau",
       "artCaption": "TEMPAT · INGATAN · HUBUNGAN",
       "sourceIds": [
-        "R002",
-        "R013"
+        "R002"
       ],
       "tags": [
         "Medan",
-        "Malaysia",
+        "HIKMA",
+        "diaspora",
         "perantauan",
-        "migrasi",
-        "keluarga",
-        "Kuala Lumpur"
+        "organisasi sosial",
+        "kampung asal"
       ],
       "body": [
         {
-          "heading": "Rujukan awal perantauan",
+          "heading": "HIKMA di Medan dalam kajian 2012",
           "paragraphs": [
-            "Monograf Harvina tentang organisasi sosial Mandailing di Kota Medan masuk dalam inventaris awal. Buku Abdur-Razzaq Lubis tentang Sutan Puasa juga menjadi calon rujukan sejarah diaspora.",
-            "Rancangan penelitian akan membandingkan bahasa, marga, organisasi, dan hubungan keluarga di kampung serta perantauan. Jalur migrasi atau identitas tokoh tidak disimpulkan hanya dari nama marga."
+            "Harvina membatasi penelitian pada organisasi sosial Mandailing di Kecamatan Medan Amplas, dengan metode deskriptif, observasi, wawancara, dan studi pustaka. Buku tersebut menyebut HIKMA terbentuk di Medan pada 21 Juni 1986. Tanggal ini mengikuti keterangan dalam kajian dan belum dicocokkan dengan arsip organisasi.",
+            "Menurut kajian tersebut, HIKMA menjadi ruang untuk menghubungkan warga Mandailing di perantauan melalui kegiatan sosial dan budaya, serta menyampaikan aspirasi agar warga turut membantu daerah asal. Ini gambaran satu organisasi dalam konteks Medan yang diteliti, bukan deskripsi semua perantau atau huta. Kata pengantar buku mengakui masih ada bagian perjalanan organisasi yang belum terisi karena keterbatasan informasi."
           ]
         }
       ],
-      "limit": "Catatan ini didasarkan pada identifikasi bibliografis. Tesis sejarah dalam buku harus diperiksa dan dibandingkan sebelum dijadikan kesimpulan ensiklopedia."
+      "limit": "Hanya halaman pilihan PDF hlm. 7–9, 40–42, 63–64, dan 68–69 ditelaah; jumlah dan kriteria informan tidak dirinci. Penulis menyatakan ada kekosongan informasi. Uraian dibatasi pada HIKMA dan konteks Medan; tidak mewakili semua komunitas Mandailing."
     },
     {
       "id": "jejak-material",
