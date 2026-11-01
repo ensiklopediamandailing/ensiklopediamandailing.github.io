@@ -46,3 +46,12 @@ Pemeriksaan lokal memakai salinan kode dan inventaris dari GitHub; berkas media 
 Batas pemeriksaan: R014 ditautkan ke laman jurnal resmi dan ringkasan hanya mengatribusikan hasil pada satu studi di Tanjung Julu. Inventaris tetap mencatat 9 sumber sample_read, 12 metadata_only, 2 abstract_excerpt, dan 0 full_read. Dua puluh dua referensi lain tidak dibaca ulang satu per satu dalam pemeriksaan ini. Belum ada tinjauan komunitas. Uji VoiceOver/pembaca layar, sweep seluruh tautan sumber, pengukuran kontras teks di atas foto, dan uji Apps Script ujung-ke-ujung belum dilakukan. Folder intake yang diperiksa masih kosong; pengiriman daring tetap belum aktif.
 
 Workflow mencatat peringatan non-blocking terkait perubahan runtime Node.js pada GitHub Actions dan migrasi runner ubuntu-latest. Keduanya tidak menggagalkan pemeriksaan.
+
+
+## Pemeriksaan lanjutan dan daftar sumber — 1 November 2026
+
+PR #28 menambahkan empat pemeriksaan otomatis untuk tanggal editorial: metadata project.updatedOn harus berupa tanggal kalender ISO yang valid; app.js mengambil nilai itu, memformatnya dalam bahasa Indonesia dengan zona waktu UTC, lalu menampilkan hasilnya pada catatan. Pemeriksaan PR lulus pada [run 41311555670](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41311555670). Perubahan hanya pada pemeriksaan; tidak mengubah konten situs.
+
+PR #29 memperbarui dialog daftar sumber agar jumlahnya dihitung dari data yang dimuat, mengganti keterangan katalog lama, dan memperbarui hash cache app.js. Tiga pemeriksaan regresi baru memastikan hitungan dinamis, teks jumlah, dan ketiadaan label tetap “19 rekaman”. Pemeriksaan lokal lulus 473 pemeriksaan dengan 10 catatan dan 23 sumber. Pemeriksaan browser langsung setelah penerbitan menampilkan “Inventaris saat ini memuat 23 rekaman sumber” serta daftar R001–R023.
+
+CI PR #29 lulus pada [run 41311931379](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41311931379); validasi main [41311974656](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41311974656) dan GitHub Pages [41311974038](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41311974038) juga sukses. Perubahan hanya memperbarui tampilan jumlah sumber; tidak mengubah isi budaya atau status pembacaan.
