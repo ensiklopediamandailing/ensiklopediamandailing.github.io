@@ -155,12 +155,13 @@
   $('#empty-reset').addEventListener('click', resetSearch);
   $('#show-more').addEventListener('click', () => {state.showAll = true; renderEntries();});
 
-  function sourceRecord(id) {
+  function sourceRecord(id, linkToRecord = false) {
     const source = data.sources[id];
     if (!source) return '';
     const locator = String(source.locator || '').trim();
     const locatorPunctuation = /[.!?…]$/.test(locator) ? '' : '.';
-    return `<div class="source-record"><p class="source-label">${escape(source.id)} / ${escape(source.readStatus)}</p><p><strong>${escape(source.title)}</strong></p><p>${escape(source.authors)}. ${escape(source.year)}. ${escape(source.publisher)}.</p><p>Bagian yang diperiksa: ${escape(locator)}${locatorPunctuation}</p><p class="source-note">${escape(source.limit)}</p>${externalLink(source.url, 'Buka sumber asli')}${source.previewUrl ? ' ' + externalLink(source.previewUrl, 'Lihat cuplikan di JSTOR') : ''}</div>`;
+    const sourceLink = linkToRecord ? `<button type="button" class="inline-button" data-open-source="${escape(source.id)}">Buka rekam sumber ↗</button>` : '';
+    return `<div class="source-record"><p class="source-label">${escape(source.id)} / ${escape(source.readStatus)}</p><p><strong>${escape(source.title)}</strong></p><p>${escape(source.authors)}. ${escape(source.year)}. ${escape(source.publisher)}.</p><p>Bagian yang diperiksa: ${escape(locator)}${locatorPunctuation}</p><p class="source-note">${escape(source.limit)}</p>${externalLink(source.url, 'Buka sumber asli')}${source.previewUrl ? ' ' + externalLink(source.previewUrl, 'Lihat cuplikan di JSTOR') : ''}${sourceLink ? `<p>${sourceLink}</p>` : ''}</div>`;
   }
   function mediaRecord(id) {
     const media = data.media[id];
@@ -179,18 +180,26 @@
     const entry = data.entries.find(e => e.id === id);
     if (!entry) return;
     const body = entry.body.map(section => `<h3>${escape(section.heading)}</h3>${section.paragraphs.map(p => `<p>${escape(p)}</p>`).join('')}`).join('');
-    showReading(entry.title, themeName(entry.category) + ' / Catatan awal', `<p class="reading-status">${escape(entry.status)} · Belum ditinjau komunitas.<br>${escape(entry.limit)}</p>${body}${entry.sourceIds.map(sourceRecord).join('')}${entry.mediaId ? mediaRecord(entry.mediaId) : ''}<p class="source-note" style="margin-top:24px">Catatan editorial proyek · ${escape(projectUpdatedLabel)}. Koreksi dan sumber tambahan dapat disiapkan melalui bagian kontribusi.</p>`);
+    showReading(entry.title, themeName(entry.category) + ' / Catatan awal', `<p class="reading-status">${escape(entry.status)} · Belum ditinjau komunitas.<br>${escape(entry.limit)}</p>${body}${entry.sourceIds.map(id => sourceRecord(id, true)).join('')}${entry.mediaId ? mediaRecord(entry.mediaId) : ''}<p class="source-note" style="margin-top:24px">Catatan editorial proyek · ${escape(projectUpdatedLabel)}. Koreksi dan sumber tambahan dapat disiapkan melalui bagian kontribusi.</p>`);
     if (updateLocation) {
       try {history.replaceState(null, '', '#catatan/' + entry.id);} catch (_) { /* file:// tetap dapat membaca catatan */ }
     }
   }
-  function openSource(id) {
+  function openSource(id, updateLocation = true) {
     const source = data.sources[id];
-    if (source) showReading('Rekam sumber', 'Transparansi penelitian', sourceRecord(id) + '<p class="source-note" style="margin-top:22px">Identifikasi sumber berbeda dari pemeriksaan seluruh isinya. Tingkat kepastian harus dinilai pada setiap klaim.</p>');
+    if (!source) return;
+    const relatedEntries = data.entries.filter(entry => entry.sourceIds.includes(id));
+    const relatedLinks = relatedEntries.length
+      ? `<h3>Catatan yang merujuk sumber ini</h3><ul>${relatedEntries.map(entry => `<li><button type="button" class="inline-button" data-open-entry="${escape(entry.id)}">${escape(entry.title)}</button></li>`).join('')}</ul>`
+      : '<p class="source-note">Belum ada catatan awal yang merujuk rekam ini.</p>';
+    showReading('Rekam sumber', 'Transparansi penelitian', sourceRecord(id) + relatedLinks + '<p class="source-note" style="margin-top:22px">Identifikasi sumber berbeda dari pemeriksaan seluruh isinya. Tingkat kepastian harus dinilai pada setiap klaim.</p>');
+    if (updateLocation) {
+      try {history.replaceState(null, '', '#sumber/' + encodeURIComponent(id));} catch (_) { /* file:// tetap dapat membaca sumber */ }
+    }
   }
   function openMarga(name) {
     if (!data.marga.includes(name)) return;
-    showReading(name, 'Marga / Inventaris awal', `<p class="reading-status">Nama tercatat pada judul katalog. Asal-usul, kampung terkait, dan silsilah belum diverifikasi.</p><p>${escape(name)} termasuk nama yang disebut dalam judul rujukan Z. Pangaduan Lubis. Penyebutannya menjadi titik awal penelitian, bukan penetapan hubungan keturunan atau kedudukan adat.</p><h3>Ruang penelitian berikutnya</h3><ul><li>Mencocokkan eksemplar, edisi, dan ejaan dalam sumber.</li><li>Mendokumentasikan versi asal-usul menurut pemilik pengetahuan.</li><li>Memeriksa kampung terkait dan hubungan keluarga tanpa mengisi generasi yang tidak diketahui.</li></ul>${sourceRecord('R004')}`);
+    showReading(name, 'Marga / Inventaris awal', `<p class="reading-status">Nama tercatat pada judul katalog. Asal-usul, kampung terkait, dan silsilah belum diverifikasi.</p><p>${escape(name)} termasuk nama yang disebut dalam judul rujukan Z. Pangaduan Lubis. Penyebutannya menjadi titik awal penelitian, bukan penetapan hubungan keturunan atau kedudukan adat.</p><h3>Ruang penelitian berikutnya</h3><ul><li>Mencocokkan eksemplar, edisi, dan ejaan dalam sumber.</li><li>Mendokumentasikan versi asal-usul menurut pemilik pengetahuan.</li><li>Memeriksa kampung terkait dan hubungan keluarga tanpa mengisi generasi yang tidak diketahui.</li></ul>${sourceRecord('R004', true)}`);
   }
   function openMethod() {
     showReading('Membaca sumber dan status informasi', 'Pedoman editorial', '<p>Catatan awal dibangun dari sumber yang telah diidentifikasi pada cetak biru. Tidak ada klaim bahwa seluruh referensi telah dibaca penuh atau ditinjau komunitas.</p><h3>Jenis informasi</h3><ul><li><strong>Fakta terdokumentasi:</strong> pernyataan yang ditopang bukti tertentu dengan lokasi yang dapat diperiksa.</li><li><strong>Tradisi lisan:</strong> penuturan yang diatribusikan kepada sumber dan konteksnya, tanpa otomatis menyatakan isi cerita sebagai kejadian historis.</li><li><strong>Penafsiran:</strong> cara penulis atau peneliti menjelaskan bukti, yang dapat dibandingkan dengan tafsir lain.</li></ul><h3>Kedalaman pemeriksaan</h3><ul><li><strong>Inventaris sumber:</strong> metadata atau katalog telah diidentifikasi.</li><li><strong>Ringkasan terbatas:</strong> abstrak atau bagian tertentu diperiksa; batasnya dijelaskan.</li><li><strong>Tinjauan komunitas:</strong> belum dilakukan pada catatan halaman ini.</li></ul><p>Variasi antarlokasi, keluarga, dan generasi dicatat secara terbuka. Daftar marga tidak dinyatakan lengkap dan sumber yang saling menyalin tidak dihitung sebagai bukti independen.</p>' + '<p class="source-note">Dokumen kerja cetak biru belum dipublikasikan. Metode di halaman ini merangkum arah penelitian proyek.</p>');
@@ -198,7 +207,7 @@
   $('#open-method').addEventListener('click', openMethod);
   $('#open-sources').addEventListener('click', () => {
     const sourceCount = Object.keys(data.sources).length;
-    showReading('Daftar sumber', 'Transparansi penelitian', `<p>Inventaris saat ini memuat ${sourceCount} rekaman sumber. Status pembacaan menunjukkan cakupan yang tercatat, bukan jaminan kebenaran seluruh isinya.</p>` + Object.keys(data.sources).map(sourceRecord).join(''));
+    showReading('Daftar sumber', 'Transparansi penelitian', `<p>Inventaris saat ini memuat ${sourceCount} rekaman sumber. Status pembacaan menunjukkan cakupan yang tercatat, bukan jaminan kebenaran seluruh isinya.</p>` + Object.keys(data.sources).map(id => sourceRecord(id)).join(''));
   });
   $('#open-credits').addEventListener('click', () => {
     showReading('Kredit foto dan penggunaan konten', 'Atribusi & hak penggunaan', '<p>Foto digunakan berdasarkan keterangan dan lisensi yang tercantum pada rekam Wikimedia Commons milik fotografer. Penggunaannya tidak menyiratkan dukungan fotografer terhadap proyek.</p>' + Object.keys(data.media).map(mediaRecord).join('') + '<h3>Naskah dan sumber</h3><p>Naskah pengantar disusun untuk proyek Ensiklopedia Suku Mandailing. Lisensi publikasi naskah ensiklopedia belum ditetapkan. Sumber, foto, atau pengetahuan komunitas tetap mengikuti hak dan pembatasannya masing-masing. Tautan ke buku tidak memberi izin menyalin seluruh isinya.</p><p>Ilustrasi tipografis serta lambang buku adalah elemen antarmuka. Keduanya tidak dimaksudkan sebagai aksara, ornamen adat, atau rekonstruksi sejarah.</p>');
@@ -226,7 +235,7 @@
     });
   });
   reading.addEventListener('close', () => {
-    if (location.hash.startsWith('#catatan/')) {
+    if (location.hash.startsWith('#catatan/') || location.hash.startsWith('#sumber/')) {
       try {history.replaceState(null, '', '#entri');} catch (_) { /* optional location state */ }
     }
     if (readingOpener?.isConnected) readingOpener.focus({preventScroll: true});
@@ -315,10 +324,14 @@
   });
 
   function readLocation() {
-    if (!location.hash.startsWith('#catatan/')) return;
     try {
-      const id = decodeURIComponent(location.hash.slice('#catatan/'.length));
-      openEntry(id, false);
+      if (location.hash.startsWith('#catatan/')) {
+        const id = decodeURIComponent(location.hash.slice('#catatan/'.length));
+        openEntry(id, false);
+      } else if (location.hash.startsWith('#sumber/')) {
+        const id = decodeURIComponent(location.hash.slice('#sumber/'.length));
+        openSource(id, false);
+      }
     } catch (_) { /* Abaikan fragmen URL yang tidak sah. */ }
   }
   window.addEventListener('hashchange', readLocation);
