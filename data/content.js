@@ -209,9 +209,9 @@ window.MANDAILING_CONTENT = {
       "publisher": "Berkala Arkeologi Sangkhakala 15(1), 119 sampai 141",
       "url": "https://doi.org/10.24832/bas.v15i1.140",
       "readStatus": "Bagian tertentu",
-      "locator": "Daftar isi dan bagian awal volume; PDF repositori 8625",
-      "limit": "Isi artikel dan konteks penanggalan setiap objek masih perlu dibaca; DOI tersedia, laman jurnal sempat gagal diakses.",
-      "checkedOn": "2026-10-26"
+      "locator": "PDF hlm. 119–129 dan 135–137: metode, deskripsi tinggalan, serta bagian interpretasi pilihan.",
+      "limit": "Bagian terpilih saja dibaca; hubungan dengan tradisi megalitik dan religi masa lalu merupakan interpretasi yang didukung pustaka, bukan penanggalan langsung untuk tiap objek. Jangan menjadikan tinggalan sebagai bukti tunggal identitas etnis atau marga.",
+      "checkedOn": "2026-11-01"
     },
     "R010": {
       "id": "R010",
@@ -305,9 +305,9 @@ window.MANDAILING_CONTENT = {
       "publisher": "JTC1 SC2 WG2 N3293 dan Unicode L2 07 233",
       "url": "https://www.unicode.org/wg2/docs/n3293.pdf",
       "readStatus": "Bagian tertentu",
-      "locator": "Halaman 1 bagian 2.1 Mandailing",
-      "limit": "Jangan menyalin rancangan karakter 2007 sebagai tabel implementasi final.",
-      "checkedOn": "2026-10-26"
+      "locator": "Proposal PDF hlm. 1–2, khususnya metadata dan §2.1 Mandailing; dibandingkan dengan bagan resmi Unicode 18.0.0 untuk blok Batak U+1BC0–U+1BFF.",
+      "limit": "Dokumen berstatus preliminary proposal dan individual contribution. Untuk implementasi, gunakan daftar kode resmi Unicode dan data karakter terkait; bentuk glyph bagan bukan pola preskriptif untuk menyalin naskah. Variasi ejaan dan pembacaan perlu ahli/penutur.",
+      "checkedOn": "2026-11-01"
     },
     "R018": {
       "id": "R018",
@@ -323,15 +323,15 @@ window.MANDAILING_CONTENT = {
     },
     "R019": {
       "id": "R019",
-      "title": "Oral History Best Practices",
+      "title": "Oral History Best Practices (bagian dari OHA Principles and Best Practices)",
       "authors": "Oral History Association",
-      "year": "tanpa tahun pada laman yang diperiksa",
+      "year": "2018 (diadopsi; PDF ©2025)",
       "publisher": "Oral History Association",
-      "url": "https://oralhistory.org/best-practices/",
+      "url": "https://oralhistory.org/wp-content/uploads/2025/12/2025-OHA-PrinciplesBP_Best-Practices.pdf",
       "readStatus": "Bagian tertentu",
-      "locator": "Bagian Preparation Interviewing Preservation dan Access and Use",
-      "limit": "Laman diperiksa 26 Oktober 2026; nama dan tanggal versi panduan harus dicatat saat arsip resmi disimpan.",
-      "checkedOn": "2026-10-26"
+      "locator": "PDF hlm. 1–7: bagian Preparation, Interviewing, Preservation, dan Access and Use; beberapa rekomendasi etika dan pengarsipan ditelaah.",
+      "limit": "PDF menyatakan pedoman diadopsi Oktober 2018 dan ©2025; tahun hak cipta bukan tahun revisi. Bagian ini adalah panduan ringkas yang menunjuk ke rangkaian pedoman OHA lain, bukan pengganti kebijakan lokal atau tinjauan etika.",
+      "checkedOn": "2026-11-01"
     }
   },
   "entries": [
@@ -537,7 +537,7 @@ window.MANDAILING_CONTENT = {
       "title": "Jejak material dan pertanyaan sejarah",
       "category": "sejarah",
       "summary": "Mengapa tinggalan material perlu dibaca bersama konteks arkeologi, penanggalan, serta kritik sumber?",
-      "status": "Inventaris sumber",
+      "status": "Ringkasan terbatas",
       "art": "sejarah",
       "artText": "Jejak",
       "artCaption": "OBJEK · WAKTU · KONTEKS",
@@ -560,7 +560,7 @@ window.MANDAILING_CONTENT = {
           ]
         }
       ],
-      "limit": "Judul, penulis, dan volume telah diidentifikasi melalui bagian awal jurnal. Pembacaan artikel dan data penanggalan belum diselesaikan."
+      "limit": "Bagian PDF hlm. 119–129 dan 135–137 ditelaah. Tafsir megalitik perlu diatribusikan; objek tidak ditanggalkan atau dikaitkan dengan identitas hanya dari keberadaannya."
     },
     {
       "id": "bagas-godang",
