@@ -154,7 +154,9 @@
   function sourceRecord(id) {
     const source = data.sources[id];
     if (!source) return '';
-    return `<div class="source-record"><p class="source-label">${escape(source.id)} / ${escape(source.readStatus)}</p><p><strong>${escape(source.title)}</strong></p><p>${escape(source.authors)}. ${escape(source.year)}. ${escape(source.publisher)}.</p><p>Bagian yang diperiksa: ${escape(source.locator)}.</p><p class="source-note">${escape(source.limit)}</p>${externalLink(source.url, 'Buka sumber asli')}</div>`;
+    const locator = String(source.locator || '').trim();
+    const locatorPunctuation = /[.!?…]$/.test(locator) ? '' : '.';
+    return `<div class="source-record"><p class="source-label">${escape(source.id)} / ${escape(source.readStatus)}</p><p><strong>${escape(source.title)}</strong></p><p>${escape(source.authors)}. ${escape(source.year)}. ${escape(source.publisher)}.</p><p>Bagian yang diperiksa: ${escape(locator)}${locatorPunctuation}</p><p class="source-note">${escape(source.limit)}</p>${externalLink(source.url, 'Buka sumber asli')}</div>`;
   }
   function mediaRecord(id) {
     const media = data.media[id];
