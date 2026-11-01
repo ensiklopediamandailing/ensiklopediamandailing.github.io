@@ -357,6 +357,18 @@ window.MANDAILING_CONTENT = {
       "locator": "Pratinjau publik JSTOR: Bab 2 tercantum hlm. 5–15; cuplikan singkat di awal bab, nomor halaman cuplikan tidak ditampilkan.",
       "limit": "JSTOR menyatakan akses institusi ke buku tidak tersedia saat diperiksa. Cuplikan terhenti saat menceritakan ekspedisi mencapai pertemuan Gombak dan Klang; tidak ada halaman lengkap Bab 2 atau catatan kaki yang ditelaah. Jangan gunakan cuplikan ini untuk menyimpulkan bahwa Gullick membahas atau menolak peran Sutan Puasa. Judul rentang tahun berbeda antarkatalog: halaman MBRAS memakai 1856–1939, sedangkan rekaman JSTOR memakai 1857–1939; cocokkan edisi saat mengutip.",
       "checkedOn": "2026-11-01"
+    },
+    "R022": {
+      "id": "R022",
+      "title": "POLEMIK SEJARAH MALAYSIA : - MAJLIS POLEMIK SEJARAH MALAYSIA SESI KE 28, PENEMPATAN AWAL KUALA LUMPUR",
+      "authors": "Arkib Negara Malaysia",
+      "year": "2012 (acara; rekaman dikatalogkan 2013)",
+      "publisher": "Arkib Negara Malaysia",
+      "url": "https://ofa.arkib.gov.my/ofa/group/asset/1183807",
+      "readStatus": "Metadata dan katalog",
+      "locator": "Keterangan katalog: acara 13/12/2012; 4 unit; durasi 01:03:11; No. Penerimaan 2013/0001308W. Rekaman belum ditonton.",
+      "limit": "Video, pembicara, makalah, dan bukti yang dirujuk belum diperiksa. Keterangan katalog bukan bukti primer abad ke-19; jangan menyajikan ringkasannya sebagai transkripsi atau konsensus historiografi. Ketersediaan berkas video belum dipastikan.",
+      "checkedOn": "2026-11-01"
     }
   },
   "entries": [
@@ -590,7 +602,7 @@ window.MANDAILING_CONTENT = {
       "id": "asal-usul-kuala-lumpur",
       "title": "Kuala Lumpur: menelusuri narasi asal-usul dalam sumber",
       "category": "sejarah",
-      "summary": "Tiga rujukan membingkai narasi tentang perkembangan awal Kuala Lumpur; inventaris ini belum menetapkan satu tokoh sebagai pendiri.",
+      "summary": "Empat rujukan tercatat tentang narasi perkembangan awal Kuala Lumpur; inventaris ini belum menetapkan satu tokoh sebagai pendiri.",
       "status": "Inventaris sumber",
       "art": "sejarah",
       "artText": "Asal",
@@ -598,7 +610,8 @@ window.MANDAILING_CONTENT = {
       "sourceIds": [
         "R013",
         "R020",
-        "R021"
+        "R021",
+        "R022"
       ],
       "tags": [
         "Kuala Lumpur",
@@ -621,9 +634,16 @@ window.MANDAILING_CONTENT = {
             "Inventaris ini juga mencatat studi Yap Ah Loy oleh S. M. Middlebrook, J. M. Gullick, dan C. A. Gibson-Hill (JMBRAS 24(2), 1951), serta buku sejarah Kuala Lumpur oleh J. M. Gullick (edisi MBRAS 2017; pertama terbit 2000). R020 tetap metadata-only. Pratinjau publik JSTOR menampilkan cuplikan awal Bab 2 R021 (bab tercantum hlm. 5–15): Gullick menulis tentang ekspedisi tambang 1857 dan uang muka dari saudagar di Melaka. Cuplikan berhenti saat menyebut pertemuan Gombak dan Klang; halaman penuh tidak tersedia lewat akses JSTOR saat diperiksa. Cuplikan ini belum menunjukkan perbandingan tentang Sutan Puasa.",
             "Peran orang, kelompok, pusat dagang, dan pusat pemerintahan dalam perkembangan kota perlu dibedakan dan dibandingkan dengan sumber sezaman. Catatan ini tidak menetapkan satu tokoh sebagai pendiri tunggal atau menyajikan satu narasi sebagai konsensus."
           ]
+        },
+        {
+          "heading": "Rekaman katalog Arkib Negara 2012",
+          "paragraphs": [
+            "Katalog Arkib Negara Malaysia mencatat video sesi ke-28 Polemik Sejarah Malaysia, “Penempatan Awal Kuala Lumpur”, pada 13 Desember 2012. Deskripsi katalog menyebut makalah “Jejak Raja Abdullah, Sutan Puasa dan Yap Ah Loy” dan merangkum kesimpulan yang mengutamakan Raja Abdullah.",
+            "Ringkasan katalog ini adalah catatan tentang sebuah acara dan rekaman, bukan isi video yang telah ditelaah atau bukti langsung peristiwa abad ke-19. Proyek belum memeriksa rekaman berdurasi 1:03:11, makalah, atau bukti yang dirujuk; R022 tetap metadata-only."
+          ]
         }
       ],
-      "limit": "R013 dan R020 tetap metadata-only; R021 baru memiliki cuplikan terbatas dari awal Bab 2. Belum ada teks penuh, dokumen primer, atau tinjauan komunitas. Sinopsis penerbit untuk R013 adalah tesis buku, bukan verifikasi independen; cuplikan R021 belum cukup untuk menilai argumen tentang Sutan Puasa. Periksa isi lengkap dan bukti arsip sebelum menyimpulkan."
+      "limit": "R013 dan R020 tetap metadata-only; R021 hanya cuplikan awal Bab 2; R022 hanya keterangan katalog untuk video yang belum diperiksa. Belum ada telaah teks penuh, tinjauan komunitas, atau dasar untuk menetapkan satu narasi sebagai konsensus."
     },
     {
       "id": "bagas-godang",
