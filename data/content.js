@@ -114,7 +114,7 @@ window.MANDAILING_CONTENT = {
       "url": "https://doi.org/10.1080/23311983.2023.2211816",
       "readStatus": "Bagian tertentu",
       "locator": "PDF hlm. 4–8: metode, hasil, dan simpulan; observasi Markobar di Pasar Maga pada 7 Juni 2019.",
-      "limit": "Jumlah informan tidak dinyatakan; abstrak dan bagian metode memakai label pendekatan yang tidak konsisten. Satu konteks lokal; perlu pembandingan dan tinjauan penutur.",
+      "limit": "Jumlah informan tidak dinyatakan pada bagian yang ditelaah; abstrak menyebut fenomenologi komunikatif, sedangkan metode juga menyebut penelitian dan pengembangan. Belum full_read; tinjauan penutur dan pembandingan lokasi lain diperlukan.",
       "checkedOn": "2026-11-01"
     },
     "R002": {
@@ -197,8 +197,8 @@ window.MANDAILING_CONTENT = {
       "publisher": "Berita Penelitian Arkeologi 31, Balai Arkeologi Sumatera Utara",
       "url": "https://repositori.kemendikdasmen.go.id/20018/1/BPA%2031%20tahun%202017.pdf",
       "readStatus": "Bagian tertentu",
-      "locator": "PDF hlm. 4 dan 56–57: metode, ringkasan hasil pilihan, dan rekomendasi.",
-      "limit": "20 rekaman yang dilaporkan mencakup tiga kabupaten; angka bukan sensus. Teks, bahasa, dan provenans tiap objek belum diaudit.",
+      "locator": "PDF hlm. 4 dan 56–57: metode, ringkasan hasil pilihan, dan rekomendasi; tidak semua objek dibaca.",
+      "limit": "Halaman metode, ringkasan hasil dan rekomendasi ditelaah; teks, bahasa, transkripsi, kondisi, dan provenans tiap objek belum diaudit. Laporan sendiri menganjurkan penelitian lanjutan yang lebih luas.",
       "checkedOn": "2026-11-01"
     },
     "R009": {
@@ -221,8 +221,8 @@ window.MANDAILING_CONTENT = {
       "publisher": "Bercadik Jurnal Pengkajian dan Penciptaan Seni 1(1)",
       "url": "https://doi.org/10.26887/bcdk.v1i1.19",
       "readStatus": "Bagian tertentu",
-      "locator": "Laman penerbit serta metode dan hasil pada salinan PDF repositori Garuda.",
-      "limit": "PDF yang ditemukan berjudul salinan hasil perbaikan; versi final dan halaman belum dicocokkan. Klaim dibatasi pada kasus Kotanopan.",
+      "locator": "Laman penerbit serta bagian metode dan hasil pada salinan PDF repositori Garuda; halaman versi final belum dicocokkan.",
+      "limit": "PDF yang ditemukan berjudul salinan hasil perbaikan penyunting/pembimbing; belum dicocokkan dengan tata letak final terbitan dan nomor halaman. Jumlah informan tidak tercatat pada bagian metode yang ditelaah.",
       "checkedOn": "2026-11-01"
     },
     "R011": {
@@ -269,8 +269,8 @@ window.MANDAILING_CONTENT = {
       "publisher": "Al Kauniyah Jurnal Biologi 15(1), 107 sampai 120",
       "url": "https://doi.org/10.15408/kauniyah.v15i1.17958",
       "readStatus": "Bagian tertentu",
-      "locator": "PDF hlm. 107–120: metode, hasil/simpulan, dan beberapa baris tabel.",
-      "limit": "Satu desa; tabel hanya ditelaah sebagian. Laporan penggunaan tumbuhan bukan bukti klinis dan bukan dasar resep atau dosis.",
+      "locator": "PDF hlm. 107–120: metode, hasil/simpulan, dan beberapa baris tabel; tidak seluruh tabel ditranskripsi.",
+      "limit": "Sampel hanya satu desa dan bagian tabel tidak seluruhnya ditelaah; identifikasi dan nama lokal perlu diperiksa per entri. Artikel ini bukan dasar resep, dosis, atau klaim keamanan/efektivitas medis.",
       "checkedOn": "2026-11-01"
     },
     "R015": {
