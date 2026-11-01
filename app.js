@@ -3,6 +3,10 @@
   'use strict';
   const data = window.MANDAILING_CONTENT;
   if (!data) return;
+  const projectUpdatedDate = new Date(`${data.project.updatedOn}T00:00:00Z`);
+  const projectUpdatedLabel = Number.isNaN(projectUpdatedDate.valueOf())
+    ? data.project.updatedOn
+    : new Intl.DateTimeFormat('id-ID', {day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC'}).format(projectUpdatedDate);
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
   const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -175,7 +179,7 @@
     const entry = data.entries.find(e => e.id === id);
     if (!entry) return;
     const body = entry.body.map(section => `<h3>${escape(section.heading)}</h3>${section.paragraphs.map(p => `<p>${escape(p)}</p>`).join('')}`).join('');
-    showReading(entry.title, themeName(entry.category) + ' / Catatan awal', `<p class="reading-status">${escape(entry.status)} · Belum ditinjau komunitas.<br>${escape(entry.limit)}</p>${body}${entry.sourceIds.map(sourceRecord).join('')}${entry.mediaId ? mediaRecord(entry.mediaId) : ''}<p class="source-note" style="margin-top:24px">Catatan editorial proyek · 27 Oktober 2026. Koreksi dan sumber tambahan dapat disiapkan melalui bagian kontribusi.</p>`);
+    showReading(entry.title, themeName(entry.category) + ' / Catatan awal', `<p class="reading-status">${escape(entry.status)} · Belum ditinjau komunitas.<br>${escape(entry.limit)}</p>${body}${entry.sourceIds.map(sourceRecord).join('')}${entry.mediaId ? mediaRecord(entry.mediaId) : ''}<p class="source-note" style="margin-top:24px">Catatan editorial proyek · ${escape(projectUpdatedLabel)}. Koreksi dan sumber tambahan dapat disiapkan melalui bagian kontribusi.</p>`);
     if (updateLocation) {
       try {history.replaceState(null, '', '#catatan/' + entry.id);} catch (_) { /* file:// tetap dapat membaca catatan */ }
     }
