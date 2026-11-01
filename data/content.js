@@ -257,8 +257,8 @@ window.MANDAILING_CONTENT = {
       "publisher": "Areca Books",
       "url": "https://arecabooks.com/product/sutan-puasa-founder-of-kuala-lumpur/",
       "readStatus": "Metadata dan katalog",
-      "locator": "Metadata Google Books dan laman resmi Areca Books; sinopsis penerbit; isi penuh belum diperiksa.",
-      "limit": "Sinopsis Areca Books memaparkan tesis buku tentang peran Sutan Puasa. Ini pernyataan penerbit/penulis, bukan verifikasi independen. Isi buku, bukti arsip yang dikutip, dan perbandingan dengan karya historiografi lain belum diperiksa; jangan menyajikan klaim pendiri tunggal sebagai fakta atau konsensus.",
+      "locator": "Metadata Google Books dan laman resmi Areca Books; sinopsis penerbit dan daftar isi diperiksa; isi penuh belum diperiksa.",
+      "limit": "Sinopsis Areca Books memaparkan tesis buku tentang peran Sutan Puasa. Ini pernyataan penerbit/penulis, bukan verifikasi independen. Isi buku, bukti arsip yang dikutip, dan perbandingan dengan karya historiografi lain belum diperiksa; jangan menyajikan klaim pendiri tunggal sebagai fakta atau konsensus. Google Books mencatat 615 halaman, sedangkan halaman Areca untuk cetak ulang 2023 mencatat 648 halaman; cocokkan edisi dan paginasi sebelum mengutip.",
       "checkedOn": "2026-11-01"
     },
     "R014": {
@@ -352,9 +352,10 @@ window.MANDAILING_CONTENT = {
       "year": "2000; cetak ulang MBRAS 2017",
       "publisher": "Malaysian Branch of the Royal Asiatic Society, Monograph No. 29",
       "url": "https://mbras.org.my/product/m29-a-history-of-kuala-lumpur-1856-1939/",
-      "readStatus": "Metadata dan katalog",
-      "locator": "Katalog resmi MBRAS: judul/edisi 2017; laman menyatakan pertama terbit 2000. Isi penuh belum diperiksa.",
-      "limit": "Laman penerbit menjelaskan buku sejarah kota dengan rujukan memoar, arsip, dan karya terbitan, tetapi isi sumber tidak ditelaah di sini. Jangan menganggap metadata atau sinopsis sebagai penilaian atas peran Sutan Puasa.",
+      "previewUrl": "https://www.jstor.org/stable/j.ctv6mtff5",
+      "readStatus": "Abstrak atau cuplikan",
+      "locator": "Pratinjau publik JSTOR: Bab 2 tercantum hlm. 5–15; cuplikan singkat di awal bab, nomor halaman cuplikan tidak ditampilkan.",
+      "limit": "JSTOR menyatakan akses institusi ke buku tidak tersedia saat diperiksa. Cuplikan terhenti saat menceritakan ekspedisi mencapai pertemuan Gombak dan Klang; tidak ada halaman lengkap Bab 2 atau catatan kaki yang ditelaah. Jangan gunakan cuplikan ini untuk menyimpulkan bahwa Gullick membahas atau menolak peran Sutan Puasa. Judul rentang tahun berbeda antarkatalog: halaman MBRAS memakai 1856–1939, sedangkan rekaman JSTOR memakai 1857–1939; cocokkan edisi saat mengutip.",
       "checkedOn": "2026-11-01"
     }
   },
@@ -611,18 +612,18 @@ window.MANDAILING_CONTENT = {
           "heading": "Tesis yang diajukan buku 2018",
           "paragraphs": [
             "Buku Abdur-Razzaq Lubis berjudul Sutan Puasa, Founder of Kuala Lumpur. Sinopsis penerbit mengajukan Pangkalan Lumpur sebagai pos dagang Mandailing dan menekankan peran Sutan Puasa. Ini cara penerbit memaparkan tesis buku, bukan kesimpulan yang telah diverifikasi oleh proyek.",
-            "Metadata Areca Books mencatat edisi 2018 dan cetak ulang 2023 setebal 648 halaman. Isi lengkap dan dokumen yang dirujuk belum diperiksa; R013 tetap berstatus metadata."
+            "Laman Areca Books mencatat 648 halaman dan daftar isi Bab 2 “Who Founded Kuala Lumpur?” serta Bab 13 “Sutan Puasa, the founder of Kuala Lumpur?”. Edisi pertama 2018 dan cetak ulang 2023. Isi dan dokumen yang dirujuk belum diperiksa; R013 tetap metadata-only."
           ]
         },
         {
           "heading": "Sumber pembanding dalam inventaris",
           "paragraphs": [
-            "Inventaris ini juga mencatat studi Yap Ah Loy oleh S. M. Middlebrook, J. M. Gullick, dan C. A. Gibson-Hill (JMBRAS 24(2), 1951), serta buku sejarah Kuala Lumpur oleh J. M. Gullick (edisi MBRAS 2017; pertama terbit 2000). Katalog telah diperiksa, tetapi isi kedua sumber belum ditelaah untuk memastikan cara masing-masing membahas Sutan Puasa.",
+            "Inventaris ini juga mencatat studi Yap Ah Loy oleh S. M. Middlebrook, J. M. Gullick, dan C. A. Gibson-Hill (JMBRAS 24(2), 1951), serta buku sejarah Kuala Lumpur oleh J. M. Gullick (edisi MBRAS 2017; pertama terbit 2000). R020 tetap metadata-only. Pratinjau publik JSTOR menampilkan cuplikan awal Bab 2 R021 (bab tercantum hlm. 5–15): Gullick menulis tentang ekspedisi tambang 1857 dan uang muka dari saudagar di Melaka. Cuplikan berhenti saat menyebut pertemuan Gombak dan Klang; halaman penuh tidak tersedia lewat akses JSTOR saat diperiksa. Cuplikan ini belum menunjukkan perbandingan tentang Sutan Puasa.",
             "Peran orang, kelompok, pusat dagang, dan pusat pemerintahan dalam perkembangan kota perlu dibedakan dan dibandingkan dengan sumber sezaman. Catatan ini tidak menetapkan satu tokoh sebagai pendiri tunggal atau menyajikan satu narasi sebagai konsensus."
           ]
         }
       ],
-      "limit": "Ketiga rujukan masih berstatus metadata dan katalog; belum ada halaman isi atau dokumen primer yang ditelaah. Uraian penerbit untuk R013 adalah tesis buku, bukan verifikasi independen. Baca silang argumen dan bukti arsip serta minta tinjauan sejarawan/komunitas sebelum menaikkan status."
+      "limit": "R013 dan R020 tetap metadata-only; R021 baru memiliki cuplikan terbatas dari awal Bab 2. Belum ada teks penuh, dokumen primer, atau tinjauan komunitas. Sinopsis penerbit untuk R013 adalah tesis buku, bukan verifikasi independen; cuplikan R021 belum cukup untuk menilai argumen tentang Sutan Puasa. Periksa isi lengkap dan bukti arsip sebelum menyimpulkan."
     },
     {
       "id": "bagas-godang",

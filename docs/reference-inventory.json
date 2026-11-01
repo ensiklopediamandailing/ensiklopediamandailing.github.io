@@ -212,10 +212,10 @@
     "url": "https://arecabooks.com/product/sutan-puasa-founder-of-kuala-lumpur/",
     "type": "monograf_sejarah_diaspora",
     "read_status": "metadata_only",
-    "locator": "Metadata Google Books dan laman resmi Areca Books; sinopsis penerbit; isi penuh belum diperiksa.",
+    "locator": "Metadata Google Books dan laman resmi Areca Books; sinopsis penerbit dan daftar isi diperiksa; isi penuh belum diperiksa.",
     "chapters": "2;6;13;14;15",
     "annotation": "Titik awal penelitian jaringan diaspora Mandailing dan sejarah Kuala Lumpur. Judul menyatakan tesis penulis tentang pendirian kota; ensiklopedia harus mengatribusikan tesis tersebut dan membandingkan bukti arsip serta historiografi lain. Deskripsi penerbit tidak cukup untuk menyatakan perdebatan sejarah telah selesai.",
-    "caution": "Sinopsis Areca Books memaparkan tesis buku tentang peran Sutan Puasa. Ini pernyataan penerbit/penulis, bukan verifikasi independen. Isi buku, bukti arsip yang dikutip, dan perbandingan dengan karya historiografi lain belum diperiksa; jangan menyajikan klaim pendiri tunggal sebagai fakta atau konsensus.",
+    "caution": "Sinopsis Areca Books memaparkan tesis buku tentang peran Sutan Puasa. Ini pernyataan penerbit/penulis, bukan verifikasi independen. Isi buku, bukti arsip yang dikutip, dan perbandingan dengan karya historiografi lain belum diperiksa; jangan menyajikan klaim pendiri tunggal sebagai fakta atau konsensus. Google Books mencatat 615 halaman, sedangkan halaman Areca untuk cetak ulang 2023 mencatat 648 halaman; cocokkan edisi dan paginasi sebelum mengutip.",
     "accessed_on": "2026-11-01",
     "full_text_checked": false,
     "rights_note": "Tautan dan metadata dicatat; tidak ada salinan teks penuh atau foto sumber yang didistribusikan dalam paket ini."
@@ -341,9 +341,12 @@
     "year": "2000; cetak ulang MBRAS 2017",
     "publisher": "Malaysian Branch of the Royal Asiatic Society, Monograph No. 29",
     "url": "https://mbras.org.my/product/m29-a-history-of-kuala-lumpur-1856-1939/",
-    "read_status": "metadata_only",
-    "locator": "Katalog resmi MBRAS: judul/edisi 2017; laman menyatakan pertama terbit 2000. Isi penuh belum diperiksa.",
-    "caution": "Laman penerbit menjelaskan buku sejarah kota dengan rujukan memoar, arsip, dan karya terbitan, tetapi isi sumber tidak ditelaah di sini. Jangan menganggap metadata atau sinopsis sebagai penilaian atas peran Sutan Puasa.",
-    "accessed_on": "2026-11-01"
+    "read_status": "abstract_excerpt",
+    "locator": "Pratinjau publik JSTOR: Bab 2 tercantum hlm. 5–15; cuplikan singkat di awal bab, nomor halaman cuplikan tidak ditampilkan.",
+    "caution": "JSTOR menyatakan akses institusi ke buku tidak tersedia saat diperiksa. Cuplikan terhenti saat menceritakan ekspedisi mencapai pertemuan Gombak dan Klang; tidak ada halaman lengkap Bab 2 atau catatan kaki yang ditelaah. Jangan gunakan cuplikan ini untuk menyimpulkan bahwa Gullick membahas atau menolak peran Sutan Puasa. Judul rentang tahun berbeda antarkatalog: halaman MBRAS memakai 1856–1939, sedangkan rekaman JSTOR memakai 1857–1939; cocokkan edisi saat mengutip.",
+    "accessed_on": "2026-11-01",
+    "preview_url": "https://www.jstor.org/stable/j.ctv6mtff5",
+    "annotation": "Cuplikan awal Bab 2 mengatribusikan kepada Gullick catatan bahwa pada 1857 Raja Abdullah dari Klang dan Raja Jumaat dari Lukut mengirim 87 penambang Tionghoa dari Lukut ke hulu Sungai Klang; bagian yang terlihat menyebut uang muka $30.000 dari dua saudagar Tionghoa di Melaka. Ini hanya cuplikan terbatas dari isi R021, bukan telaah seluruh bab atau sumber yang dikutip, dan belum mengungkap pembahasan Gullick tentang Sutan Puasa.",
+    "full_text_checked": false
   }
 ]

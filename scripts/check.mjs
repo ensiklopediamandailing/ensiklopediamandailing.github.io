@@ -49,6 +49,7 @@ for (const [id, source] of Object.entries(data.sources)) {
   check(id === source.id && inventoryIds.has(id), `ID sumber tidak cocok: ${id}`);
   for (const field of ['title', 'authors', 'year', 'publisher', 'readStatus', 'locator', 'limit']) check(hasText(source[field]), `Rekam ${id} tanpa ${field}`);
   check(webUrl(source.url), `URL sumber tidak valid: ${id}`);
+  if (source.previewUrl) check(webUrl(source.previewUrl), `URL cuplikan tidak valid: ${id}`);
 }
 for (const entry of data.entries) {
   check(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(entry.id), `Slug tidak valid: ${entry.id}`);
