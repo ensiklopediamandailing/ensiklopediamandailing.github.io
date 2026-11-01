@@ -29,3 +29,20 @@ Keterbatasan: belum ada pengujian pembaca layar, Safari/Firefox, perangkat sentu
 ## Pemindahan ke GitHub Pages
 
 Kode ditempatkan pada root repo. Generator dan pemeriksaan integritas disesuaikan dengan lokasi baru. Canonical/OG memakai domain GitHub Pages, metadata robots memakai `index,follow`, dan `.nojekyll` ditambahkan. Tautan dokumen/folder kerja dihilangkan dari sumber publik; tautan navigasi penggantinya mengarah ke metodologi dan kontribusi pada halaman yang sama. Bibliografi akademik dan atribusi media publik tetap tersedia. Pemeriksaan migrasi menjalankan generator, sintaks, integritas aset/rujukan, domain canonical, serta ketiadaan tautan dokumen kerja. Status penerbitan versi ini tersedia pada tab Actions repo untuk commit yang bersangkutan; hasil interaksi di atas berasal dari pengujian versi awal sebelum pemindahan.
+
+
+## Pembaruan pemeriksaan setelah PR #25 dan #26 — 1 November 2026
+
+| Area | Hasil |
+| --- | --- |
+| Generator konten | Menghasilkan 10 catatan, 23 rekaman sumber, 10 tema, dan 8 nama marga |
+| Pemeriksaan integritas lokal | node scripts/check.mjs lulus 466 pemeriksaan integritas |
+| CI PR #25 | [Run 41304180212](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41304180212) sukses; validasi main [41304265349](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41304265349) dan Pages [41304264893](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41304264893) sukses |
+| CI PR #26 | [Run 41304461129](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41304461129) sukses; validasi main [41304526552](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41304526552) dan Pages [41304526450](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41304526450) sukses |
+| Situs publik | Artikel etnobotani menampilkan status Ringkasan terbatas, sumber R014, locator halaman, batas klaim, dan tautan DOI. Tanggal catatan editorial tampil 1 November 2026 setelah perbaikan metadata pada PR #26. |
+
+Pemeriksaan lokal memakai salinan kode dan inventaris dari GitHub; berkas media sementara hanya dipakai untuk memastikan jalur aset terdaftar. Karena itu, CI GitHub terhadap aset repository adalah pemeriksaan integritas rilis yang berwenang.
+
+Batas pemeriksaan: R014 ditautkan ke laman jurnal resmi dan ringkasan hanya mengatribusikan hasil pada satu studi di Tanjung Julu. Inventaris tetap mencatat 9 sumber sample_read, 12 metadata_only, 2 abstract_excerpt, dan 0 full_read. Dua puluh dua referensi lain tidak dibaca ulang satu per satu dalam pemeriksaan ini. Belum ada tinjauan komunitas. Uji VoiceOver/pembaca layar, sweep seluruh tautan sumber, pengukuran kontras teks di atas foto, dan uji Apps Script ujung-ke-ujung belum dilakukan. Folder intake yang diperiksa masih kosong; pengiriman daring tetap belum aktif.
+
+Workflow mencatat peringatan non-blocking terkait perubahan runtime Node.js pada GitHub Actions dan migrasi runner ubuntu-latest. Keduanya tidak menggagalkan pemeriksaan.
