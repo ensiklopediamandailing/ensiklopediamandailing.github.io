@@ -197,7 +197,8 @@
   }
   $('#open-method').addEventListener('click', openMethod);
   $('#open-sources').addEventListener('click', () => {
-    showReading('Daftar sumber awal', 'Bibliografi cetak biru v0.1', '<p>Berikut 19 rekaman referensi awal dalam cetak biru 26 Oktober 2026. Status pemeriksaan menyebut bagian yang tersedia, bukan jaminan kebenaran seluruh isinya.</p>' + Object.keys(data.sources).map(sourceRecord).join(''));
+    const sourceCount = Object.keys(data.sources).length;
+    showReading('Daftar sumber', 'Transparansi penelitian', `<p>Inventaris saat ini memuat ${sourceCount} rekaman sumber. Status pembacaan menunjukkan cakupan yang tercatat, bukan jaminan kebenaran seluruh isinya.</p>` + Object.keys(data.sources).map(sourceRecord).join(''));
   });
   $('#open-credits').addEventListener('click', () => {
     showReading('Kredit foto dan penggunaan konten', 'Atribusi & hak penggunaan', '<p>Foto digunakan berdasarkan keterangan dan lisensi yang tercantum pada rekam Wikimedia Commons milik fotografer. Penggunaannya tidak menyiratkan dukungan fotografer terhadap proyek.</p>' + Object.keys(data.media).map(mediaRecord).join('') + '<h3>Naskah dan sumber</h3><p>Naskah pengantar disusun untuk proyek Ensiklopedia Suku Mandailing. Lisensi publikasi naskah ensiklopedia belum ditetapkan. Sumber, foto, atau pengetahuan komunitas tetap mengikuti hak dan pembatasannya masing-masing. Tautan ke buku tidak memberi izin menyalin seluruh isinya.</p><p>Ilustrasi tipografis serta lambang buku adalah elemen antarmuka. Keduanya tidak dimaksudkan sebagai aksara, ornamen adat, atau rekonstruksi sejarah.</p>');
