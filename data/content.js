@@ -666,6 +666,42 @@ window.MANDAILING_CONTENT = {
       "limit": "R013 dan R020 tetap metadata-only; R021 hanya cuplikan awal Bab 2; R022 hanya keterangan katalog video; R023 adalah pembacaan artikel laporan polemik pada hlm. 24–25, bukan pemeriksaan dokumen asal. Belum ada tinjauan komunitas atau dasar untuk menetapkan satu narasi sebagai konsensus."
     },
     {
+      "id": "etnobotani-tanjung-julu",
+      "title": "Pengetahuan tumbuhan di Tanjung Julu dalam satu kajian etnobotani",
+      "category": "pengetahuan",
+      "summary": "Satu studi etnobotani mencatat tumbuhan yang dilaporkan digunakan di Tanjung Julu; catatan ini tidak membuktikan khasiat medis.",
+      "status": "Ringkasan terbatas",
+      "art": "pengetahuan",
+      "artText": "Tumbuh",
+      "artCaption": "TANJUNG JULU · SATU STUDI",
+      "sourceIds": [
+        "R014"
+      ],
+      "tags": [
+        "etnobotani",
+        "tumbuhan",
+        "Tanjung Julu",
+        "Mandailing Natal",
+        "pengetahuan lokal"
+      ],
+      "body": [
+        {
+          "heading": "Cakupan satu penelitian",
+          "paragraphs": [
+            "Silalahi, Nisyawati, dan Wahyuningtyas (2022) melaporkan studi etnobotani di Desa Tanjung Julu. Abstrak menyebut wawancara dengan 32 responden umum dan 8 informan kunci, serta 163 jenis tumbuhan yang dilaporkan digunakan dalam konteks penelitian itu. Angka tersebut adalah hasil yang dilaporkan dari satu desa, bukan inventaris seluruh tumbuhan atau gambaran semua pengetahuan Mandailing.",
+            "Artikel mencatat penggunaan tumbuhan berdasarkan wawancara dan analisis etnobotani. Ringkasan ini tidak menyatakan bahwa penggunaan yang dilaporkan aman atau efektif secara klinis."
+          ]
+        },
+        {
+          "heading": "Batas pembacaan dan penggunaan",
+          "paragraphs": [
+            "Catatan ini bukan panduan pengobatan dan tidak memuat resep, dosis, atau rekomendasi untuk kondisi tertentu. Nama lokal dan identifikasi tumbuhan perlu ditelaah per entri bersama penutur setempat dan ahli botani sebelum dibuatkan profil tersendiri."
+          ]
+        }
+      ],
+      "limit": "Sampel PDF hlm. 107–120 mencakup metode, hasil/simpulan, dan beberapa baris tabel; seluruh tabel tidak ditranskripsi. Studi terbatas pada satu desa. Laporan penggunaan wawancara bukan bukti klinis tentang keamanan atau efektivitas; identifikasi dan nama lokal belum ditelaah per entri bersama penutur dan ahli botani."
+    },
+    {
       "id": "bagas-godang",
       "title": "Bagas Godang dalam dokumentasi visual",
       "category": "arsitektur",

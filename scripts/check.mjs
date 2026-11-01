@@ -45,9 +45,12 @@ const referenceCounts = [...html.matchAll(/<\w+\b[^>]*\bdata-reference-count\b[^
 check(referenceCounts.length === 2 && referenceCounts.every(count => count === inventory.length), 'Jumlah referensi publik harus cocok dengan inventaris');
 const themeIds = new Set(data.themes.map(x => x.id));
 const inventoryIds = new Set(inventory.map(x => x.id));
+const sourceReadStatuses = new Set(['Metadata dan katalog', 'Abstrak atau cuplikan', 'Bagian tertentu', 'Teks penuh']);
+const editorialStatuses = new Set(['Ringkasan terbatas', 'Inventaris sumber', 'Dokumentasi visual beratribusi']);
 for (const [id, source] of Object.entries(data.sources)) {
   check(id === source.id && inventoryIds.has(id), `ID sumber tidak cocok: ${id}`);
   for (const field of ['title', 'authors', 'year', 'publisher', 'readStatus', 'locator', 'limit']) check(hasText(source[field]), `Rekam ${id} tanpa ${field}`);
+  check(sourceReadStatuses.has(source.readStatus), `Status pembacaan sumber tidak dikenal: ${id}`);
   check(webUrl(source.url), `URL sumber tidak valid: ${id}`);
   if (source.previewUrl) check(webUrl(source.previewUrl), `URL cuplikan tidak valid: ${id}`);
 }
@@ -55,9 +58,14 @@ for (const entry of data.entries) {
   check(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(entry.id), `Slug tidak valid: ${entry.id}`);
   check(themeIds.has(entry.category), `Tema tidak dikenal: ${entry.id}`);
   for (const field of ['title', 'summary', 'status', 'limit']) check(hasText(entry[field]), `Catatan ${entry.id} tanpa ${field}`);
+  check(editorialStatuses.has(entry.status), `Status editorial tidak dikenal: ${entry.id}`);
   check(Array.isArray(entry.sourceIds), `sourceIds harus daftar: ${entry.id}`);
   check(entry.sourceIds.length > 0 || Boolean(data.media[entry.mediaId]), `Catatan tanpa sumber/media: ${entry.id}`);
   for (const id of entry.sourceIds) check(Boolean(data.sources[id]), `Sumber ${id} tidak ditemukan`);
+  if (entry.status === 'Ringkasan terbatas') {
+    const evidenceStatuses = new Set(['Bagian tertentu', 'Abstrak atau cuplikan']);
+    check(entry.sourceIds.length > 0 && entry.sourceIds.every(id => evidenceStatuses.has(data.sources[id]?.readStatus)), `Ringkasan terbatas harus merujuk sumber yang dibaca sebagian atau cuplikannya: ${entry.id}`);
+  }
   check(entry.body.length > 0 && entry.body.every(x => hasText(x.heading) && x.paragraphs.length > 0 && x.paragraphs.every(hasText)), `Isi catatan belum lengkap: ${entry.id}`);
   if (entry.image) {
     localFile(entry.image);
