@@ -21,6 +21,12 @@ function check(condition, message) { assert.ok(condition, message); checks++; }
 const contentHash = createHash('sha256').update(read('data/content.js')).digest('hex').slice(0, 12);
 const contentScriptVersion = html.match(/<script defer src="data\/content\.js\?v=([a-f0-9]{12})"><\/script>/);
 check(contentScriptVersion?.[1] === contentHash, 'URL konten harus memakai hash berkas hasil generator');
+const appHash = createHash('sha256').update(read('app.js')).digest('hex').slice(0, 12);
+const appScriptVersion = html.match(/<script defer src="app\.js\?v=([a-f0-9]{12})"><\/script>/);
+check(appScriptVersion?.[1] === appHash, 'URL app.js harus memakai hash berkas antarmuka');
+const languageHash = createHash('sha256').update(read('landing-language.js')).digest('hex').slice(0, 12);
+const languageScriptVersion = html.match(/<script defer src="landing-language\.js\?v=([a-f0-9]{12})"><\/script>/);
+check(languageScriptVersion?.[1] === languageHash, 'URL landing-language.js harus memakai hash berkas terjemahan');
 function hasText(value) { return typeof value === 'string' && value.trim().length > 0; }
 function webUrl(value) { try { return ['https:', 'http:'].includes(new URL(value).protocol); } catch { return false; } }
 function localFile(relative) {

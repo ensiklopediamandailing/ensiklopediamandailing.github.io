@@ -49,6 +49,15 @@ if count != 1:
 index_html, reference_count_matches = re.subn(r'(<(?:dt|span)\b[^>]*\bdata-reference-count\b[^>]*>)[0-9]+(</(?:dt|span)>)', lambda match: f"{match.group(1)}{len(refs)}{match.group(2)}", index_html)
 if reference_count_matches != 2:
     raise SystemExit('Expected two data-reference-count elements in index.html')
+for script_name in ('app.js','landing-language.js'):
+    script_hash = sha256((ROOT/script_name).read_bytes()).hexdigest()[:12]
+    if script_name == 'app.js':
+        script_pattern = r'(<script defer src="app\.js)(?:\?v=[^"]*)?("></script>)'
+    else:
+        script_pattern = r'(<script defer src="landing-language\.js)(?:\?v=[^"]*)?("></script>)'
+    index_html, script_count = re.subn(script_pattern, lambda match: match.group(1) + '?v=' + script_hash + match.group(2), index_html, count=1)
+    if script_count != 1:
+        raise SystemExit('Expected one ' + script_name + ' script tag in index.html')
 index_path.write_text(index_html,encoding='utf-8')
 (ROOT/'docs/reference-inventory.json').write_text(json.dumps(refs,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({'entries':len(entries),'sources':len(sources),'themes':len(themes),'marga':len(data['marga'])}))
