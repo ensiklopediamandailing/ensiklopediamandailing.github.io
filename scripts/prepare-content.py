@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 source=ROOT/'docs/reference-inventory.json'
 refs=json.loads(source.read_text())
 read_labels={'metadata_only':'Metadata dan katalog','abstract_excerpt':'Abstrak atau cuplikan','sample_read':'Bagian tertentu','full_read':'Teks penuh'}
-sources={s['id']:{'id':s['id'],'title':s['title'],'authors':s['authors'],'year':s['year'],'publisher':s['publisher'],'url':s['url'],'previewUrl':s.get('preview_url'),'readStatus':read_labels[s['read_status']],'locator':s['locator'],'limit':s['caution'],'checkedOn':s['accessed_on']} for s in refs}
+sources={s['id']:{'id':s['id'],'title':s['title'],'authors':s['authors'],'year':s['year'],'publisher':s['publisher'],'url':s['url'],**({'previewUrl':s['preview_url']} if s.get('preview_url') else {}),'readStatus':read_labels[s['read_status']],'locator':s['locator'],'limit':s['caution'],'checkedOn':s['accessed_on']} for s in refs}
 themes=[
 ('sejarah','Sejarah','Jejak waktu, tempat, dan perubahan masyarakat.'),
 ('adat','Adat','Tradisi dan hubungan dalam kehidupan bersama.'),
