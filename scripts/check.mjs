@@ -1,5 +1,6 @@
 // Pemeriksaan integritas rilis; tidak memverifikasi kebenaran ilmiah sumber.
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
@@ -17,10 +18,14 @@ const data = JSON.parse(JSON.stringify(context.window.MANDAILING_CONTENT));
 const inventory = JSON.parse(read('docs/reference-inventory.json'));
 let checks = 0;
 function check(condition, message) { assert.ok(condition, message); checks++; }
+const contentHash = createHash('sha256').update(read('data/content.js')).digest('hex').slice(0, 12);
+const contentScriptVersion = html.match(/<script defer src="data\/content\.js\?v=([a-f0-9]{12})"><\/script>/);
+check(contentScriptVersion?.[1] === contentHash, 'URL konten harus memakai hash berkas hasil generator');
 function hasText(value) { return typeof value === 'string' && value.trim().length > 0; }
 function webUrl(value) { try { return ['https:', 'http:'].includes(new URL(value).protocol); } catch { return false; } }
 function localFile(relative) {
-  const target = path.resolve(dist, relative);
+  const assetPath = relative.split(/[?#]/, 1)[0];
+  const target = path.resolve(dist, assetPath);
   check(target.startsWith(dist + path.sep), `Aset keluar dari dist: ${relative}`);
   check(fs.existsSync(target) && fs.statSync(target).size > 0, `Aset hilang: ${relative}`);
 }
