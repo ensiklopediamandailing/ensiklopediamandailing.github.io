@@ -31,3 +31,6 @@ dialog{border:1px solid #ccbeaa;border-radius:4px;background:var(--paper);color:
 .landing-language-control select{max-width:135px;min-height:40px;padding:6px 8px;border:1px solid var(--line);border-radius:4px;background:var(--paper);color:var(--ink);font-size:13px}
 .translation-status{margin-top:12px;max-width:570px;color:var(--muted);font-size:13px;line-height:1.5}
 @media(max-width:760px){.landing-language-control{margin-left:auto}.landing-language-control select{max-width:112px;font-size:12px;padding-inline:4px}}
+
+/* Keep header controls within narrow screens. */
+@media(max-width:360px){.header-inner{gap:8px}.brand{gap:7px}.brand-icon{width:32px;height:36px}.brand-type{font-size:16px}.brand-type>span{font-size:7px;letter-spacing:1.4px}.menu-toggle{gap:5px;font-size:10px;padding-inline:7px}.landing-language-control select{max-width:80px;padding-inline:4px}}
