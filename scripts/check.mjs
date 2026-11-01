@@ -28,6 +28,10 @@ check(appSourceForDate.includes('escape(projectUpdatedLabel)'), 'Label tanggal m
 check(appSourceForDate.includes('const sourceCount = Object.keys(data.sources).length;'), 'Dialog sumber harus menghitung inventaris saat runtime');
 check(appSourceForDate.includes('Inventaris saat ini memuat ${sourceCount} rekaman sumber.'), 'Dialog sumber harus menampilkan jumlah inventaris terbaru');
 check(!appSourceForDate.includes('Berikut 19 rekaman referensi awal'), 'Dialog sumber tidak boleh mengunci jumlah sumber lama');
+check(appSourceForDate.includes('sourceRecord(id, linkToRecord = false)') && appSourceForDate.includes('data-open-source="${escape(source.id)}"'), 'Catatan harus menyediakan tautan internal ke rekam sumber');
+check(appSourceForDate.includes('data.entries.filter(entry => entry.sourceIds.includes(id))'), 'Rekam sumber harus menemukan catatan yang merujuknya dari data aktif');
+check(appSourceForDate.includes("history.replaceState(null, '', '#sumber/' + encodeURIComponent(id))"), 'Rekam sumber harus memiliki fragmen URL langsung');
+check(appSourceForDate.includes("location.hash.startsWith('#sumber/')") && appSourceForDate.includes("location.hash.startsWith('#catatan/') || location.hash.startsWith('#sumber/')"), 'Fragmen sumber harus membuka rekam dan kembali ke bagian catatan saat dialog ditutup');
 const contentHash = createHash('sha256').update(read('data/content.js')).digest('hex').slice(0, 12);
 const contentScriptVersion = html.match(/<script defer src="data\/content\.js\?v=([a-f0-9]{12})"><\/script>/);
 check(contentScriptVersion?.[1] === contentHash, 'URL konten harus memakai hash berkas hasil generator');
