@@ -3,7 +3,7 @@ window.MANDAILING_CONTENT = {
   "project": {
     "title": "Ensiklopedia Suku Mandailing",
     "version": "0.1",
-    "updatedOn": "2026-10-27",
+    "updatedOn": "2026-11-01",
     "blueprintDate": "2026-10-26",
     "founder": "Ahmad Saleh",
     "blueprintUrl": null,
@@ -112,10 +112,10 @@ window.MANDAILING_CONTENT = {
       "year": "2023",
       "publisher": "Cogent Arts & Humanities 10(1), artikel 2211816",
       "url": "https://doi.org/10.1080/23311983.2023.2211816",
-      "readStatus": "Abstrak atau cuplikan",
-      "locator": "Abstrak dan cuplikan teks terindeks; artikel lengkap belum diperiksa",
-      "limit": "Daftar penulis dan DOI teridentifikasi; nomor halaman isi belum ditetapkan.",
-      "checkedOn": "2026-10-26"
+      "readStatus": "Bagian tertentu",
+      "locator": "PDF hlm. 4–8: metode, hasil, dan simpulan; observasi Markobar di Pasar Maga pada 7 Juni 2019.",
+      "limit": "Jumlah informan tidak dinyatakan; abstrak dan bagian metode memakai label pendekatan yang tidak konsisten. Satu konteks lokal; perlu pembandingan dan tinjauan penutur.",
+      "checkedOn": "2026-11-01"
     },
     "R002": {
       "id": "R002",
@@ -197,9 +197,9 @@ window.MANDAILING_CONTENT = {
       "publisher": "Berita Penelitian Arkeologi 31, Balai Arkeologi Sumatera Utara",
       "url": "https://repositori.kemendikdasmen.go.id/20018/1/BPA%2031%20tahun%202017.pdf",
       "readStatus": "Bagian tertentu",
-      "locator": "Halaman judul, kata pengantar, daftar isi; PDF halaman 2 sampai 5",
-      "limit": "Teks isi dan provenans tiap objek belum diaudit menyeluruh; nomor halaman cetak harus dicatat saat ekstraksi.",
-      "checkedOn": "2026-10-26"
+      "locator": "PDF hlm. 4 dan 56–57: metode, ringkasan hasil pilihan, dan rekomendasi.",
+      "limit": "20 rekaman yang dilaporkan mencakup tiga kabupaten; angka bukan sensus. Teks, bahasa, dan provenans tiap objek belum diaudit.",
+      "checkedOn": "2026-11-01"
     },
     "R009": {
       "id": "R009",
@@ -220,10 +220,10 @@ window.MANDAILING_CONTENT = {
       "year": "2013 [tahun volume]",
       "publisher": "Bercadik Jurnal Pengkajian dan Penciptaan Seni 1(1)",
       "url": "https://doi.org/10.26887/bcdk.v1i1.19",
-      "readStatus": "Abstrak atau cuplikan",
-      "locator": "Laman artikel dan abstrak",
-      "limit": "Nomor halaman belum diperiksa; gunakan tahun volume sambil mencatat metadata unggah tersendiri.",
-      "checkedOn": "2026-10-26"
+      "readStatus": "Bagian tertentu",
+      "locator": "Laman penerbit serta metode dan hasil pada salinan PDF repositori Garuda.",
+      "limit": "PDF yang ditemukan berjudul salinan hasil perbaikan; versi final dan halaman belum dicocokkan. Klaim dibatasi pada kasus Kotanopan.",
+      "checkedOn": "2026-11-01"
     },
     "R011": {
       "id": "R011",
@@ -268,10 +268,10 @@ window.MANDAILING_CONTENT = {
       "year": "2022",
       "publisher": "Al Kauniyah Jurnal Biologi 15(1), 107 sampai 120",
       "url": "https://doi.org/10.15408/kauniyah.v15i1.17958",
-      "readStatus": "Abstrak atau cuplikan",
-      "locator": "Laman artikel, metadata, abstrak",
-      "limit": "Tanggal publikasi laman 21 Juni 2022; tidak digunakan untuk memberi resep atau dosis pengobatan.",
-      "checkedOn": "2026-10-26"
+      "readStatus": "Bagian tertentu",
+      "locator": "PDF hlm. 107–120: metode, hasil/simpulan, dan beberapa baris tabel.",
+      "limit": "Satu desa; tabel hanya ditelaah sebagian. Laporan penggunaan tumbuhan bukan bukti klinis dan bukan dasar resep atau dosis.",
+      "checkedOn": "2026-11-01"
     },
     "R015": {
       "id": "R015",
@@ -364,7 +364,7 @@ window.MANDAILING_CONTENT = {
           ]
         }
       ],
-      "limit": "Pembacaan sumber masih terbatas pada abstrak dan cuplikan. Variasi kampung serta praktik perlu dibandingkan melalui penelitian lanjutan."
+      "limit": "Jumlah informan tidak dinyatakan; label pendekatan di abstrak dan metode tidak konsisten. Satu konteks lokal; perlu pembandingan dan tinjauan penutur."
     },
     {
       "id": "inventaris-marga",
@@ -434,7 +434,7 @@ window.MANDAILING_CONTENT = {
           ]
         }
       ],
-      "limit": "Laman dan abstrak telah diperiksa. Teks lengkap, variasi lokal, serta peninjauan pelaku budaya masih diperlukan.",
+      "limit": "Laman penerbit, abstrak, dan bagian metode/hasil pada salinan PDF hasil perbaikan dibaca; versi final, variasi lokal, serta peninjauan pelaku budaya masih diperlukan.",
       "mediaId": "gordang"
     },
     {
@@ -498,7 +498,7 @@ window.MANDAILING_CONTENT = {
           ]
         }
       ],
-      "limit": "Pemeriksaan awal mencakup halaman judul, kata pengantar, dan daftar isi. Isi seluruh objek belum diaudit; teks ritual tidak direproduksi di sini."
+      "limit": "Bagian metode, hasil pilihan, dan rekomendasi ditelaah. Laporan mencakup tiga kabupaten; teks dan provenans tiap objek belum diaudit."
     },
     {
       "id": "diaspora-dan-kampung",
