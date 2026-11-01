@@ -1,6 +1,6 @@
 # Pedoman data dan tautan silang — MVP Mandailing
 
-Status: **rancangan teknis** (31 Oktober 2026). Dokumen ini tidak mengesahkan klaim sejarah, padanan kata, atau hubungan kekerabatan.
+Status: **rancangan teknis**, diperbarui 1 November 2026. Dokumen ini tidak mengesahkan klaim sejarah, padanan kata, atau hubungan kekerabatan.
 
 ## Sumber kebenaran
 
@@ -42,8 +42,7 @@ Aturan penerimaan: (1) kedua ID ada di data sumber masing-masing; (2) hubungan i
 
 ## Penerimaan kontribusi
 
-Halaman `kontributor.html` di GitHub Pages menyimpan draf lokal di browser. Secara terpisah, prototipe formulir publik dan panel admin Google Apps Script telah di-deploy dan dilaporkan dapat dibuka, tetapi pengiriman ujicoba **belum terverifikasi menghasilkan berkas di folder intake Google Drive**. Jangan menyatakan sistem penerimaan daring sudah operasional sebelum uji ujung-ke-ujung (kirim → berkas masuk → antrean admin → moderasi) berhasil. Sebelum membuka kontribusi luas, tetapkan kebijakan privasi, izin rekaman/foto, bukti penerimaan, pembatasan penyalahgunaan, dan audit akses. Jangan menyimpan silsilah keluarga hidup, kontak pribadi atau bahan sensitif di data publik.
-
+Halaman `kontributor.html` di GitHub Pages menyimpan draf lokal di browser. Kode prototipe formulir publik dan panel admin tersimpan di `integrations/apps-script/`, tetapi **belum dideploy sebagai layanan Apps Script**. Folder intake Google Drive yang diperiksa untuk audit ini masih kosong; belum ada pengiriman uji yang terverifikasi menghasilkan berkas atau antrean moderasi. Jangan menyatakan sistem penerimaan daring sudah operasional sebelum uji ujung-ke-ujung (kirim → berkas masuk → antrean admin → moderasi) berhasil. Sebelum membuka kontribusi luas, tetapkan kebijakan privasi, izin rekaman/foto, bukti penerimaan, pembatasan penyalahgunaan, dan audit akses. Jangan menyimpan silsilah keluarga hidup, kontak pribadi atau bahan sensitif di data publik.
 ## Pemeriksaan sebelum rilis
 
 1. Jalankan `python3 scripts/prepare-content.py` lalu `node scripts/check.mjs`.
