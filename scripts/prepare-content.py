@@ -1,5 +1,7 @@
 from pathlib import Path
+from hashlib import sha256
 import json
+import re
 ROOT=Path(__file__).resolve().parents[1]
 source=ROOT/'docs/reference-inventory.json'
 refs=json.loads(source.read_text())
@@ -33,6 +35,16 @@ data={'project':{'title':'Ensiklopedia Suku Mandailing','version':'0.1','updated
 {'id':'mora','name':'Mora','kicker':'01 / RELASI KEKERABATAN','description':'Kelompok kerabat pemberi istri dalam hubungan yang sedang dibahas. Kedudukannya perlu dijelaskan menurut pihak acuan dan konteks setempat.','sourceIds':['R001']},
 {'id':'kahanggi','name':'Kahanggi','kicker':'02 / RELASI KEKERABATAN','description':'Kerabat yang dijelaskan dalam sumber melalui hubungan semarga. Cakupan operasional serta perwakilan dalam acara perlu diperiksa secara lokal.','sourceIds':['R001']},
 {'id':'anak-boru','name':'Anak boru','kicker':'03 / RELASI KEKERABATAN','description':'Kelompok kerabat penerima istri dalam hubungan yang sedang dibahas. Perannya dipahami bersama pihak acuan dan konteks adat.','sourceIds':['R001']}], 'marga':['Lubis','Nasution','Batubara','Daulae','Matondang','Rangkuti','Parinduri','Pulungan'],'sources':sources,'entries':entries,'media':media}
-(ROOT/'data/content.js').write_text('/* Konten publik. Jangan menaruh data pribadi atau arsip terbatas di sini. */\nwindow.MANDAILING_CONTENT = '+json.dumps(data,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
+content_path=ROOT/'data/content.js'
+content_text='/* Konten publik. Jangan menaruh data pribadi atau arsip terbatas di sini. */\nwindow.MANDAILING_CONTENT = '+json.dumps(data,ensure_ascii=False,indent=2)+';\n'
+content_path.write_text(content_text,encoding='utf-8')
+content_hash=sha256(content_text.encode('utf-8')).hexdigest()[:12]
+index_path=ROOT/'index.html'
+index_html=index_path.read_text(encoding='utf-8')
+pattern=r'(<script defer src="data/content\.js)(?:\?v=[^"]*)?("></script>)'
+index_html,count=re.subn(pattern,lambda match:f"{match.group(1)}?v={content_hash}{match.group(2)}",index_html,count=1)
+if count != 1:
+    raise SystemExit('Expected one data/content.js script tag in index.html')
+index_path.write_text(index_html,encoding='utf-8')
 (ROOT/'docs/reference-inventory.json').write_text(json.dumps(refs,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({'entries':len(entries),'sources':len(sources),'themes':len(themes),'marga':len(data['marga'])}))
