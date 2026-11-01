@@ -55,3 +55,12 @@ PR #28 menambahkan empat pemeriksaan otomatis untuk tanggal editorial: metadata 
 PR #29 memperbarui dialog daftar sumber agar jumlahnya dihitung dari data yang dimuat, mengganti keterangan katalog lama, dan memperbarui hash cache app.js. Tiga pemeriksaan regresi baru memastikan hitungan dinamis, teks jumlah, dan ketiadaan label tetap “19 rekaman”. Pemeriksaan lokal lulus 473 pemeriksaan dengan 10 catatan dan 23 sumber. Pemeriksaan browser langsung setelah penerbitan menampilkan “Inventaris saat ini memuat 23 rekaman sumber” serta daftar R001–R023.
 
 CI PR #29 lulus pada [run 41311931379](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41311931379); validasi main [41311974656](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41311974656) dan GitHub Pages [41311974038](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41311974038) juga sukses. Perubahan hanya memperbarui tampilan jumlah sumber; tidak mengubah isi budaya atau status pembacaan.
+
+
+## Navigasi dua arah catatan dan sumber — 2 November 2026
+
+PR #31 menambahkan tautan dari artikel ke rekam sumber, daftar balik ke catatan yang memakai ID sumber tersebut, serta fragmen langsung #sumber/<id>. Hubungan diturunkan dari sourceIds pada data aktif. Tidak ada isi budaya, metadata sumber, atau status editorial yang diubah.
+
+Pemeriksaan integritas lokal lulus 477 pemeriksaan: 10 catatan, 10 tema, dan 23 sumber. CI PR #31, pemeriksaan validate pada [run 41360415504](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41360415504), sukses. Runner mencatat peringatan Node.js 20 dan pemberitahuan migrasi ubuntu-latest ke Ubuntu 26; keduanya non-blocking.
+
+PR #31 digabung squash pada SHA 2c881c98e494da58fba8029001f3478cc0421275. Pemeriksaan browser dan GitHub Pages pasca-merge belum dicatat pada pembaruan ini. Pemetaan lintas Kamus–Ensiklopedia dan semua tahap editorial yang memerlukan verifikasi tetap ditunda.
