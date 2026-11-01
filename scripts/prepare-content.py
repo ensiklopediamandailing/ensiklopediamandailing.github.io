@@ -46,6 +46,9 @@ pattern=r'(<script defer src="data/content\.js)(?:\?v=[^"]*)?("></script>)'
 index_html,count=re.subn(pattern,lambda match:f"{match.group(1)}?v={content_hash}{match.group(2)}",index_html,count=1)
 if count != 1:
     raise SystemExit('Expected one data/content.js script tag in index.html')
+index_html, reference_count_matches = re.subn(r'(<(?:dt|span)\b[^>]*\bdata-reference-count\b[^>]*>)[0-9]+(</(?:dt|span)>)', lambda match: f"{match.group(1)}{len(refs)}{match.group(2)}", index_html)
+if reference_count_matches != 2:
+    raise SystemExit('Expected two data-reference-count elements in index.html')
 index_path.write_text(index_html,encoding='utf-8')
 (ROOT/'docs/reference-inventory.json').write_text(json.dumps(refs,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({'entries':len(entries),'sources':len(sources),'themes':len(themes),'marga':len(data['marga'])}))

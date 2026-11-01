@@ -35,6 +35,8 @@ for (const [name, values] of [['tema', data.themes.map(x => x.id)], ['catatan', 
   check(new Set(values).size === values.length, `ID/nama ${name} duplikat`);
 }
 check(inventory.length === Object.keys(data.sources).length, 'Jumlah sumber generator tidak konsisten');
+const referenceCounts = [...html.matchAll(/<\w+\b[^>]*\bdata-reference-count\b[^>]*>(\d+)<\/\w+>/g)].map(match => Number(match[1]));
+check(referenceCounts.length === 2 && referenceCounts.every(count => count === inventory.length), 'Jumlah referensi publik harus cocok dengan inventaris');
 const themeIds = new Set(data.themes.map(x => x.id));
 const inventoryIds = new Set(inventory.map(x => x.id));
 for (const [id, source] of Object.entries(data.sources)) {
