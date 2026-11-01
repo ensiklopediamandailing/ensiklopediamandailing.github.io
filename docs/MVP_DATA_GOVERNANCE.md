@@ -59,3 +59,8 @@ Halaman `kontributor.html` di GitHub Pages menyimpan draf lokal di browser. Kode
 - **P2:** audio berizin dan indeks pencarian gabungan.
 
 Rencana kerja dan catatan audit disimpan di folder Google Drive internal proyek. URL folder internal tidak disalin ke repositori publik; jangan menautkan dokumen pribadi atau konten terbatas ke situs publik.
+
+
+## Menyiapkan draf artikel
+
+Gunakan [templat riset artikel](ARTICLE_RESEARCH_TEMPLATE.md) untuk mencatat pertanyaan, pernyataan yang akan diperiksa, lokator sumber, batas bukti, dan status telaah. Templat sengaja kosong: mengisinya tidak dengan sendirinya memverifikasi sumber atau menyetujui publikasi. Jangan memindahkan nilai status usulan lintas-proyek ke data artikel tanpa pemetaan skema yang terdokumentasi.
