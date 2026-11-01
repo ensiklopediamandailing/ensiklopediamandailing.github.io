@@ -58,4 +58,4 @@ Halaman `kontributor.html` di GitHub Pages menyimpan draf lokal di browser. Kode
 - **P1:** metadata review, pemetaan ID lintas situs, kontribusi termoderasi, aksesibilitas.
 - **P2:** audio berizin dan indeks pencarian gabungan.
 
-Rencana kerja dan catatan audit: [folder Google Drive Audit dan Pengembangan](https://drive.google.com/drive/folders/1OEdcxyzmDRUAksewLPCFH0G_eUbUSFwq). Folder ini merupakan ruang kerja internal; jangan menautkan dokumen pribadi atau konten terbatas ke situs publik.
+Rencana kerja dan catatan audit disimpan di folder Google Drive internal proyek. URL folder internal tidak disalin ke repositori publik; jangan menautkan dokumen pribadi atau konten terbatas ke situs publik.
