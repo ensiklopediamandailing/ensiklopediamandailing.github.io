@@ -29,6 +29,6 @@ jobs:
         run: python3 scripts/prepare-content.py
       - name: Check generated content is committed
         run: |
-          git diff --exit-code -- data/content.js
+          git diff --exit-code -- data/content.js index.html
       - name: Run integrity and accessibility baseline checks
         run: node scripts/check.mjs
