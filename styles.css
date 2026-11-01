@@ -39,3 +39,6 @@ dialog{border:1px solid #ccbeaa;border-radius:4px;background:var(--paper);color:
 .stage-separator{color:var(--muted)}
 .theme-number,.role-kicker{color:#79664f}
 .step-index{color:#79664f}
+
+/* Keep placeholder text readable on light surfaces. */
+.search-field input::placeholder,.contribution-dialog input::placeholder,.contribution-dialog textarea::placeholder,.contributor-form input::placeholder,.contributor-form textarea::placeholder{color:var(--muted);opacity:1}
