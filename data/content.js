@@ -369,6 +369,18 @@ window.MANDAILING_CONTENT = {
       "locator": "Keterangan katalog: acara 13/12/2012; 4 unit; durasi 01:03:11; No. Penerimaan 2013/0001308W. Rekaman belum ditonton.",
       "limit": "Video, pembicara, makalah, dan bukti yang dirujuk belum diperiksa. Keterangan katalog bukan bukti primer abad ke-19; jangan menyajikan ringkasannya sebagai transkripsi atau konsensus historiografi. Ketersediaan berkas video belum dipastikan.",
       "checkedOn": "2026-11-01"
+    },
+    "R023": {
+      "id": "R023",
+      "title": "Siapa Buka Kuala Lumpur?",
+      "authors": "Usdi Abdullah",
+      "year": "2012",
+      "publisher": "Puspawangsa, Berita Arkib Negara Malaysia, Bil. 4/2012 (Oktober–Disember), hlm. 24–25",
+      "url": "https://www.arkib.gov.my/images/penerbitan/edaran%20awam/puspawangsa/Puspawangsa%20Bil%204%202012-a.pdf",
+      "readStatus": "Bagian tertentu",
+      "locator": "PDF halaman tercetak 24–25: artikel tentang Polemik Sejarah Sesi 28; teks artikel diperiksa; bagian lain buletin tidak dibaca.",
+      "limit": "Hanya artikel pada hlm. 24–25 yang diperiksa; watikah dan bukti arsip yang dirujuk tidak ditampilkan atau dicocokkan pada bagian yang dibaca. Keterangan video R022 menyebut 1266 Hijrah; cocokkan penanggalan pada dokumen asli sebelum mengutip. Kesimpulan artikel bukan konsensus yang ditetapkan proyek.",
+      "checkedOn": "2026-11-01"
     }
   },
   "entries": [
@@ -602,7 +614,7 @@ window.MANDAILING_CONTENT = {
       "id": "asal-usul-kuala-lumpur",
       "title": "Kuala Lumpur: menelusuri narasi asal-usul dalam sumber",
       "category": "sejarah",
-      "summary": "Empat rujukan tercatat tentang narasi perkembangan awal Kuala Lumpur; inventaris ini belum menetapkan satu tokoh sebagai pendiri.",
+      "summary": "Lima rujukan tercatat tentang narasi perkembangan awal Kuala Lumpur; inventaris ini belum menetapkan satu tokoh sebagai pendiri.",
       "status": "Inventaris sumber",
       "art": "sejarah",
       "artText": "Asal",
@@ -611,7 +623,8 @@ window.MANDAILING_CONTENT = {
         "R013",
         "R020",
         "R021",
-        "R022"
+        "R022",
+        "R023"
       ],
       "tags": [
         "Kuala Lumpur",
@@ -641,9 +654,16 @@ window.MANDAILING_CONTENT = {
             "Katalog Arkib Negara Malaysia mencatat video sesi ke-28 Polemik Sejarah Malaysia, “Penempatan Awal Kuala Lumpur”, pada 13 Desember 2012. Deskripsi katalog menyebut makalah “Jejak Raja Abdullah, Sutan Puasa dan Yap Ah Loy” dan merangkum kesimpulan yang mengutamakan Raja Abdullah.",
             "Ringkasan katalog ini adalah catatan tentang sebuah acara dan rekaman, bukan isi video yang telah ditelaah atau bukti langsung peristiwa abad ke-19. Proyek belum memeriksa rekaman berdurasi 1:03:11, makalah, atau bukti yang dirujuk; R022 tetap metadata-only."
           ]
+        },
+        {
+          "heading": "Laporan polemik dalam buletin Arkib Negara",
+          "paragraphs": [
+            "Artikel Usdi Abdullah “Siapa Buka Kuala Lumpur?” di Puspawangsa Bil. 4/2012 (hlm. tercetak 24–25) merangkum sesi polemik 13 Desember 2012 dan dua kertas kerja akademik. Laporan itu mengutip garis waktu Raja Abdullah (1857), Sutan Puasa (1859), dan Yap Ah Loy (1862), lalu menyimpulkan Raja Abdullah sebagai pengasas.",
+            "Itu kesimpulan dalam laporan buletin, bukan penetapan proyek atau bukti langsung. Artikel juga menyebut watikah 1850 dan watikah baru 1864, tetapi dokumen asli dan rujukan arsipnya belum diperiksa. Keterangan video R022 menyebut 1266 Hijrah; cocokkan tarikh dokumen asal sebelum mengutip."
+          ]
         }
       ],
-      "limit": "R013 dan R020 tetap metadata-only; R021 hanya cuplikan awal Bab 2; R022 hanya keterangan katalog untuk video yang belum diperiksa. Belum ada telaah teks penuh, tinjauan komunitas, atau dasar untuk menetapkan satu narasi sebagai konsensus."
+      "limit": "R013 dan R020 tetap metadata-only; R021 hanya cuplikan awal Bab 2; R022 hanya keterangan katalog video; R023 adalah pembacaan artikel laporan polemik pada hlm. 24–25, bukan pemeriksaan dokumen asal. Belum ada tinjauan komunitas atau dasar untuk menetapkan satu narasi sebagai konsensus."
     },
     {
       "id": "bagas-godang",
