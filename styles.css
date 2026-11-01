@@ -42,3 +42,6 @@ dialog{border:1px solid #ccbeaa;border-radius:4px;background:var(--paper);color:
 
 /* Keep placeholder text readable on light surfaces. */
 .search-field input::placeholder,.contribution-dialog input::placeholder,.contribution-dialog textarea::placeholder,.contributor-form input::placeholder,.contributor-form textarea::placeholder{color:var(--muted);opacity:1}
+
+.footer-contact a{color:var(--maroon);text-decoration:underline;text-underline-offset:2px}
+.footer-contact a:hover{color:var(--maroon-deep)}
