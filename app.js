@@ -112,7 +112,11 @@
     const q = normalize(state.query.trim());
     const filtered = data.entries.filter(entry => {
       if (state.category !== 'all' && entry.category !== state.category) return false;
-      const searchable = [entry.title, entry.summary, themeName(entry.category), ...entry.tags, ...entry.sourceIds.map(id => data.sources[id]?.authors || '')].join(' ');
+      const sourceSearchTerms = entry.sourceIds.flatMap(id => {
+        const source = data.sources[id];
+        return source ? [source.id, source.title, source.authors, source.year, source.publisher, source.readStatus, source.locator] : [];
+      });
+      const searchable = [entry.title, entry.summary, themeName(entry.category), ...entry.tags, ...sourceSearchTerms].join(' ');
       return !q || normalize(searchable).includes(q);
     });
     const hasFilter = Boolean(q) || state.category !== 'all';
