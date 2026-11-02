@@ -71,4 +71,4 @@ Generator `npm run content:generate` menghasilkan 11 catatan, 23 sumber, 10 tema
 
 `npm run check` lulus 488 pemeriksaan integritas pada snapshot lokal: ID, referensi, kategori, aset, tanggal, dan pemeriksaan dasar lain. `git diff --check` juga lulus. Ringkasan status pada data: 6 Ringkasan terbatas, 4 Inventaris sumber, dan 1 Dokumentasi visual beratribusi; 16 dari 23 ID sumber tercantum pada setidaknya satu catatan.
 
-Batas: R015 tetap berstatus Abstrak atau cuplikan. Teks penuh dan arsip belum diperiksa; kartu ini tidak merangkum temuan atau menetapkan kronologi. Pemeriksaan ini tidak mencakup pembaca layar, browser/Pages, telaah komunitas, atau uji Apps Script. CI GitHub belum dijalankan pada saat catatan ini dibuat.
+Batas: R015 tetap berstatus Abstrak atau cuplikan. Teks penuh dan arsip belum diperiksa; kartu ini tidak merangkum temuan atau menetapkan kronologi. Pemeriksaan ini tidak mencakup pembaca layar, browser/Pages, telaah komunitas, atau uji Apps Script. CI PR #36 lulus pada run 41368261488 (pemeriksaan validate; 2 November 2026).
