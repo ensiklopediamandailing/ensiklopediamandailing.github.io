@@ -388,7 +388,7 @@ window.MANDAILING_CONTENT = {
       "id": "dalihan-na-tolu",
       "title": "Dalihan Na Tolu: membaca hubungan kekerabatan",
       "category": "adat",
-      "summary": "Pengantar penelitian tentang mora, kahanggi, dan anak boru dalam hubungan keluarga serta konteks adat.",
+      "summary": "Satu kajian tutur di Pasar Maga menjadi rujukan terbatas untuk membaca hubungan kekerabatan; cakupan lokalnya tetap disebut.",
       "status": "Ringkasan terbatas",
       "art": "dnt",
       "artText": "DNT",
@@ -406,14 +406,21 @@ window.MANDAILING_CONTENT = {
       ],
       "body": [
         {
-          "heading": "Pengantar yang terus diteliti",
+          "heading": "Konteks sampel yang ditelaah",
           "paragraphs": [
-            "Kajian tutur di Pasar Maga menjadi salah satu rujukan awal untuk memahami hubungan kekerabatan. Penjelasan pada halaman ini bersifat pengantar dan belum ditinjau komunitas.",
-            "Dalam rancangan ensiklopedia, peran dicatat menurut pihak acuan, keluarga, dan konteks peristiwa. Peran tersebut tidak dilekatkan secara permanen pada seluruh marga."
+            "Artikel Zulkarnain, Asmara, dan Sutatminingsih (2023) menjadi salah satu rujukan awal tentang tutur dalam komunitas Mandailing. Inventaris sumber mencatat observasi Markobar pada satu acara perkawinan di Pasar Maga pada 7 Juni 2019.",
+            "Bagian PDF hlm. 4–8 dicatat sebagai sampel yang dibaca, mencakup metode, hasil, dan simpulan. Rincian ini memberi konteks pada lokasi dan acara yang diteliti, bukan gambaran semua tempat atau generasi."
+          ]
+        },
+        {
+          "heading": "Batas pembacaan dan penafsiran",
+          "paragraphs": [
+            "Jumlah informan tidak dinyatakan pada bagian yang ditelaah, dan label pendekatan di abstrak serta metode tidak konsisten. Karena itu catatan ini tidak menetapkan satu aturan tetap untuk semua hubungan kekerabatan.",
+            "Dalam rancangan ensiklopedia, peran dicatat menurut pihak acuan, keluarga, dan konteks peristiwa. Peran tersebut tidak dilekatkan secara permanen pada seluruh marga; pembandingan lokasi dan tinjauan penutur masih diperlukan."
           ]
         }
       ],
-      "limit": "Jumlah informan tidak dinyatakan; label pendekatan di abstrak dan metode tidak konsisten. Satu konteks lokal; perlu pembandingan dan tinjauan penutur."
+      "limit": "R001 berstatus Bagian tertentu: sampel PDF hlm. 4–8 dan satu konteks lokal. Jumlah informan tidak dinyatakan pada bagian yang ditelaah; label pendekatan di abstrak dan metode tidak konsisten. Perlu pembandingan dan tinjauan penutur."
     },
     {
       "id": "inventaris-marga",
