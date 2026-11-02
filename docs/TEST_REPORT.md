@@ -64,3 +64,11 @@ PR #31 menambahkan tautan dari artikel ke rekam sumber, daftar balik ke catatan 
 Pemeriksaan integritas lokal lulus 477 pemeriksaan: 10 catatan, 10 tema, dan 23 sumber. CI PR #31, pemeriksaan validate pada [run 41360415504](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41360415504), sukses. Runner mencatat peringatan Node.js 20 dan pemberitahuan migrasi ubuntu-latest ke Ubuntu 26; keduanya non-blocking.
 
 PR #31 digabung squash pada SHA 2c881c98e494da58fba8029001f3478cc0421275. Pemeriksaan browser dan GitHub Pages pasca-merge belum dicatat pada pembaruan ini. Pemetaan lintas Kamus–Ensiklopedia dan semua tahap editorial yang memerlukan verifikasi tetap ditunda.
+
+## Kartu inventaris sumber R015 pada tema Agama — 2 November 2026
+
+Generator `npm run content:generate` menghasilkan 11 catatan, 23 sumber, 10 tema, dan 8 nama marga. Kartu `islamisasi-mandailing-natal` memakai status **Inventaris sumber** dan menautkan R015. Isinya hanya memaparkan metadata yang sudah tercatat pada inventaris, membedakan tahun volume 2021 dari tanggal publikasi laman 18 Mei 2022, serta menahan kesimpulan kronologi.
+
+`npm run check` lulus 488 pemeriksaan integritas pada snapshot lokal: ID, referensi, kategori, aset, tanggal, dan pemeriksaan dasar lain. `git diff --check` juga lulus. Ringkasan status pada data: 6 Ringkasan terbatas, 4 Inventaris sumber, dan 1 Dokumentasi visual beratribusi; 16 dari 23 ID sumber tercantum pada setidaknya satu catatan.
+
+Batas: R015 tetap berstatus Abstrak atau cuplikan. Teks penuh dan arsip belum diperiksa; kartu ini tidak merangkum temuan atau menetapkan kronologi. Pemeriksaan ini tidak mencakup pembaca layar, browser/Pages, telaah komunitas, atau uji Apps Script. CI GitHub belum dijalankan pada saat catatan ini dibuat.

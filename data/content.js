@@ -3,7 +3,7 @@ window.MANDAILING_CONTENT = {
   "project": {
     "title": "Ensiklopedia Suku Mandailing",
     "version": "0.1",
-    "updatedOn": "2026-11-01",
+    "updatedOn": "2026-11-02",
     "blueprintDate": "2026-10-26",
     "founder": "Ahmad Saleh",
     "blueprintUrl": null,
@@ -729,6 +729,43 @@ window.MANDAILING_CONTENT = {
       ],
       "limit": "Status ini menyatakan identifikasi serta atribusi media. Bukan pengesahan sejarah bangunan atau seluruh makna budayanya.",
       "mediaId": "bagas"
+    },
+    {
+      "id": "islamisasi-mandailing-natal",
+      "title": "Rujukan awal tentang Islamisasi Mandailing Natal",
+      "category": "agama",
+      "summary": "Inventaris proyek mencatat satu artikel berstatus abstrak atau cuplikan; belum ada kesimpulan proyek tentang kronologi.",
+      "status": "Inventaris sumber",
+      "art": "sejarah",
+      "artText": "Rujukan",
+      "artCaption": "AGAMA · SUMBER",
+      "sourceIds": [
+        "R015"
+      ],
+      "tags": [
+        "Islamization",
+        "Mandailing Natal",
+        "Padri War",
+        "kronologi",
+        "historiografi"
+      ],
+      "body": [
+        {
+          "heading": "Rekaman bibliografis",
+          "paragraphs": [
+            "Dalam inventaris proyek, R015 tercatat sebagai artikel Amliansyah dan Siti Fatimah berjudul “Islamization of Mandailing Natal After the Padri War,” pada Science and Environmental Journal for Postgraduate 4(1), halaman 71–75. Catatan inventaris mempertahankan tahun volume 2021 dan tanggal publikasi laman 18 Mei 2022 sebagai dua rekaman metadata, bukan menyatukannya.",
+            "Catatan ini membantu pembaca menemukan rujukan untuk tema agama; isinya tidak merangkum hasil penelitian atau menyatakan kronologi."
+          ]
+        },
+        {
+          "heading": "Batas pembacaan",
+          "paragraphs": [
+            "Inventaris menandai R015 sebagai abstrak atau cuplikan. Teks lengkap dan arsip yang dirujuk belum ditelaah. Perbedaan kronologi yang tercatat tetap menunggu pemeriksaan teks penuh dan arsip.",
+            "Proyek belum menarik kesimpulan tentang waktu, pelaku, jalur, atau bentuk perubahan praktik agama dari R015."
+          ]
+        }
+      ],
+      "limit": "R015 tetap berstatus Abstrak atau cuplikan. Teks lengkap dan arsip belum diperiksa; catatan ini adalah inventaris rujukan, bukan ringkasan temuan atau kesimpulan sejarah."
     }
   ],
   "media": {

@@ -1,6 +1,6 @@
 # Peta cakupan konten — 2 November 2026
 
-Snapshot struktur data Ensiklopedia pada `main` (SHA `16b8835aae83251a2ea92cd7fbb35f63910f4332`). Sumber angka: `data/content.js` dan hubungan `sourceIds` yang disimpan pada catatan. Ini audit struktur, bukan penilaian kebenaran sumber atau isi budaya.
+Snapshot struktur `data/content.js` setelah pembaruan generator. Angka menunjukkan isi dan relasi ID yang tampil pada data; audit ini bukan validasi kebenaran sejarah atau budaya.
 
 ## Catatan menurut tema
 
@@ -14,29 +14,30 @@ Snapshot struktur data Ensiklopedia pada `main` (SHA `16b8835aae83251a2ea92cd7fb
 | Arsitektur | 1 | `bagas-godang` |
 | Kuliner | 0 | — |
 | Pengetahuan lokal | 1 | `etnobotani-tanjung-julu` |
-| Agama | 0 | — |
+| Agama | 1 | `islamisasi-mandailing-natal` |
 | Diaspora | 1 | `diaspora-dan-kampung` |
 
-Total: 10 catatan pada 8 dari 10 tema.
+Total 11 catatan pada 9 dari 10 tema. Catatan baru pada tema Agama berstatus **Inventaris sumber**; tema Kuliner masih kosong.
 
 ## Status editorial dan baca
 
-| Kelompok | Jumlah |
+| Status catatan | Jumlah |
 | --- | ---: |
 | Ringkasan terbatas | 6 |
-| Inventaris sumber | 3 |
+| Inventaris sumber | 4 |
 | Dokumentasi visual beratribusi | 1 |
 
-Dari 23 rekaman sumber: 9 berstatus **Bagian tertentu**, 12 **Metadata dan katalog**, dan 2 **Abstrak atau cuplikan**. Tidak ada rekaman berstatus teks penuh.
+Dari 23 rekaman sumber, 9 berstatus **Bagian tertentu**, 12 **Metadata dan katalog**, 2 **Abstrak atau cuplikan**, dan 0 **Teks penuh**. Belum ada catatan yang ditinjau komunitas.
 
-## Hubungan sumber di data
+## Relasi sumber
 
-Lima belas ID sumber muncul pada setidaknya satu `sourceIds` catatan: 7 berstatus Bagian tertentu, 7 Metadata dan katalog, dan 1 Abstrak atau cuplikan. Delapan ID tidak ditautkan oleh `sourceIds` catatan publik pada snapshot ini: `R003`, `R011`, `R012`, `R015`, `R016`, `R017`, `R018`, dan `R019`. Ini hanya menghitung relasi data; sumber tersebut tidak dinyatakan tak berguna atau tidak relevan.
+Enam belas ID sumber muncul pada sekurangnya satu catatan: 7 berstatus Bagian tertentu, 7 Metadata dan katalog, dan 2 Abstrak atau cuplikan. Tujuh ID belum ditautkan oleh `sourceIds`: `R003`, `R011`, `R012`, `R016`, `R017`, `R018`, dan `R019`.
 
-Catatan `bagas-godang` memakai rekaman media beratribusi dan tidak memiliki `sourceIds`; hitungan itu mengikuti skema yang ada.
+Kartu `islamisasi-mandailing-natal` menautkan R015 sebagai rekaman bibliografis untuk tema Agama. R015 tetap berstatus Abstrak atau cuplikan. Tautan itu tidak menyatakan bahwa abstrak mendukung suatu kronologi atau kesimpulan sejarah; kartu hanya menginventaris metadata dan mencatat kebutuhan pemeriksaan teks lengkap serta arsip.
 
 ## Batas penggunaan
 
-- Hubungan `sourceIds` menunjukkan ID yang dicantumkan pada catatan. Hubungan itu tidak membuktikan semua klaim catatan ditopang oleh seluruh isi sumber.
-- Jumlah tema kosong dan sumber yang belum ditautkan dapat membantu menyusun antrean editorial setelah sumber diperiksa; angka ini bukan izin untuk mengisi tema dengan klaim tanpa bukti.
-- Snapshot ini tidak menambah atau mengubah konten, sumber, status editorial, atau status baca. Verifikasi sumber, tinjauan komunitas, uji aksesibilitas, dan uji kontribusi tetap pekerjaan terpisah.
+- `sourceIds` menunjukkan rekaman yang dicantumkan pada sebuah catatan. Relasi tersebut tidak membuktikan bahwa setiap klaim didukung oleh keseluruhan sumber.
+- Status Inventaris sumber berarti rujukan dikenali dan dicatat; status ini bukan ringkasan isi atau pengesahan klaim.
+- Tema kosong dan sumber yang belum ditautkan membantu menyusun pekerjaan editorial berikutnya, tetapi tidak memberi dasar untuk menulis klaim tanpa bukti.
+- Snapshot ini tidak menambahkan atau menaikkan status baca sumber. Tinjauan komunitas, pembacaan penuh, pemeriksaan browser/Pages, aksesibilitas, dan uji kontribusi tetap pekerjaan terpisah.
