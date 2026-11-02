@@ -100,9 +100,13 @@
   }
   function card(entry) {
     const source = data.sources[entry.sourceIds[0]];
+    const sourceReadStatuses = [...new Set(entry.sourceIds.map(id => data.sources[id]?.readStatus).filter(Boolean))];
+    const readStatus = sourceReadStatuses.length
+      ? `<p class="entry-source-status">Status baca sumber: ${sourceReadStatuses.map(escape).join(' · ')}</p>`
+      : '';
     const shortSource = source ? source.authors.split(';')[0] + ' · ' + source.year.replace('[menurut katalog]', '(katalog)').replace('[tahun volume]', '(volume)') : 'Nasution007 · Wikimedia Commons';
     const sourceControl = source ? `<button type="button" class="inline-button" data-open-source="${escape(source.id)}">Lihat sumber ↗</button>` : `<button type="button" class="inline-button" data-open-media="${escape(entry.mediaId)}">Kredit foto ↗</button>`;
-    return `<article class="entry-card" aria-labelledby="title-${escape(entry.id)}">${entryArt(entry)}<div class="entry-card-body"><p class="entry-category">${escape(themeName(entry.category))}</p><h3 id="title-${escape(entry.id)}">${escape(entry.title)}</h3><p class="entry-summary">${escape(entry.summary)}</p><p class="entry-status">${escape(entry.status)}</p><p class="entry-source">${escape(shortSource)}<br>${sourceControl}</p><button type="button" class="entry-open" data-open-entry="${escape(entry.id)}" aria-label="Baca catatan ${escape(entry.title)}">Baca catatan ${icon()}</button></div></article>`;
+    return `<article class="entry-card" aria-labelledby="title-${escape(entry.id)}">${entryArt(entry)}<div class="entry-card-body"><p class="entry-category">${escape(themeName(entry.category))}</p><h3 id="title-${escape(entry.id)}">${escape(entry.title)}</h3><p class="entry-summary">${escape(entry.summary)}</p><p class="entry-status">${escape(entry.status)}</p>${readStatus}<p class="entry-source">${escape(shortSource)}<br>${sourceControl}</p><button type="button" class="entry-open" data-open-entry="${escape(entry.id)}" aria-label="Baca catatan ${escape(entry.title)}">Baca catatan ${icon()}</button></div></article>`;
   }
   function renderEntries() {
     const q = normalize(state.query.trim());
