@@ -1,6 +1,6 @@
 # Pedoman data dan tautan silang — MVP Mandailing
 
-Status: **rancangan teknis**, diperbarui 1 November 2026. Dokumen ini tidak mengesahkan klaim sejarah, padanan kata, atau hubungan kekerabatan.
+Status: **rancangan teknis**, diperbarui 2 November 2026. Dokumen ini tidak mengesahkan klaim sejarah, padanan kata, atau hubungan kekerabatan.
 
 ## Sumber kebenaran
 
@@ -43,6 +43,21 @@ Aturan penerimaan: (1) kedua ID ada di data sumber masing-masing; (2) hubungan i
 ## Penerimaan kontribusi
 
 Halaman `kontributor.html` di GitHub Pages menyimpan draf lokal di browser. Kode prototipe formulir publik dan panel admin tersimpan di `integrations/apps-script/`, tetapi **belum dideploy sebagai layanan Apps Script**. Folder intake Google Drive yang diperiksa untuk audit ini masih kosong; belum ada pengiriman uji yang terverifikasi menghasilkan berkas atau antrean moderasi. Jangan menyatakan sistem penerimaan daring sudah operasional sebelum uji ujung-ke-ujung (kirim → berkas masuk → antrean admin → moderasi) berhasil. Sebelum membuka kontribusi luas, tetapkan kebijakan privasi, izin rekaman/foto, bukti penerimaan, pembatasan penyalahgunaan, dan audit akses. Jangan menyimpan silsilah keluarga hidup, kontak pribadi atau bahan sensitif di data publik.
+
+### Rekaman sejarah lisan
+
+R019, *Oral History Best Practices* dari Oral History Association, tercatat berstatus **Bagian tertentu**. Inventaris menyebut bagian Preparation, Interviewing, Preservation, dan Access and Use pada PDF halaman 1–7 telah ditelaah. Gunakan ini sebagai rujukan metode yang terbatas; bukan pengganti kebijakan privasi lokal, telaah etika, atau pemeriksaan panduan lengkap.
+
+Sebelum rekaman dipakai dalam artikel atau disimpan pada kanal kontribusi:
+
+- Catat persetujuan narasumber untuk perekaman, penyimpanan, penggunaan kutipan, atribusi, dan tingkat akses yang diminta. Simpan bukti persetujuan di lokasi dengan akses terbatas; jangan masukkan kontak atau formulir persetujuan ke data publik.
+- Beri narasumber kesempatan meninjau materi sebelum publikasi dan catat cakupan materi yang telah disetujui.
+- Pisahkan rekaman asli, transkrip, dan kutipan publik. Batasi akses pada bahan mentah sesuai persetujuan; simpan metadata dan konteks yang diperlukan untuk menemukan rekaman penuh.
+- Saat mengutip, pertahankan konteks dan sitasikan rekaman lengkap serta lokatornya. Potongan kutipan tidak menggantikan rekaman atau rangkaian pedoman metode.
+- Jangan menyatakan rekaman telah diterima, disimpan, ditinjau, atau disetujui sebelum tahap tersebut benar-benar diuji dan dicatat.
+
+Checklist ini adalah rancangan proses untuk penerapan mendatang. Ia tidak mengaktifkan endpoint atau membuktikan alur Apps Script.
+
 ## Pemeriksaan sebelum rilis
 
 1. Jalankan `python3 scripts/prepare-content.py` lalu `node scripts/check.mjs`.
@@ -51,11 +66,12 @@ Halaman `kontributor.html` di GitHub Pages menyimpan draf lokal di browser. Kode
 4. Uji tautan ke `https://kamusmandailing.github.io/` dan URL ensiklopedia.
 5. Pastikan `kontributor.html` tetap menyebut draf lokal; bedakan dengan formulir Apps Script terpisah yang masih menunggu verifikasi penyimpanan dan moderasi.
 6. Catat hasil dan keterbatasan di folder Google Drive proyek `Audit dan Pengembangan`.
+7. Untuk rekaman sejarah lisan, periksa bukti persetujuan, kesempatan peninjauan narasumber, batas akses, metadata, konteks kutipan, dan sitasi rekaman lengkap sesuai lingkup R019 yang tercatat.
 
 ## Backlog
 
 - **P0:** audit deploy publik, penanda status sumber, navigasi dua arah.
-- **P1:** metadata review, pemetaan ID lintas situs, kontribusi termoderasi, aksesibilitas.
+- **P1:** metadata review, pemetaan ID lintas situs, kontribusi termoderasi dan protokol rekaman sejarah lisan, aksesibilitas.
 - **P2:** audio berizin dan indeks pencarian gabungan.
 
 Rencana kerja dan catatan audit disimpan di folder Google Drive internal proyek. URL folder internal tidak disalin ke repositori publik; jangan menautkan dokumen pribadi atau konten terbatas ke situs publik.
