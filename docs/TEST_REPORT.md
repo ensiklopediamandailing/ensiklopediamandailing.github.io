@@ -125,4 +125,4 @@ Pemeriksaan ini tidak menilai ketepatan klaim budaya atau kelengkapan telaah sum
 
 Kartu catatan kini menampilkan kedalaman baca untuk sumber yang tertaut, terpisah dari status editorial catatan. Jika beberapa sumber memiliki status baca berbeda, semua status unik dicantumkan; kartu dokumentasi visual tidak menampilkan status baca sumber. Nilai berasal dari inventaris yang ada dan tidak dinaikkan.
 
-Pemeriksaan lokal lulus 558 pemeriksaan integritas dan `git diff --check`. GitHub Actions validate lulus pada [run 41372278166](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41372278166) untuk commit `bc1fd3c). Pemeriksaan statis tidak membuktikan tampilan pada semua ukuran layar atau audit pembaca layar; pemeriksaan tersebut masih terbuka.
+Pemeriksaan lokal lulus 558 pemeriksaan integritas dan `git diff --check`. GitHub Actions validate lulus pada [run 41372278166](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41372278166) untuk commit `bc1fd3c`. Pemeriksaan statis tidak membuktikan tampilan pada semua ukuran layar atau audit pembaca layar; pemeriksaan tersebut masih terbuka.
