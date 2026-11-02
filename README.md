@@ -56,7 +56,7 @@ Halaman tidak mengirim analitik atau memuat font/CDN pihak ketiga. Tautan sumber
 ## Asumsi dan status editorial
 
 - Dasar isi adalah cetak biru 26 Oktober 2026: 16 bab rencana, 19 rekaman referensi awal, dan 8 nama marga dari judul katalog. Angka ini bukan ukuran kelengkapan ensiklopedia.
-- Lima belas catatan yang tersedia mencakup enam ringkasan terbatas, delapan inventaris sumber, dan satu dokumentasi visual beratribusi. Status baca dan batas pemeriksaan dicatat; belum ada tinjauan komunitas atau pembacaan penuh seluruh referensi.
+- Tujuh belas catatan yang tersedia mencakup enam ringkasan terbatas, sepuluh inventaris sumber, dan satu dokumentasi visual beratribusi. Status baca dan batas pemeriksaan dicatat; belum ada tinjauan komunitas atau pembacaan penuh seluruh referensi.
 - Tema yang belum memiliki catatan menampilkan keadaan kosong yang menjelaskan rencana kajian.
 - Kontak pengiriman belum ditetapkan dalam dokumen proyek. Halaman menampilkan status kanal sedang disiapkan.
 - Nama pemrakarsa mengikuti dokumen proyek. Tidak ada mitra, testimoni, statistik pengunjung, atau silsilah yang direkayasa.

@@ -914,6 +914,80 @@ window.MANDAILING_CONTENT = {
         }
       ],
       "limit": "R018 tetap Metadata dan katalog. Teks penuh dan pasal belum diperiksa; tidak ada klaim bahwa objek Mandailing tertentu memperoleh penetapan warisan budaya."
+    },
+    {
+      "id": "rujukan-umum-budaya-mandailing",
+      "title": "Rujukan pengantar lintas topik tentang Budaya Mandailing",
+      "category": "adat",
+      "summary": "Inventaris mencatat buku pengantar lintas topik; isi per bab belum ditelaah dan buku ini tidak menopang klaim asal-usul marga.",
+      "status": "Inventaris sumber",
+      "art": "sejarah",
+      "artText": "Rujukan",
+      "artCaption": "BUDAYA · SUMBER",
+      "sourceIds": [
+        "R003"
+      ],
+      "tags": [
+        "Budaya Mandailing",
+        "Askolani Nasution",
+        "pengantar",
+        "bibliografi",
+        "adat"
+      ],
+      "body": [
+        {
+          "heading": "Rekaman bibliografis",
+          "paragraphs": [
+            "Inventaris proyek mencatat buku Askolani Nasution (2019) berjudul “Budaya Mandailing”, dengan Direktorat Jenderal Kebudayaan dan metadata repositori BPNB Aceh. Berkas PDF teridentifikasi sepanjang 97 halaman.",
+            "Anotasi inventaris memposisikan buku ini sebagai rujukan pengantar untuk istilah dan topik lintas bab. Kartu ini tidak merangkum isi buku atau mengaitkan satu bab tertentu dengan suatu klaim."
+          ]
+        },
+        {
+          "heading": "Batas pembacaan",
+          "paragraphs": [
+            "R003 tetap berstatus Metadata dan katalog; isi belum dibaca per topik atau dibandingkan dengan kajian khusus dan pengetahuan lokal. Status buku pengantar tidak cukup untuk membuktikan asal-usul marga.",
+            "Metadata mencatat ISBN 9786029457872. Izin reproduksi setiap foto atau objek perlu diperiksa terpisah sebelum digunakan."
+          ]
+        }
+      ],
+      "limit": "R003 tetap Metadata dan katalog. Isi buku belum dibaca; catatan ini hanya inventaris umum dan tidak mengesahkan klaim tentang adat, marga, atau budaya."
+    },
+    {
+      "id": "rujukan-statistik-mandailing-natal-2026",
+      "title": "Rujukan statistik Kabupaten Mandailing Natal 2026",
+      "category": "sejarah",
+      "summary": "Inventaris mencatat publikasi resmi BPS sebagai konteks administratif; belum ada angka yang diekstrak.",
+      "status": "Inventaris sumber",
+      "art": "sejarah",
+      "artText": "BPS",
+      "artCaption": "DATA · WILAYAH",
+      "sourceIds": [
+        "R016"
+      ],
+      "tags": [
+        "BPS",
+        "Mandailing Natal",
+        "statistik",
+        "administrasi",
+        "bibliografi"
+      ],
+      "body": [
+        {
+          "heading": "Rekaman publikasi",
+          "paragraphs": [
+            "R016 tercatat sebagai “Kabupaten Mandailing Natal Dalam Angka 2026”, diterbitkan BPS Kabupaten Mandailing Natal pada 2026. Kartu ini menunjuk laman publikasi resmi; belum ada angka yang diekstrak atau dimasukkan ke ensiklopedia.",
+            "Inventaris memakai publikasi ini sebagai calon sumber konteks administratif, sosial, dan ekonomi kontemporer, bukan sebagai jumlah penduduk etnis Mandailing."
+          ]
+        },
+        {
+          "heading": "Batas penggunaan angka",
+          "paragraphs": [
+            "R016 tetap berstatus Metadata dan katalog. Tahun pada judul publikasi dapat berbeda dari tahun observasi pada tiap tabel. Sebelum memakai angka, catat tabel, tahun data, definisi variabel, dan instansi penghasilnya.",
+            "Data kabupaten tidak identik dengan jumlah etnis Mandailing. Kartu ini tidak menyajikan statistik atau menarik kesimpulan demografis."
+          ]
+        }
+      ],
+      "limit": "R016 tetap Metadata dan katalog; tidak ada tabel atau angka yang diperiksa. Tahun data, definisi, dan sumber penghasil wajib dicatat untuk setiap statistik yang kelak digunakan."
     }
   ],
   "media": {
