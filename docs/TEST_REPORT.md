@@ -153,3 +153,11 @@ Uji browser/Pages setelah penerbitan, uji pembaca layar/VoiceOver, dan pemeriksa
 Logika pencarian/filter dipisahkan ke `entry-filter.js` agar fungsi yang dipakai halaman dapat dieksekusi langsung oleh pemeriksaan Node tanpa browser. Pemeriksaan kini menguji bahwa semua catatan kembali tanpa filter, tiap status menghasilkan catatan yang tepat, filter ID sumber dapat digabung dengan tema dan status, dan status yang tidak dikenal tidak menghasilkan catatan. Pemisahan ini juga membantu menangkap dan memperbaiki rujukan variabel pencarian lama pada penghitung hasil.
 
 `node --check app.js`, `node --check entry-filter.js`, `npm run check` (575 pemeriksaan integritas), dan `git diff --check` lulus. GitHub Actions `validate` lulus pada [run 41373985440](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41373985440) untuk head kode PR `cfa60b5`. Konten dan status editorial tidak berubah.
+
+## Perincian terbatas artikel Dalihan Na Tolu — 2 November 2026
+
+Artikel `dalihan-na-tolu` kini menyebut konteks yang sudah dicatat pada inventaris R001: satu observasi Markobar di acara perkawinan Pasar Maga pada 7 Juni 2019 dan sampel baca PDF halaman 4–8. Batas jumlah informan dan ketidakkonsistenan label pendekatan tetap dijelaskan. Status artikel **Ringkasan terbatas** dan status baca R001 **Bagian tertentu** tidak berubah; tidak ada pembacaan sumber baru atau generalisasi lintas tempat dan generasi.
+
+Generator menghasilkan 17 catatan, 23 sumber, 10 tema, dan 8 nama marga. `npm run check` lulus 577 pemeriksaan integritas; `node --check app.js`, `node --check entry-filter.js`, `node --check data/content.js`, dan `git diff --check` lulus. Pemeriksaan baru mengunci status/link R001 serta batas halaman dan konteks lokal agar pembaruan mendatang tidak menaikkan status secara tidak sengaja.
+
+Batas: hasil ini adalah pemeriksaan lokal. Filter editorial belum diuji di browser, tidak ada pemeriksaan ulang PDF atau telaah penutur, dan uji Apps Script end-to-end, pembaca layar, serta browser/Pages belum dilakukan. CI untuk perubahan ini belum dicatat.
