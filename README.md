@@ -21,6 +21,7 @@ Buka `http://localhost:8080`. GitHub Pages menggunakan branch `main`, direktori 
 | `index.html` | Struktur semantik, metadata, navigasi, bagian editorial, dan formulir draf |
 | `styles.css` | Palet, tipografi sistem, tata letak, keadaan fokus, dan aturan responsif |
 | `app.js` | Pencarian, filter, menu ponsel, tab kekerabatan, dialog bacaan, serta draf lokal |
+| `entry-filter.js` | Pencarian dan penyaringan catatan yang dapat diuji terpisah dari antarmuka |
 | `data/content.js` | Data publik: tema, catatan, marga, peran, sumber, dan kredit media |
 | `assets/` | Foto WebP lokal, favicon, serta catatan hak penggunaan |
 | `docs/reference-inventory.json` | Inventaris bibliografis dan status baca sumber proyek |
