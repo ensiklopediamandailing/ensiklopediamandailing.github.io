@@ -12,7 +12,7 @@ Tidak ada dependensi JavaScript, instalasi paket, atau proses build. Buka `index
 python3 -m http.server 8080
 ```
 
-Buka `http://localhost:8080`. GitHub Pages menggunakan branch `main`, direktori `/ (root)`. Berkas `.nojekyll` mempertahankan perilaku situs statis tanpa pemrosesan Jekyll. Commit perubahan ke `main` untuk memicu publikasi ulang melalui konfigurasi Pages yang sudah tersedia. Status publikasi dapat diperiksa pada tab **Actions → pages build and deployment**. Tidak ada kunci API atau layanan server tambahan yang diperlukan.
+Buka `http://localhost:8080`. GitHub Pages menggunakan branch `main`, direktori `/ (root)`. Berkas `.nojekyll` mempertahankan perilaku situs statis tanpa pemrosesan Jekyll. Setelah PR lolos pemeriksaan yang disyaratkan dan tinjauan selesai, pengelola menggabungkan perubahan ke `main`; pembaruan pada branch itu memicu publikasi ulang melalui konfigurasi Pages yang tersedia. Periksa hasil publikasi pada tab **Actions → pages build and deployment**. Tidak ada kunci API atau layanan server tambahan yang diperlukan.
 
 ## Susunan kode
 
