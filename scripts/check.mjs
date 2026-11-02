@@ -32,6 +32,8 @@ check(appSourceForDate.includes('sourceRecord(id, linkToRecord = false)') && app
 check(appSourceForDate.includes('data.entries.filter(entry => entry.sourceIds.includes(id))'), 'Rekam sumber harus menemukan catatan yang merujuknya dari data aktif');
 check(appSourceForDate.includes("sourceReadStatuses.map(escape).join(' · ')") && appSourceForDate.includes('class="entry-source-status"'), 'Kartu harus memperlihatkan kedalaman baca sumber yang tertaut');
 check(css.includes('.entry-source-status{') && css.includes('@media(max-width:760px){.entry-source-status{font-size:11px}}'), 'Status baca sumber harus tetap terbaca pada layar kecil');
+check(appSourceForDate.includes('const sourceSearchTerms = entry.sourceIds.flatMap(id => {') && appSourceForDate.includes('[source.id, source.title, source.authors, source.year, source.publisher, source.readStatus, source.locator]'), 'Pencarian catatan harus mencakup metadata dan lokasi sumber yang tertaut');
+check(appSourceForDate.includes("...sourceSearchTerms].join(' ')"), 'Istilah metadata sumber harus digabung ke indeks pencarian catatan');
 check(appSourceForDate.includes("history.replaceState(null, '', '#sumber/' + encodeURIComponent(id))"), 'Rekam sumber harus memiliki fragmen URL langsung');
 check(appSourceForDate.includes("location.hash.startsWith('#sumber/')") && appSourceForDate.includes("location.hash.startsWith('#catatan/') || location.hash.startsWith('#sumber/')"), 'Fragmen sumber harus membuka rekam dan kembali ke bagian catatan saat dialog ditutup');
 const contentHash = createHash('sha256').update(read('data/content.js')).digest('hex').slice(0, 12);
