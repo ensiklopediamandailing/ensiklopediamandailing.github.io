@@ -134,3 +134,16 @@ Pencarian catatan kini mencakup ID, judul, penulis, tahun, penerbit, status baca
 `npm run check` lulus 560 pemeriksaan integritas; `git diff --check` lulus. Pemeriksaan integritas memastikan metadata sumber masuk ke indeks pencarian dan versi cache menunjuk berkas antarmuka yang baru. GitHub Actions `validate` lulus pada [run 41372768652](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41372768652) untuk head PR `c32b3c7`, yang membawa perubahan antarmuka, pemeriksaan, dan laporan awal.
 
 Perubahan ini tidak memverifikasi isi sumber, klaim budaya, atau ketepatan relasi sumber. Pembacaan penuh, telaah komunitas, pengujian browser/Pages, audit pembaca layar, dan uji Apps Script end-to-end tetap belum dilakukan.
+
+
+## Fokus dialog bacaan — sesi otomatis 2 November 2026
+
+Judul dialog kini menerima fokus saat bacaan berganti, dan penutupan tautan langsung mengarahkan fokus ke pencarian. Uji keyboard, navigasi catatan–sumber, bibliografi, serta lebar 320/390/768/1280 px dicatat pada [audit fokus dialog](audits/2026-11-02-dialog-focus.md) beserta hasil terstruktur dan hash berkas. Generator lulus; worktree gabungan lulus 566 pemeriksaan integritas dan `git diff --check`. Perubahan filter editorial dari pekerjaan lain dipertahankan. Hasil ini adalah uji lokal, belum CI/Pages atau uji pembaca layar aktual. Tidak ada status budaya, sumber, atau intake yang dinaikkan.
+
+## Filter status editorial dan integrasi audit fokus — 2 November 2026
+
+Katalog kini menyediakan filter status editorial yang nilainya dibentuk dari status catatan aktif dan dapat digabung dengan pencarian serta filter tema. Hapus filter dan pintasan tema juga mengembalikan status ke “Semua status”. Tidak ada nilai status editorial yang diubah. Perubahan fokus dialog—fokus ke judul saat bacaan dibuka atau berganti, kembali ke pembuka, serta fallback ke kotak pencarian untuk fragmen langsung—disertakan bersama audit dan hasil terstruktur.
+
+`node --check app.js`, `npm run check` (566 pemeriksaan integritas), dan `git diff --check` lulus. CI `validate` lulus pada [run 41373282855](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41373282855) untuk head kode PR `d5dd51b`. Hash SHA-256 di hasil audit cocok dengan snapshot berkas lokal yang juga cocok dengan berkas kode pada head tersebut. Audit mencatat uji keyboard dan ukuran 320/390/768/1280 px di browser lokal.
+
+Uji browser/Pages setelah penerbitan, uji pembaca layar/VoiceOver, dan pemeriksaan di Safari/Firefox/perangkat fisik belum dilakukan. PR #36 tetap terbuka, mergeable, belum digabung atau diterbitkan. Pembacaan sumber penuh, tinjauan komunitas/penutur, serta uji Apps Script end-to-end tetap terbuka.
