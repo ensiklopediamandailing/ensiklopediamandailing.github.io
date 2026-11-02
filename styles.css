@@ -47,5 +47,5 @@ dialog{border:1px solid #ccbeaa;border-radius:4px;background:var(--paper);color:
 .footer-contact a:hover{color:var(--maroon-deep)}
 
 /* Make source reading depth visible before a reader opens a card. */
-.entry-source-status{font-size:8px;color:var(--muted);line-height:1.55;margin:0 0 8px}
+.entry-source-status{font-size:9px;color:var(--muted);line-height:1.55;margin:0 0 8px}
 @media(max-width:760px){.entry-source-status{font-size:11px}}
