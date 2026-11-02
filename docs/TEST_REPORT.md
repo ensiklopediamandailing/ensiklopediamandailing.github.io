@@ -111,4 +111,4 @@ Generator `npm run content:generate` menghasilkan 17 catatan, 23 sumber, 10 tema
 
 `npm run check` lulus 554 pemeriksaan integritas; `git diff --check` lulus. Snapshot memuat 6 Ringkasan terbatas, 10 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Dua puluh dua dari 23 ID sumber tertaut; R019 tetap menjadi rujukan metode internal yang tidak ditautkan pada catatan publik.
 
-Batas: R003 dan R016 tetap Metadata dan katalog. Isi buku R003 dan tabel/angka R016 belum diperiksa. Data kabupaten tidak dianggap sebagai jumlah etnis Mandailing. CI untuk tambahan ini menunggu.
+Batas: R003 dan R016 tetap Metadata dan katalog. Isi buku R003 dan tabel/angka R016 belum diperiksa. Data kabupaten tidak dianggap sebagai jumlah etnis Mandailing. CI `validate` lulus pada [run 41370647363](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41370647363) untuk commit konten `3e1fa3a`.
