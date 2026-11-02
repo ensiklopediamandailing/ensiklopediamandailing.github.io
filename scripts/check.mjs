@@ -61,6 +61,14 @@ const themeIds = new Set(data.themes.map(x => x.id));
 const inventoryIds = new Set(inventory.map(x => x.id));
 const sourceReadStatuses = new Set(['Metadata dan katalog', 'Abstrak atau cuplikan', 'Bagian tertentu', 'Teks penuh']);
 const editorialStatuses = new Set(['Ringkasan terbatas', 'Inventaris sumber', 'Dokumentasi visual beratribusi']);
+const linkedSourceIds = new Set(data.entries.flatMap(entry => Array.isArray(entry.sourceIds) ? entry.sourceIds : []));
+const unlinkedSourceIds = [...inventoryIds].filter(id => !linkedSourceIds.has(id));
+const sourceLinkExceptions = new Map([['R019', 'pedoman metode internal']]);
+const coverageAudit = read('docs/CONTENT_COVERAGE.md');
+check(unlinkedSourceIds.every(id => sourceLinkExceptions.has(id)), `Sumber tanpa tautan catatan harus memiliki pengecualian terdokumentasi: ${unlinkedSourceIds.join(', ')}`);
+for (const [id, reason] of sourceLinkExceptions) {
+  check(inventoryIds.has(id) && !linkedSourceIds.has(id) && hasText(reason) && coverageAudit.includes(`\`${id}\``) && coverageAudit.includes(reason), `Pengecualian tautan sumber harus sesuai inventaris dan audit cakupan: ${id}`);
+}
 for (const [id, source] of Object.entries(data.sources)) {
   check(id === source.id && inventoryIds.has(id), `ID sumber tidak cocok: ${id}`);
   for (const field of ['title', 'authors', 'year', 'publisher', 'readStatus', 'locator', 'limit']) check(hasText(source[field]), `Rekam ${id} tanpa ${field}`);
