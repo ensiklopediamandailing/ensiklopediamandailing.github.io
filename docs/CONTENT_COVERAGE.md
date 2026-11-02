@@ -35,6 +35,8 @@ Dua puluh dua ID sumber muncul pada sekurangnya satu catatan: 8 berstatus Bagian
 
 Pemeriksaan `scripts/check.mjs` memastikan setiap sumber yang belum tertaut memiliki pengecualian tertulis pada audit cakupan. Saat ini satu-satunya pengecualian adalah R019. Pemeriksaan ini menguji kelengkapan relasi ID, bukan relevansi sumber atau dukungan bukti.
 
+Catatan `dalihan-na-tolu` menggunakan R001 sebagai **Ringkasan terbatas**. Pembaruan generator menyebutkan bahwa inventaris mencatat observasi Markobar pada satu acara perkawinan di Pasar Maga (7 Juni 2019) serta sampel PDF hlm. 4–8. R001 tetap **Bagian tertentu**; halaman tidak menggeneralisasi pengamatan itu atau menetapkan satu aturan kekerabatan bagi seluruh Mandailing. Tidak ada pembacaan tambahan atau perubahan status sumber pada pembaruan ini.
+
 Kartu `islamisasi-mandailing-natal` menautkan R015 sebagai rekaman bibliografis untuk tema Agama. R015 tetap berstatus Abstrak atau cuplikan. Tautan itu tidak menyatakan bahwa abstrak mendukung suatu kronologi atau kesimpulan sejarah; kartu hanya menginventaris metadata dan mencatat kebutuhan pemeriksaan teks lengkap serta arsip.
 
 Kartu `rujukan-buku-pelajaran-mandailing-1873` menautkan R011 sebagai rekaman bibliografis untuk tema Sejarah. R011 tetap berstatus Metadata dan katalog. Artikel dan buku pelajaran primer belum diperiksa; kartu tidak merangkum analisis atau menetapkan kesimpulan tentang periode kolonial.
