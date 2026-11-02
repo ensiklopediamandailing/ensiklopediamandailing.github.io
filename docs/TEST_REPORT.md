@@ -103,4 +103,4 @@ Generator `npm run content:generate` menghasilkan 15 catatan, 23 sumber, 10 tema
 
 `npm run check` lulus 532 pemeriksaan integritas; `git diff --check` lulus. Snapshot memuat 6 Ringkasan terbatas, 8 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Dua puluh dari 23 ID sumber tertaut; tiga belum tertaut.
 
-Batas: teks penuh dan pasal konvensi belum diperiksa. Kartu tidak menyatakan bahwa unsur budaya Mandailing tertentu telah tercatat atau ditetapkan sebagai warisan budaya. Pemeriksaan lokal tidak mencakup browser/Pages, telaah komunitas, aksesibilitas pembaca layar, atau uji Apps Script end-to-end. CI untuk tambahan R018 menunggu.
+Batas: teks penuh dan pasal konvensi belum diperiksa. Kartu tidak menyatakan bahwa unsur budaya Mandailing tertentu telah tercatat atau ditetapkan sebagai warisan budaya. Pemeriksaan lokal tidak mencakup browser/Pages, telaah komunitas, aksesibilitas pembaca layar, atau uji Apps Script end-to-end. CI `validate` lulus pada [run 41370233614](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41370233614) untuk commit konten `1b2e8e9`.
