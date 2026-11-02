@@ -840,6 +840,43 @@ window.MANDAILING_CONTENT = {
         }
       ],
       "limit": "R012 tetap berstatus Metadata dan katalog. Isi edisi Indonesia, naskah Inggris, serta arsip belum diperiksa; kartu ini hanya inventaris bibliografis dan tidak menetapkan klaim sejarah atau kategori etnis."
+    },
+    {
+      "id": "rujukan-aksara-batak-unicode",
+      "title": "Rujukan teknis tentang aksara Batak dan Unicode",
+      "category": "bahasa",
+      "summary": "Inventaris mencatat proposal awal pengodean aksara Batak dan telaah terbatas bagian Mandailing; proposal ini bukan spesifikasi Unicode saat ini.",
+      "status": "Inventaris sumber",
+      "art": "bahasa",
+      "artText": "Aksara",
+      "artCaption": "BAHASA · AKSARA",
+      "sourceIds": [
+        "R017"
+      ],
+      "tags": [
+        "aksara",
+        "Batak",
+        "Mandailing",
+        "Unicode",
+        "pengodean"
+      ],
+      "body": [
+        {
+          "heading": "Rekaman teknis yang ditelaah sebagian",
+          "paragraphs": [
+            "R017 tercatat sebagai “Preliminary proposal for encoding the Batak script in the UCS” oleh Michael Everson (2007), dokumen JTC1 SC2 WG2 N3293 dan Unicode L2 07 233.",
+            "Inventaris proyek mencatat pembacaan terbatas pada halaman 1–2, khususnya §2.1 Mandailing, lalu pembandingan dengan bagan resmi Unicode 18.0.0 untuk blok Batak U+1BC0–U+1BFF. Keterangan ini menyatakan lingkup telaah sebelumnya, bukan verifikasi ulang dalam kartu ini."
+          ]
+        },
+        {
+          "heading": "Batas penggunaan",
+          "paragraphs": [
+            "R017 adalah proposal awal dan kontribusi individual, bukan spesifikasi saat ini atau bukti asal aksara pada naskah tertentu. Untuk penerapan teknis, inventaris mengarahkan pembaca ke daftar kode resmi dan data karakter Unicode; bentuk glyph pada bagan bukan pola preskriptif untuk menyalin naskah.",
+            "Variasi ejaan dan pembacaan memerlukan penelaahan ahli atau penutur. Proyek tidak menarik kesimpulan tentang asal-usul aksara dari proposal ini."
+          ]
+        }
+      ],
+      "limit": "R017 tetap berstatus Bagian tertentu; hanya halaman 1–2 dan §2.1 Mandailing tercatat telah ditelaah. Proposal tidak menggantikan data Unicode terkini atau membuktikan asal aksara."
     }
   ],
   "media": {

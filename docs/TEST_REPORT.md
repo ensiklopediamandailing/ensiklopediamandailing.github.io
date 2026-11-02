@@ -88,3 +88,11 @@ Generator `npm run content:generate` menghasilkan 13 catatan, 23 sumber, 10 tema
 `npm run check` lulus 510 pemeriksaan integritas; `git diff --check` lulus. Snapshot memiliki 6 Ringkasan terbatas, 6 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Delapan belas dari 23 ID sumber muncul pada catatan; lima belum tertaut.
 
 Batas: R012 tetap berstatus Metadata dan katalog. Isi buku, naskah Inggris, dan arsip belum diperiksa; kartu hanya memakai metadata dan anotasi inventaris, tidak merangkum isi atau menetapkan klaim sejarah. Pemeriksaan lokal tidak mencakup pembaca layar, browser/Pages, telaah komunitas, atau uji Apps Script end-to-end. CI `validate` lulus pada [run 41369349707](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41369349707) untuk commit konten `ffa4fa9` yang menambahkan kartu R012.
+
+## Kartu inventaris sumber R017 pada tema Bahasa & sastra — 2 November 2026
+
+Generator `npm run content:generate` menghasilkan 14 catatan, 23 sumber, 10 tema, dan 8 nama marga. Kartu `rujukan-aksara-batak-unicode` menautkan R017 dengan status catatan **Inventaris sumber**. Status sumber R017 tetap **Bagian tertentu**; inventaris proyek hanya mencatat telaah halaman 1–2, terutama §2.1 Mandailing, serta pembandingan dengan bagan Unicode 18.0.0.
+
+`npm run check` lulus 521 pemeriksaan integritas; `git diff --check` lulus. Snapshot memuat 6 Ringkasan terbatas, 7 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Sembilan belas dari 23 ID sumber tertaut; empat belum tertaut.
+
+Batas: proposal R017 adalah kontribusi awal, bukan spesifikasi Unicode saat ini atau bukti asal aksara pada naskah tertentu. Pembaruan ini tidak memeriksa ulang PDF. Pemeriksaan lokal tidak mencakup browser/Pages, telaah komunitas, aksesibilitas pembaca layar, atau uji Apps Script end-to-end. CI untuk tambahan R017 menunggu.
