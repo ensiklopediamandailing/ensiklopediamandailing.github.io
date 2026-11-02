@@ -803,6 +803,43 @@ window.MANDAILING_CONTENT = {
         }
       ],
       "limit": "R011 tetap berstatus Metadata dan katalog. Artikel, buku pelajaran primer, serta rincian edisinya belum diperiksa; kartu ini hanya inventaris bibliografis dan tidak menetapkan kesimpulan sejarah."
+    },
+    {
+      "id": "rujukan-politik-tapanuli-1915-1940",
+      "title": "Rujukan bibliografis tentang kehidupan politik Tapanuli",
+      "category": "sejarah",
+      "summary": "Inventaris proyek mencatat edisi Indonesia dalam katalog; isi buku dan arsip yang dirujuk belum diperiksa.",
+      "status": "Inventaris sumber",
+      "art": "sejarah",
+      "artText": "Katalog",
+      "artCaption": "SEJARAH · SUMBER",
+      "sourceIds": [
+        "R012"
+      ],
+      "tags": [
+        "Tapanuli",
+        "sejarah politik",
+        "1915–1940",
+        "Lance Castles",
+        "bibliografi"
+      ],
+      "body": [
+        {
+          "heading": "Rekaman bibliografis",
+          "paragraphs": [
+            "Inventaris proyek mencatat buku Lance Castles edisi 2001 berjudul “Kehidupan politik suatu keresidenan di Sumatra Tapanuli 1915 1940,” diterbitkan Kepustakaan Populer Gramedia bersama Yayasan Adikarya IKAPI dan Ford Foundation. Katalog CiNii Books mencantumkan NCID BB25205194.",
+            "Anotasi inventaris menyebut judul Inggris The political life of a Sumatran residency sebagai sumber terjemahan. Catatan ini tidak menyatakan bahwa edisi Indonesia atau naskah Inggris telah diperiksa."
+          ]
+        },
+        {
+          "heading": "Batas pembacaan",
+          "paragraphs": [
+            "R012 berstatus Metadata dan katalog; isi buku dan rujukan arsipnya belum diperiksa. Tahun 2001 adalah tahun edisi yang dicatat, bukan tanggal peristiwa yang dibahas.",
+            "Keterangan administratif tentang Tapanuli tidak dipakai sebagai kategori etnis tunggal. Proyek belum menarik kesimpulan tentang kehidupan politik Mandailing dari R012."
+          ]
+        }
+      ],
+      "limit": "R012 tetap berstatus Metadata dan katalog. Isi edisi Indonesia, naskah Inggris, serta arsip belum diperiksa; kartu ini hanya inventaris bibliografis dan tidak menetapkan klaim sejarah atau kategori etnis."
     }
   ],
   "media": {

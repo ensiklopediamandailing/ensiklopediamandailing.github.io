@@ -80,3 +80,11 @@ Generator `npm run content:generate` menghasilkan 12 catatan, 23 sumber, 10 tema
 `npm run check` lulus 499 pemeriksaan integritas; `git diff --check` lulus. Snapshot memiliki 6 Ringkasan terbatas, 5 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Tujuh belas dari 23 ID sumber muncul pada catatan; enam belum tertaut.
 
 Batas: R011 tetap berstatus Metadata dan katalog. Artikel penuh dan buku pelajaran primer belum diperiksa; kartu tidak merangkum analisisnya atau menarik kesimpulan sejarah. Pemeriksaan lokal ini tidak mencakup aksesibilitas pembaca layar, browser/Pages, telaah komunitas, atau uji Apps Script. CI `validate` lulus pada [run 41368857650](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41368857650) untuk commit konten `b3c47fd`; run tersebut menguji generator dan data R011/R015 sebelum pembaruan catatan CI ini.
+
+## Kartu inventaris sumber R012 pada tema Sejarah — 2 November 2026
+
+Generator `npm run content:generate` menghasilkan 13 catatan, 23 sumber, 10 tema, dan 8 nama marga. Kartu `rujukan-politik-tapanuli-1915-1940` berstatus **Inventaris sumber** dan menautkan R012. Kartu mempertahankan 2001 sebagai tahun edisi yang dicatat, tidak menganggapnya tanggal peristiwa, serta tidak memakai wilayah administratif sebagai kategori etnis.
+
+`npm run check` lulus 510 pemeriksaan integritas; `git diff --check` lulus. Snapshot memiliki 6 Ringkasan terbatas, 6 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Delapan belas dari 23 ID sumber muncul pada catatan; lima belum tertaut.
+
+Batas: R012 tetap berstatus Metadata dan katalog. Isi buku, naskah Inggris, dan arsip belum diperiksa; kartu hanya memakai metadata dan anotasi inventaris, tidak merangkum isi atau menetapkan klaim sejarah. Pemeriksaan lokal tidak mencakup pembaca layar, browser/Pages, telaah komunitas, atau uji Apps Script end-to-end. CI untuk tambahan R012 menunggu.
