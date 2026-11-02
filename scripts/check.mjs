@@ -15,9 +15,26 @@ const css = read('styles.css');
 const context = vm.createContext({ window: {} });
 vm.runInContext(read('data/content.js'), context, { timeout: 1000 });
 const data = JSON.parse(JSON.stringify(context.window.MANDAILING_CONTENT));
+const filterSource = read('entry-filter.js');
+const filterContext = vm.createContext({ window: {} });
+vm.runInContext(filterSource, filterContext, { timeout: 1000 });
+const filterEntries = filterContext.window.MANDAILING_FILTER_ENTRIES;
 const inventory = JSON.parse(read('docs/reference-inventory.json'));
 let checks = 0;
 function check(condition, message) { assert.ok(condition, message); checks++; }
+check(typeof filterEntries === 'function', 'Logika filter harus dapat dipanggil oleh antarmuka dan pemeriksaan');
+const filteredIds = results => JSON.stringify(Array.from(results, entry => entry.id));
+check(filteredIds(filterEntries(data.entries, {}, data.sources, data.themes)) === filteredIds(data.entries), 'Tanpa kriteria filter, seluruh catatan aktif harus dikembalikan');
+for (const status of new Set(data.entries.map(entry => entry.status))) {
+  const actual = filterEntries(data.entries, {status}, data.sources, data.themes);
+  const expected = data.entries.filter(entry => entry.status === status);
+  check(filteredIds(actual) === filteredIds(expected), `Filter status harus mengembalikan catatan berstatus ${status}`);
+}
+const searchableEntry = data.entries.find(entry => entry.sourceIds?.length && data.sources[entry.sourceIds[0]]);
+const searchableSource = data.sources[searchableEntry.sourceIds[0]];
+const combinedFilter = filterEntries(data.entries, {query: searchableSource.id, category: searchableEntry.category, status: searchableEntry.status}, data.sources, data.themes);
+check(combinedFilter.some(entry => entry.id === searchableEntry.id) && combinedFilter.every(entry => entry.category === searchableEntry.category && entry.status === searchableEntry.status), 'Pencarian ID sumber, tema, dan status harus dapat digabung');
+check(filterEntries(data.entries, {status: 'Status yang tidak tersedia'}, data.sources, data.themes).length === 0, 'Status yang tidak dikenal tidak boleh menampilkan catatan');
 const projectDate = data.project?.updatedOn;
 const projectDateValue = new Date(String(projectDate) + 'T00:00:00Z');
 check(typeof projectDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(projectDate) && !Number.isNaN(projectDateValue.valueOf()) && projectDateValue.toISOString().slice(0, 10) === projectDate, 'Tanggal project.updatedOn harus berupa tanggal kalender ISO yang valid');
@@ -32,14 +49,15 @@ check(appSourceForDate.includes('sourceRecord(id, linkToRecord = false)') && app
 check(appSourceForDate.includes('data.entries.filter(entry => entry.sourceIds.includes(id))'), 'Rekam sumber harus menemukan catatan yang merujuknya dari data aktif');
 check(appSourceForDate.includes("sourceReadStatuses.map(escape).join(' · ')") && appSourceForDate.includes('class="entry-source-status"'), 'Kartu harus memperlihatkan kedalaman baca sumber yang tertaut');
 check(css.includes('.entry-source-status{') && css.includes('@media(max-width:760px){.entry-source-status{font-size:11px}}'), 'Status baca sumber harus tetap terbaca pada layar kecil');
-check(appSourceForDate.includes('const sourceSearchTerms = entry.sourceIds.flatMap(id => {') && appSourceForDate.includes('[source.id, source.title, source.authors, source.year, source.publisher, source.readStatus, source.locator]'), 'Pencarian catatan harus mencakup metadata dan lokasi sumber yang tertaut');
-check(appSourceForDate.includes("...sourceSearchTerms].join(' ')"), 'Istilah metadata sumber harus digabung ke indeks pencarian catatan');
+check(appSourceForDate.includes('window.MANDAILING_FILTER_ENTRIES(data.entries') && filterSource.includes('window.MANDAILING_FILTER_ENTRIES = function'), 'Antarmuka harus memakai logika filter yang dapat diuji terpisah');
+check(filterSource.includes('const sourceSearchTerms = (entry.sourceIds || []).flatMap(id => {') && filterSource.includes('[source.id, source.title, source.authors, source.year, source.publisher, source.readStatus, source.locator]'), 'Pencarian catatan harus mencakup metadata dan lokasi sumber yang tertaut');
 check(appSourceForDate.includes("const state = {query: '', category: 'all', status: 'all', showAll: false};") && appSourceForDate.includes('data.entries.map(entry => entry.status)'), 'Filter status editorial harus mengikuti status yang benar-benar tersedia pada catatan');
-check(appSourceForDate.includes("state.status !== 'all' && entry.status !== state.status") && appSourceForDate.includes("Boolean(q) || state.category !== 'all' || state.status !== 'all'"), 'Filter status editorial harus mengubah hasil dan jumlah catatan');
+check(filterSource.includes("if (status !== 'all' && entry.status !== status) return false;") && appSourceForDate.includes("Boolean(state.query.trim()) || state.category !== 'all' || state.status !== 'all'"), 'Filter status editorial harus mengubah hasil dan jumlah catatan');
 check(appSourceForDate.includes("$('#editorial-status-select').value = 'all'") && appSourceForDate.includes("$('#editorial-status-select').addEventListener('change'"), 'Status editorial harus dapat dipilih dan dihapus bersama filter lain');
 check(html.includes('id="editorial-status-select"') && html.includes('Filter status editorial'), 'Filter status editorial harus memiliki kontrol yang berlabel');
 check(css.includes('.editorial-status-field{') && css.includes('.editorial-status-field select{'), 'Filter status editorial harus mengikuti gaya kontrol tema');
 check(css.includes('.search-bar{display:grid;grid-template-columns:minmax(0,1fr) auto;') && css.includes('.editorial-status-field{grid-column:1/-1;grid-row:3;min-width:0;border-left:0;border-top:1px solid var(--line);'), 'Filter tema dan status harus memiliki tata letak layar kecil');
+check(html.includes('entry-filter.js?v=') && html.indexOf('entry-filter.js?v=') < html.indexOf('app.js?v='), 'Logika filter harus dimuat sebelum antarmuka');
 check(appSourceForDate.includes("history.replaceState(null, '', '#sumber/' + encodeURIComponent(id))"), 'Rekam sumber harus memiliki fragmen URL langsung');
 check(appSourceForDate.includes("location.hash.startsWith('#sumber/')") && appSourceForDate.includes("location.hash.startsWith('#catatan/') || location.hash.startsWith('#sumber/')"), 'Fragmen sumber harus membuka rekam dan kembali ke bagian catatan saat dialog ditutup');
 const contentHash = createHash('sha256').update(read('data/content.js')).digest('hex').slice(0, 12);
@@ -48,6 +66,9 @@ check(contentScriptVersion?.[1] === contentHash, 'URL konten harus memakai hash 
 const appHash = createHash('sha256').update(read('app.js')).digest('hex').slice(0, 12);
 const appScriptVersion = html.match(/<script defer src="app\.js\?v=([a-f0-9]{12})"><\/script>/);
 check(appScriptVersion?.[1] === appHash, 'URL app.js harus memakai hash berkas antarmuka');
+const filterHash = createHash('sha256').update(filterSource).digest('hex').slice(0, 12);
+const filterScriptVersion = html.match(/<script defer src="entry-filter\.js\?v=([a-f0-9]{12})"><\/script>/);
+check(filterScriptVersion?.[1] === filterHash, 'URL entry-filter.js harus memakai hash berkas logika filter');
 const languageHash = createHash('sha256').update(read('landing-language.js')).digest('hex').slice(0, 12);
 const languageScriptVersion = html.match(/<script defer src="landing-language\.js\?v=([a-f0-9]{12})"><\/script>/);
 check(languageScriptVersion?.[1] === languageHash, 'URL landing-language.js harus memakai hash berkas terjemahan');
