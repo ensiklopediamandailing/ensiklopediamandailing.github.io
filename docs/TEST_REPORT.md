@@ -147,3 +147,9 @@ Katalog kini menyediakan filter status editorial yang nilainya dibentuk dari sta
 `node --check app.js`, `npm run check` (566 pemeriksaan integritas), dan `git diff --check` lulus. CI `validate` lulus pada [run 41373282855](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41373282855) untuk head kode PR `d5dd51b`. Hash SHA-256 di hasil audit cocok dengan snapshot berkas lokal yang juga cocok dengan berkas kode pada head tersebut. Audit mencatat uji keyboard dan ukuran 320/390/768/1280 px di browser lokal.
 
 Uji browser/Pages setelah penerbitan, uji pembaca layar/VoiceOver, dan pemeriksaan di Safari/Firefox/perangkat fisik belum dilakukan. PR #36 tetap terbuka, mergeable, belum digabung atau diterbitkan. Pembacaan sumber penuh, tinjauan komunitas/penutur, serta uji Apps Script end-to-end tetap terbuka.
+
+## Uji perilaku pencarian dan filter — 2 November 2026
+
+Logika pencarian/filter dipisahkan ke `entry-filter.js` agar fungsi yang dipakai halaman dapat dieksekusi langsung oleh pemeriksaan Node tanpa browser. Pemeriksaan kini menguji bahwa semua catatan kembali tanpa filter, tiap status menghasilkan catatan yang tepat, filter ID sumber dapat digabung dengan tema dan status, dan status yang tidak dikenal tidak menghasilkan catatan. Pemisahan ini juga membantu menangkap dan memperbaiki rujukan variabel pencarian lama pada penghitung hasil.
+
+`node --check app.js`, `node --check entry-filter.js`, `npm run check` (575 pemeriksaan integritas), dan `git diff --check` lulus. GitHub Actions `validate` lulus pada [run 41373985440](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41373985440) untuk head kode PR `cfa60b5`. Konten dan status editorial tidak berubah.
