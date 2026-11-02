@@ -15,7 +15,7 @@
   const safeUrl = value => /^https?:\/\//i.test(value || '') ? escape(value) : '#';
   const themeName = id => data.themes.find(t => t.id === id)?.name || id;
   const externalLink = (url, text, className = 'text-link') => `<a class="${className}" href="${safeUrl(url)}" target="_blank" rel="noopener noreferrer">${escape(text)} ${icon('up-right')}</a>`;
-  const state = {query: '', category: 'all', showAll: false};
+  const state = {query: '', category: 'all', status: 'all', showAll: false};
   const reading = $('#reading-dialog');
   const contribution = $('#contribution-dialog');
   let readingOpener = null;
@@ -63,6 +63,8 @@
     return `<button type="button" class="theme-item" data-theme="${escape(theme.id)}" aria-label="${escape(theme.name)} : ${count ? count + ' catatan awal' : 'rencana kajian'}"><span class="theme-number">${String(index + 1).padStart(2, '0')}</span>${icon('up-right')}<span class="theme-title">${escape(theme.name)}</span><span class="theme-description">${escape(theme.description)}</span><span class="theme-availability${count ? ' available' : ''}">${count ? `${count} catatan awal` : 'Rencana kajian'}</span></button>`;
   }).join('');
   $('#category-select').insertAdjacentHTML('beforeend', data.themes.map(t => `<option value="${escape(t.id)}">${escape(t.name)}</option>`).join(''));
+  const editorialStatuses = [...new Set(data.entries.map(entry => entry.status))];
+  $('#editorial-status-select').insertAdjacentHTML('beforeend', editorialStatuses.map(status => `<option value="${escape(status)}">${escape(status)}</option>`).join(''));
   $('#marga-list').innerHTML = data.marga.map(name => `<button type="button" data-marga="${escape(name)}" aria-label="Lihat status inventaris marga ${escape(name)}">${escape(name)}</button>`).join('');
 
   function setRole(id, moveFocus = false) {
@@ -112,6 +114,7 @@
     const q = normalize(state.query.trim());
     const filtered = data.entries.filter(entry => {
       if (state.category !== 'all' && entry.category !== state.category) return false;
+      if (state.status !== 'all' && entry.status !== state.status) return false;
       const sourceSearchTerms = entry.sourceIds.flatMap(id => {
         const source = data.sources[id];
         return source ? [source.id, source.title, source.authors, source.year, source.publisher, source.readStatus, source.locator] : [];
@@ -119,14 +122,14 @@
       const searchable = [entry.title, entry.summary, themeName(entry.category), ...entry.tags, ...sourceSearchTerms].join(' ');
       return !q || normalize(searchable).includes(q);
     });
-    const hasFilter = Boolean(q) || state.category !== 'all';
+    const hasFilter = Boolean(q) || state.category !== 'all' || state.status !== 'all';
     const visible = hasFilter || state.showAll ? filtered : filtered.slice(0, 3);
     $('#entry-grid').innerHTML = visible.map(card).join('');
     $('#no-results').hidden = filtered.length !== 0;
     $('#entry-grid').hidden = filtered.length === 0;
     $('#reset-search').hidden = !hasFilter;
     $('#show-more').hidden = hasFilter || state.showAll || filtered.length <= 3;
-    $('#results-count').textContent = hasFilter ? `${filtered.length} catatan${state.category !== 'all' ? ' · ' + themeName(state.category) : ''}${state.query.trim() ? ' · “' + state.query.trim() + '”' : ''}` : `${visible.length} dari ${data.entries.length} catatan awal`;
+    $('#results-count').textContent = hasFilter ? `${filtered.length} catatan${state.category !== 'all' ? ' · ' + themeName(state.category) : ''}${state.status !== 'all' ? ' · ' + state.status : ''}${state.query.trim() ? ' · “' + state.query.trim() + '”' : ''}` : `${visible.length} dari ${data.entries.length} catatan awal`;
     if (!filtered.length) {
       const themeHasEntries = data.entries.some(entry => entry.category === state.category);
       const planning = state.category !== 'all' && !themeHasEntries;
@@ -137,17 +140,21 @@
   function resetSearch() {
     state.query = '';
     state.category = 'all';
+    state.status = 'all';
     state.showAll = true;
     $('#entry-search').value = '';
     $('#category-select').value = 'all';
+    $('#editorial-status-select').value = 'all';
     renderEntries();
   }
   function applyCategory(id) {
     state.query = '';
     state.category = id;
+    state.status = 'all';
     state.showAll = true;
     $('#entry-search').value = '';
     $('#category-select').value = id;
+    $('#editorial-status-select').value = 'all';
     renderEntries();
     $('#entri').scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth'});
   }
@@ -155,10 +162,12 @@
     event.preventDefault();
     state.query = $('#entry-search').value;
     state.category = $('#category-select').value;
+    state.status = $('#editorial-status-select').value;
     renderEntries();
   });
   $('#entry-search').addEventListener('input', event => {state.query = event.target.value; renderEntries();});
   $('#category-select').addEventListener('change', event => {state.category = event.target.value; renderEntries();});
+  $('#editorial-status-select').addEventListener('change', event => {state.status = event.target.value; renderEntries();});
   $('#reset-search').addEventListener('click', resetSearch);
   $('#empty-reset').addEventListener('click', resetSearch);
   $('#show-more').addEventListener('click', () => {state.showAll = true; renderEntries();});
@@ -179,10 +188,11 @@
   function showReading(title, kicker, html) {
     if (!reading.open) readingOpener = document.activeElement;
     $('#reading-kicker').textContent = kicker;
-    $('#reading-content').innerHTML = `<h2 id="reading-title">${escape(title)}</h2>${html}`;
+    $('#reading-content').innerHTML = `<h2 id="reading-title" tabindex="-1">${escape(title)}</h2>${html}`;
     if (!reading.open) reading.showModal();
     reading.scrollTop = 0;
-    $('.close-dialog', reading).focus({preventScroll: true});
+    // Mulai pada judul setiap kali bacaan berganti, termasuk navigasi catatan–sumber.
+    $('#reading-title').focus({preventScroll: true});
   }
   function openEntry(id, updateLocation = true) {
     const entry = data.entries.find(e => e.id === id);
@@ -246,7 +256,11 @@
     if (location.hash.startsWith('#catatan/') || location.hash.startsWith('#sumber/')) {
       try {history.replaceState(null, '', '#entri');} catch (_) { /* optional location state */ }
     }
-    if (readingOpener?.isConnected) readingOpener.focus({preventScroll: true});
+    // Tautan langsung tidak memiliki tombol pembuka di halaman.
+    const returnTarget = readingOpener?.isConnected && readingOpener !== document.body
+      ? readingOpener : $('#entry-search');
+    returnTarget.focus({preventScroll: returnTarget === readingOpener});
+    readingOpener = null;
   });
 
   // Draf lokal: tidak ada endpoint kirim, dan tidak ada pesan terkirim palsu.
