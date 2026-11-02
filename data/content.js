@@ -877,6 +877,43 @@ window.MANDAILING_CONTENT = {
         }
       ],
       "limit": "R017 tetap berstatus Bagian tertentu; hanya halaman 1–2 dan §2.1 Mandailing tercatat telah ditelaah. Proposal tidak menggantikan data Unicode terkini atau membuktikan asal aksara."
+    },
+    {
+      "id": "kerangka-unesco-warisan-takbenda",
+      "title": "Rujukan UNESCO tentang pelindungan warisan budaya takbenda",
+      "category": "adat",
+      "summary": "Inventaris mencatat Konvensi UNESCO 2003; rujukan ini tidak membuktikan status penetapan bagi objek Mandailing tertentu.",
+      "status": "Inventaris sumber",
+      "art": "sejarah",
+      "artText": "UNESCO",
+      "artCaption": "ADAT · KERANGKA",
+      "sourceIds": [
+        "R018"
+      ],
+      "tags": [
+        "UNESCO",
+        "warisan budaya takbenda",
+        "pelindungan",
+        "adat",
+        "bibliografi"
+      ],
+      "body": [
+        {
+          "heading": "Rekaman institusional",
+          "paragraphs": [
+            "R018 tercatat sebagai “Convention for the Safeguarding of the Intangible Cultural Heritage”, oleh UNESCO pada 2003. Inventaris proyek mengenali teks konvensi dan tanggal adopsi serta menyediakan tautan ke laman resmi.",
+            "Kartu ini menunjuk lokasi rujukan untuk kerangka pelestarian; isinya tidak merangkum pasal atau menetapkan penerapan konvensi pada kelompok atau objek Mandailing tertentu."
+          ]
+        },
+        {
+          "heading": "Batas pembacaan",
+          "paragraphs": [
+            "R018 tetap berstatus Metadata dan katalog. Teks lengkap dan pasal yang relevan belum diperiksa dalam pekerjaan ini; laman yang tercatat memerlukan JavaScript.",
+            "Konvensi ini bukan bukti bahwa unsur budaya Mandailing tertentu telah tercatat atau ditetapkan sebagai Warisan Budaya Takbenda. Status nasional atau registrasi khusus harus diperiksa pada rekaman terpisah."
+          ]
+        }
+      ],
+      "limit": "R018 tetap Metadata dan katalog. Teks penuh dan pasal belum diperiksa; tidak ada klaim bahwa objek Mandailing tertentu memperoleh penetapan warisan budaya."
     }
   ],
   "media": {

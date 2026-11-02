@@ -96,3 +96,11 @@ Generator `npm run content:generate` menghasilkan 14 catatan, 23 sumber, 10 tema
 `npm run check` lulus 521 pemeriksaan integritas; `git diff --check` lulus. Snapshot memuat 6 Ringkasan terbatas, 7 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Sembilan belas dari 23 ID sumber tertaut; empat belum tertaut.
 
 Batas: proposal R017 adalah kontribusi awal, bukan spesifikasi Unicode saat ini atau bukti asal aksara pada naskah tertentu. Pembaruan ini tidak memeriksa ulang PDF. Pemeriksaan lokal tidak mencakup browser/Pages, telaah komunitas, aksesibilitas pembaca layar, atau uji Apps Script end-to-end. CI `validate` lulus pada [run 41369696427](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41369696427) untuk commit konten `2217447`.
+
+## Kartu inventaris sumber R018 pada tema Adat — 2 November 2026
+
+Generator `npm run content:generate` menghasilkan 15 catatan, 23 sumber, 10 tema, dan 8 nama marga. Kartu `kerangka-unesco-warisan-takbenda` menautkan R018 sebagai rujukan institusional dan berstatus **Inventaris sumber**. Status R018 tetap **Metadata dan katalog**.
+
+`npm run check` lulus 532 pemeriksaan integritas; `git diff --check` lulus. Snapshot memuat 6 Ringkasan terbatas, 8 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Dua puluh dari 23 ID sumber tertaut; tiga belum tertaut.
+
+Batas: teks penuh dan pasal konvensi belum diperiksa. Kartu tidak menyatakan bahwa unsur budaya Mandailing tertentu telah tercatat atau ditetapkan sebagai warisan budaya. Pemeriksaan lokal tidak mencakup browser/Pages, telaah komunitas, aksesibilitas pembaca layar, atau uji Apps Script end-to-end. CI untuk tambahan R018 menunggu.
