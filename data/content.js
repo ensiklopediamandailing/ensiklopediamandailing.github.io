@@ -766,6 +766,43 @@ window.MANDAILING_CONTENT = {
         }
       ],
       "limit": "R015 tetap berstatus Abstrak atau cuplikan. Teks lengkap dan arsip belum diperiksa; catatan ini adalah inventaris rujukan, bukan ringkasan temuan atau kesimpulan sejarah."
+    },
+    {
+      "id": "rujukan-buku-pelajaran-mandailing-1873",
+      "title": "Rujukan bibliografis tentang buku pelajaran Mandailing",
+      "category": "sejarah",
+      "summary": "Inventaris proyek mencatat sebuah artikel yang judulnya menyebut buku pelajaran Mandailing; analisisnya belum ditelaah.",
+      "status": "Inventaris sumber",
+      "art": "sejarah",
+      "artText": "Teks",
+      "artCaption": "SEJARAH · SUMBER",
+      "sourceIds": [
+        "R011"
+      ],
+      "tags": [
+        "Mandailing",
+        "sejarah teks",
+        "buku pelajaran",
+        "1873",
+        "bibliografi"
+      ],
+      "body": [
+        {
+          "heading": "Rekaman bibliografis",
+          "paragraphs": [
+            "Inventaris proyek mencatat artikel Susan Rodgers (2002) berjudul “Compromise and contestation in colonial Sumatra An 1873 Mandailing schoolbook on the Wonders of the West,” pada Bijdragen tot de Taal Land en Volkenkunde 158(3), 479 sampai 512. Tautan penerbit dan judul terindeks dicatat pada R011.",
+            "Kartu ini membantu menemukan rujukan untuk ditelaah; isinya tidak merangkum argumen artikel atau kandungan buku pelajaran yang disebut pada judulnya."
+          ]
+        },
+        {
+          "heading": "Batas pembacaan",
+          "paragraphs": [
+            "R011 berstatus Metadata dan katalog. Teks lengkap penerbit memiliki batas akses dan analisis rinci belum dilakukan. Rekaman buku pelajaran primer dan rincian edisinya juga perlu diperiksa sebelum digunakan untuk klaim sejarah.",
+            "Proyek belum menarik kesimpulan tentang pendidikan, bahasa, atau pandangan sosial dari R011."
+          ]
+        }
+      ],
+      "limit": "R011 tetap berstatus Metadata dan katalog. Artikel, buku pelajaran primer, serta rincian edisinya belum diperiksa; kartu ini hanya inventaris bibliografis dan tidak menetapkan kesimpulan sejarah."
     }
   ],
   "media": {

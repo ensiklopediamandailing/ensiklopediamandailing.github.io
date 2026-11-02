@@ -72,3 +72,11 @@ Generator `npm run content:generate` menghasilkan 11 catatan, 23 sumber, 10 tema
 `npm run check` lulus 488 pemeriksaan integritas pada snapshot lokal: ID, referensi, kategori, aset, tanggal, dan pemeriksaan dasar lain. `git diff --check` juga lulus. Ringkasan status pada data: 6 Ringkasan terbatas, 4 Inventaris sumber, dan 1 Dokumentasi visual beratribusi; 16 dari 23 ID sumber tercantum pada setidaknya satu catatan.
 
 Batas: R015 tetap berstatus Abstrak atau cuplikan. Teks penuh dan arsip belum diperiksa; kartu ini tidak merangkum temuan atau menetapkan kronologi. Pemeriksaan ini tidak mencakup pembaca layar, browser/Pages, telaah komunitas, atau uji Apps Script. CI PR #36 lulus pada run 41368261488 (pemeriksaan validate; 2 November 2026).
+
+## Kartu inventaris sumber R011 pada tema Sejarah — 2 November 2026
+
+Generator `npm run content:generate` menghasilkan 12 catatan, 23 sumber, 10 tema, dan 8 nama marga. Kartu `rujukan-buku-pelajaran-mandailing-1873` berstatus **Inventaris sumber** dan menautkan R011. Teks judul, penulis, tahun, nama terbitan, volume, nomor, halaman, dan URL mengikuti metadata yang sudah tersimpan pada inventaris proyek.
+
+`npm run check` lulus 499 pemeriksaan integritas; `git diff --check` lulus. Snapshot memiliki 6 Ringkasan terbatas, 5 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Tujuh belas dari 23 ID sumber muncul pada catatan; enam belum tertaut.
+
+Batas: R011 tetap berstatus Metadata dan katalog. Artikel penuh dan buku pelajaran primer belum diperiksa; kartu tidak merangkum analisisnya atau menarik kesimpulan sejarah. Pemeriksaan lokal ini tidak mencakup aksesibilitas pembaca layar, browser/Pages, telaah komunitas, atau uji Apps Script. CI untuk perubahan ini menunggu.

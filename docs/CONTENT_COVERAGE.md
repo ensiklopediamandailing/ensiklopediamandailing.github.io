@@ -6,7 +6,7 @@ Snapshot struktur `data/content.js` setelah pembaruan generator. Angka menunjukk
 
 | Tema | Catatan | ID catatan |
 | --- | ---: | --- |
-| Sejarah | 2 | `jejak-material`, `asal-usul-kuala-lumpur` |
+| Sejarah | 3 | `jejak-material`, `asal-usul-kuala-lumpur`, `rujukan-buku-pelajaran-mandailing-1873` |
 | Adat | 1 | `dalihan-na-tolu` |
 | Marga | 1 | `inventaris-marga` |
 | Bahasa & sastra | 2 | `kamus-angkola-mandailing`, `sumber-tertulis` |
@@ -17,23 +17,25 @@ Snapshot struktur `data/content.js` setelah pembaruan generator. Angka menunjukk
 | Agama | 1 | `islamisasi-mandailing-natal` |
 | Diaspora | 1 | `diaspora-dan-kampung` |
 
-Total 11 catatan pada 9 dari 10 tema. Catatan baru pada tema Agama berstatus **Inventaris sumber**; tema Kuliner masih kosong.
+Total 12 catatan pada 9 dari 10 tema. Catatan baru pada tema Sejarah berstatus **Inventaris sumber**; tema Kuliner masih kosong.
 
 ## Status editorial dan baca
 
 | Status catatan | Jumlah |
 | --- | ---: |
 | Ringkasan terbatas | 6 |
-| Inventaris sumber | 4 |
+| Inventaris sumber | 5 |
 | Dokumentasi visual beratribusi | 1 |
 
 Dari 23 rekaman sumber, 9 berstatus **Bagian tertentu**, 12 **Metadata dan katalog**, 2 **Abstrak atau cuplikan**, dan 0 **Teks penuh**. Belum ada catatan yang ditinjau komunitas.
 
 ## Relasi sumber
 
-Enam belas ID sumber muncul pada sekurangnya satu catatan: 7 berstatus Bagian tertentu, 7 Metadata dan katalog, dan 2 Abstrak atau cuplikan. Tujuh ID belum ditautkan oleh `sourceIds`: `R003`, `R011`, `R012`, `R016`, `R017`, `R018`, dan `R019`.
+Tujuh belas ID sumber muncul pada sekurangnya satu catatan: 7 berstatus Bagian tertentu, 8 Metadata dan katalog, dan 2 Abstrak atau cuplikan. Enam ID belum ditautkan oleh `sourceIds`: `R003`, `R012`, `R016`, `R017`, `R018`, dan `R019`.
 
 Kartu `islamisasi-mandailing-natal` menautkan R015 sebagai rekaman bibliografis untuk tema Agama. R015 tetap berstatus Abstrak atau cuplikan. Tautan itu tidak menyatakan bahwa abstrak mendukung suatu kronologi atau kesimpulan sejarah; kartu hanya menginventaris metadata dan mencatat kebutuhan pemeriksaan teks lengkap serta arsip.
+
+Kartu `rujukan-buku-pelajaran-mandailing-1873` menautkan R011 sebagai rekaman bibliografis untuk tema Sejarah. R011 tetap berstatus Metadata dan katalog. Artikel dan buku pelajaran primer belum diperiksa; kartu tidak merangkum analisis atau menetapkan kesimpulan tentang periode kolonial.
 
 ## Batas penggunaan
 
