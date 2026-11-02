@@ -112,3 +112,11 @@ Generator `npm run content:generate` menghasilkan 17 catatan, 23 sumber, 10 tema
 `npm run check` lulus 554 pemeriksaan integritas; `git diff --check` lulus. Snapshot memuat 6 Ringkasan terbatas, 10 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Dua puluh dua dari 23 ID sumber tertaut; R019 tetap menjadi rujukan metode internal yang tidak ditautkan pada catatan publik.
 
 Batas: R003 dan R016 tetap Metadata dan katalog. Isi buku R003 dan tabel/angka R016 belum diperiksa. Data kabupaten tidak dianggap sebagai jumlah etnis Mandailing. CI `validate` lulus pada [run 41370647363](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41370647363) untuk commit konten `3e1fa3a`.
+
+## Pemeriksaan kelengkapan tautan sumber — 2 November 2026
+
+Pemeriksaan `scripts/check.mjs` kini menghitung ID yang dipakai oleh catatan publik dan menolak sumber yang tidak tertaut tanpa pengecualian tertulis pada `docs/CONTENT_COVERAGE.md`. Untuk snapshot ini, satu-satunya pengecualian adalah R019 sebagai rujukan metode internal; pemeriksaan ini hanya menilai kelengkapan relasi ID, bukan dukungan bukti.
+
+Salinan kerja lokal lulus `npm run check` dengan 556 pemeriksaan integritas dan `git diff --check`. Salinan itu masih memiliki perubahan lokal; pemeriksaan head PR dibuktikan oleh CI validate yang sukses pada [run 41371664312](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41371664312) untuk commit `4ba7748`.
+
+Pemeriksaan ini tidak menilai ketepatan klaim budaya atau kelengkapan telaah sumber. Pembacaan penuh, tinjauan komunitas, browser/Pages, audit pembaca layar, dan uji Apps Script end-to-end tetap belum dilakukan.
