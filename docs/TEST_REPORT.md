@@ -95,4 +95,4 @@ Generator `npm run content:generate` menghasilkan 14 catatan, 23 sumber, 10 tema
 
 `npm run check` lulus 521 pemeriksaan integritas; `git diff --check` lulus. Snapshot memuat 6 Ringkasan terbatas, 7 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Sembilan belas dari 23 ID sumber tertaut; empat belum tertaut.
 
-Batas: proposal R017 adalah kontribusi awal, bukan spesifikasi Unicode saat ini atau bukti asal aksara pada naskah tertentu. Pembaruan ini tidak memeriksa ulang PDF. Pemeriksaan lokal tidak mencakup browser/Pages, telaah komunitas, aksesibilitas pembaca layar, atau uji Apps Script end-to-end. CI untuk tambahan R017 menunggu.
+Batas: proposal R017 adalah kontribusi awal, bukan spesifikasi Unicode saat ini atau bukti asal aksara pada naskah tertentu. Pembaruan ini tidak memeriksa ulang PDF. Pemeriksaan lokal tidak mencakup browser/Pages, telaah komunitas, aksesibilitas pembaca layar, atau uji Apps Script end-to-end. CI `validate` lulus pada [run 41369696427](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41369696427) untuk commit konten `2217447`.
