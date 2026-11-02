@@ -64,3 +64,11 @@ PR #31 menambahkan tautan dari artikel ke rekam sumber, daftar balik ke catatan 
 Pemeriksaan integritas lokal lulus 477 pemeriksaan: 10 catatan, 10 tema, dan 23 sumber. CI PR #31, pemeriksaan validate pada [run 41360415504](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41360415504), sukses. Runner mencatat peringatan Node.js 20 dan pemberitahuan migrasi ubuntu-latest ke Ubuntu 26; keduanya non-blocking.
 
 PR #31 digabung squash pada SHA 2c881c98e494da58fba8029001f3478cc0421275. Pemeriksaan browser dan GitHub Pages pasca-merge belum dicatat pada pembaruan ini. Pemetaan lintas Kamus–Ensiklopedia dan semua tahap editorial yang memerlukan verifikasi tetap ditunda.
+
+## Pemeriksaan perubahan proyek dan petunjuk rilis — 2 November 2026
+
+PR #36 pada head `01756f5` lulus workflow validate pada [run 41370704879](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41370704879). PR #37 memperbarui petunjuk GitHub Pages agar publikasi dilakukan setelah PR melewati pemeriksaan dan tinjauan; commit `d74cbd9` lulus validate pada [run 41371157179](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41371157179).
+
+Pada salinan kerja lokal `codex/bidirectional-source-navigation` yang masih memiliki perubahan belum tersimpan, `npm run check` lulus 554 pemeriksaan integritas untuk 17 catatan, 10 tema, dan 23 sumber. `git diff --check` juga lulus. Pemeriksaan lokal ini berlaku untuk salinan kerja tersebut; status PR head dibuktikan oleh workflow Actions di atas.
+
+Pemeriksaan integritas dan CI tidak menilai ketepatan klaim budaya atau menggantikan pembacaan sumber dan tinjauan komunitas. Pemeriksaan browser/Pages, pembaca layar, dan uji Apps Script end-to-end belum dibuktikan pada pembaruan ini.
