@@ -33,6 +33,8 @@ Dari 23 rekaman sumber, 9 berstatus **Bagian tertentu**, 12 **Metadata dan katal
 
 Dua puluh dua ID sumber muncul pada sekurangnya satu catatan: 8 berstatus Bagian tertentu, 12 Metadata dan katalog, dan 2 Abstrak atau cuplikan. Satu ID, `R019`, belum ditautkan oleh `sourceIds`; R019 menjadi rujukan pedoman metode internal.
 
+Pemeriksaan `scripts/check.mjs` memastikan setiap sumber yang belum tertaut memiliki pengecualian tertulis pada audit cakupan. Saat ini satu-satunya pengecualian adalah R019. Pemeriksaan ini menguji kelengkapan relasi ID, bukan relevansi sumber atau dukungan bukti.
+
 Kartu `islamisasi-mandailing-natal` menautkan R015 sebagai rekaman bibliografis untuk tema Agama. R015 tetap berstatus Abstrak atau cuplikan. Tautan itu tidak menyatakan bahwa abstrak mendukung suatu kronologi atau kesimpulan sejarah; kartu hanya menginventaris metadata dan mencatat kebutuhan pemeriksaan teks lengkap serta arsip.
 
 Kartu `rujukan-buku-pelajaran-mandailing-1873` menautkan R011 sebagai rekaman bibliografis untuk tema Sejarah. R011 tetap berstatus Metadata dan katalog. Artikel dan buku pelajaran primer belum diperiksa; kartu tidak merangkum analisis atau menetapkan kesimpulan tentang periode kolonial.
