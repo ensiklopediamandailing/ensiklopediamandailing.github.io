@@ -10,7 +10,6 @@
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
   const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const normalize = value => String(value).toLocaleLowerCase('id').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   const icon = (name = 'arrow') => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
   const safeUrl = value => /^https?:\/\//i.test(value || '') ? escape(value) : '#';
   const themeName = id => data.themes.find(t => t.id === id)?.name || id;
@@ -111,18 +110,12 @@
     return `<article class="entry-card" aria-labelledby="title-${escape(entry.id)}">${entryArt(entry)}<div class="entry-card-body"><p class="entry-category">${escape(themeName(entry.category))}</p><h3 id="title-${escape(entry.id)}">${escape(entry.title)}</h3><p class="entry-summary">${escape(entry.summary)}</p><p class="entry-status">${escape(entry.status)}</p>${readStatus}<p class="entry-source">${escape(shortSource)}<br>${sourceControl}</p><button type="button" class="entry-open" data-open-entry="${escape(entry.id)}" aria-label="Baca catatan ${escape(entry.title)}">Baca catatan ${icon()}</button></div></article>`;
   }
   function renderEntries() {
-    const q = normalize(state.query.trim());
-    const filtered = data.entries.filter(entry => {
-      if (state.category !== 'all' && entry.category !== state.category) return false;
-      if (state.status !== 'all' && entry.status !== state.status) return false;
-      const sourceSearchTerms = entry.sourceIds.flatMap(id => {
-        const source = data.sources[id];
-        return source ? [source.id, source.title, source.authors, source.year, source.publisher, source.readStatus, source.locator] : [];
-      });
-      const searchable = [entry.title, entry.summary, themeName(entry.category), ...entry.tags, ...sourceSearchTerms].join(' ');
-      return !q || normalize(searchable).includes(q);
-    });
-    const hasFilter = Boolean(q) || state.category !== 'all' || state.status !== 'all';
+    const filtered = window.MANDAILING_FILTER_ENTRIES(data.entries, {
+      query: state.query,
+      category: state.category,
+      status: state.status
+    }, data.sources, data.themes);
+    const hasFilter = Boolean(state.query.trim()) || state.category !== 'all' || state.status !== 'all';
     const visible = hasFilter || state.showAll ? filtered : filtered.slice(0, 3);
     $('#entry-grid').innerHTML = visible.map(card).join('');
     $('#no-results').hidden = filtered.length !== 0;
