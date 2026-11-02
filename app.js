@@ -10,12 +10,11 @@
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
   const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const normalize = value => String(value).toLocaleLowerCase('id').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   const icon = (name = 'arrow') => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
   const safeUrl = value => /^https?:\/\//i.test(value || '') ? escape(value) : '#';
   const themeName = id => data.themes.find(t => t.id === id)?.name || id;
   const externalLink = (url, text, className = 'text-link') => `<a class="${className}" href="${safeUrl(url)}" target="_blank" rel="noopener noreferrer">${escape(text)} ${icon('up-right')}</a>`;
-  const state = {query: '', category: 'all', showAll: false};
+  const state = {query: '', category: 'all', status: 'all', showAll: false};
   const reading = $('#reading-dialog');
   const contribution = $('#contribution-dialog');
   let readingOpener = null;
@@ -63,6 +62,8 @@
     return `<button type="button" class="theme-item" data-theme="${escape(theme.id)}" aria-label="${escape(theme.name)} : ${count ? count + ' catatan awal' : 'rencana kajian'}"><span class="theme-number">${String(index + 1).padStart(2, '0')}</span>${icon('up-right')}<span class="theme-title">${escape(theme.name)}</span><span class="theme-description">${escape(theme.description)}</span><span class="theme-availability${count ? ' available' : ''}">${count ? `${count} catatan awal` : 'Rencana kajian'}</span></button>`;
   }).join('');
   $('#category-select').insertAdjacentHTML('beforeend', data.themes.map(t => `<option value="${escape(t.id)}">${escape(t.name)}</option>`).join(''));
+  const editorialStatuses = [...new Set(data.entries.map(entry => entry.status))];
+  $('#editorial-status-select').insertAdjacentHTML('beforeend', editorialStatuses.map(status => `<option value="${escape(status)}">${escape(status)}</option>`).join(''));
   $('#marga-list').innerHTML = data.marga.map(name => `<button type="button" data-marga="${escape(name)}" aria-label="Lihat status inventaris marga ${escape(name)}">${escape(name)}</button>`).join('');
 
   function setRole(id, moveFocus = false) {
@@ -100,25 +101,28 @@
   }
   function card(entry) {
     const source = data.sources[entry.sourceIds[0]];
+    const sourceReadStatuses = [...new Set(entry.sourceIds.map(id => data.sources[id]?.readStatus).filter(Boolean))];
+    const readStatus = sourceReadStatuses.length
+      ? `<p class="entry-source-status">Status baca sumber: ${sourceReadStatuses.map(escape).join(' · ')}</p>`
+      : '';
     const shortSource = source ? source.authors.split(';')[0] + ' · ' + source.year.replace('[menurut katalog]', '(katalog)').replace('[tahun volume]', '(volume)') : 'Nasution007 · Wikimedia Commons';
     const sourceControl = source ? `<button type="button" class="inline-button" data-open-source="${escape(source.id)}">Lihat sumber ↗</button>` : `<button type="button" class="inline-button" data-open-media="${escape(entry.mediaId)}">Kredit foto ↗</button>`;
-    return `<article class="entry-card" aria-labelledby="title-${escape(entry.id)}">${entryArt(entry)}<div class="entry-card-body"><p class="entry-category">${escape(themeName(entry.category))}</p><h3 id="title-${escape(entry.id)}">${escape(entry.title)}</h3><p class="entry-summary">${escape(entry.summary)}</p><p class="entry-status">${escape(entry.status)}</p><p class="entry-source">${escape(shortSource)}<br>${sourceControl}</p><button type="button" class="entry-open" data-open-entry="${escape(entry.id)}" aria-label="Baca catatan ${escape(entry.title)}">Baca catatan ${icon()}</button></div></article>`;
+    return `<article class="entry-card" aria-labelledby="title-${escape(entry.id)}">${entryArt(entry)}<div class="entry-card-body"><p class="entry-category">${escape(themeName(entry.category))}</p><h3 id="title-${escape(entry.id)}">${escape(entry.title)}</h3><p class="entry-summary">${escape(entry.summary)}</p><p class="entry-status">${escape(entry.status)}</p>${readStatus}<p class="entry-source">${escape(shortSource)}<br>${sourceControl}</p><button type="button" class="entry-open" data-open-entry="${escape(entry.id)}" aria-label="Baca catatan ${escape(entry.title)}">Baca catatan ${icon()}</button></div></article>`;
   }
   function renderEntries() {
-    const q = normalize(state.query.trim());
-    const filtered = data.entries.filter(entry => {
-      if (state.category !== 'all' && entry.category !== state.category) return false;
-      const searchable = [entry.title, entry.summary, themeName(entry.category), ...entry.tags, ...entry.sourceIds.map(id => data.sources[id]?.authors || '')].join(' ');
-      return !q || normalize(searchable).includes(q);
-    });
-    const hasFilter = Boolean(q) || state.category !== 'all';
+    const filtered = window.MANDAILING_FILTER_ENTRIES(data.entries, {
+      query: state.query,
+      category: state.category,
+      status: state.status
+    }, data.sources, data.themes);
+    const hasFilter = Boolean(state.query.trim()) || state.category !== 'all' || state.status !== 'all';
     const visible = hasFilter || state.showAll ? filtered : filtered.slice(0, 3);
     $('#entry-grid').innerHTML = visible.map(card).join('');
     $('#no-results').hidden = filtered.length !== 0;
     $('#entry-grid').hidden = filtered.length === 0;
     $('#reset-search').hidden = !hasFilter;
     $('#show-more').hidden = hasFilter || state.showAll || filtered.length <= 3;
-    $('#results-count').textContent = hasFilter ? `${filtered.length} catatan${state.category !== 'all' ? ' · ' + themeName(state.category) : ''}${state.query.trim() ? ' · “' + state.query.trim() + '”' : ''}` : `${visible.length} dari ${data.entries.length} catatan awal`;
+    $('#results-count').textContent = hasFilter ? `${filtered.length} catatan${state.category !== 'all' ? ' · ' + themeName(state.category) : ''}${state.status !== 'all' ? ' · ' + state.status : ''}${state.query.trim() ? ' · “' + state.query.trim() + '”' : ''}` : `${visible.length} dari ${data.entries.length} catatan awal`;
     if (!filtered.length) {
       const themeHasEntries = data.entries.some(entry => entry.category === state.category);
       const planning = state.category !== 'all' && !themeHasEntries;
@@ -129,17 +133,21 @@
   function resetSearch() {
     state.query = '';
     state.category = 'all';
+    state.status = 'all';
     state.showAll = true;
     $('#entry-search').value = '';
     $('#category-select').value = 'all';
+    $('#editorial-status-select').value = 'all';
     renderEntries();
   }
   function applyCategory(id) {
     state.query = '';
     state.category = id;
+    state.status = 'all';
     state.showAll = true;
     $('#entry-search').value = '';
     $('#category-select').value = id;
+    $('#editorial-status-select').value = 'all';
     renderEntries();
     $('#entri').scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth'});
   }
@@ -147,10 +155,12 @@
     event.preventDefault();
     state.query = $('#entry-search').value;
     state.category = $('#category-select').value;
+    state.status = $('#editorial-status-select').value;
     renderEntries();
   });
   $('#entry-search').addEventListener('input', event => {state.query = event.target.value; renderEntries();});
   $('#category-select').addEventListener('change', event => {state.category = event.target.value; renderEntries();});
+  $('#editorial-status-select').addEventListener('change', event => {state.status = event.target.value; renderEntries();});
   $('#reset-search').addEventListener('click', resetSearch);
   $('#empty-reset').addEventListener('click', resetSearch);
   $('#show-more').addEventListener('click', () => {state.showAll = true; renderEntries();});
@@ -171,10 +181,11 @@
   function showReading(title, kicker, html) {
     if (!reading.open) readingOpener = document.activeElement;
     $('#reading-kicker').textContent = kicker;
-    $('#reading-content').innerHTML = `<h2 id="reading-title">${escape(title)}</h2>${html}`;
+    $('#reading-content').innerHTML = `<h2 id="reading-title" tabindex="-1">${escape(title)}</h2>${html}`;
     if (!reading.open) reading.showModal();
     reading.scrollTop = 0;
-    $('.close-dialog', reading).focus({preventScroll: true});
+    // Mulai pada judul setiap kali bacaan berganti, termasuk navigasi catatan–sumber.
+    $('#reading-title').focus({preventScroll: true});
   }
   function openEntry(id, updateLocation = true) {
     const entry = data.entries.find(e => e.id === id);
@@ -238,7 +249,11 @@
     if (location.hash.startsWith('#catatan/') || location.hash.startsWith('#sumber/')) {
       try {history.replaceState(null, '', '#entri');} catch (_) { /* optional location state */ }
     }
-    if (readingOpener?.isConnected) readingOpener.focus({preventScroll: true});
+    // Tautan langsung tidak memiliki tombol pembuka di halaman.
+    const returnTarget = readingOpener?.isConnected && readingOpener !== document.body
+      ? readingOpener : $('#entry-search');
+    returnTarget.focus({preventScroll: returnTarget === readingOpener});
+    readingOpener = null;
   });
 
   // Draf lokal: tidak ada endpoint kirim, dan tidak ada pesan terkirim palsu.

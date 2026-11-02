@@ -1,0 +1,173 @@
+{
+  "testedAt": "2026-11-02T01:35:16.159Z",
+  "environment": "Local IAB on 127.0.0.1; keyboard events and DOM inspection; no screen reader",
+  "keyboard": [
+    {
+      "test": "direct source heading",
+      "result": {
+        "hash": "#sumber/R001",
+        "id": "reading-title",
+        "label": null,
+        "open": true,
+        "text": "Rekam sumber"
+      }
+    },
+    {
+      "test": "direct source close fallback",
+      "result": {
+        "hash": "#entri",
+        "id": "entry-search",
+        "label": null,
+        "open": false,
+        "text": ""
+      },
+      "searchVisible": true,
+      "note": "Focus and viewport checked again after scrolling settled"
+    },
+    {
+      "test": "card opens at heading",
+      "result": {
+        "hash": "#catatan/dalihan-na-tolu",
+        "id": "reading-title",
+        "label": null,
+        "open": true,
+        "text": "Dalihan Na Tolu: membaca hubungan kekerabatan"
+      }
+    },
+    {
+      "test": "forward tab reaches source link",
+      "result": {
+        "hash": "#catatan/dalihan-na-tolu",
+        "id": "",
+        "label": null,
+        "open": true,
+        "text": "Buka sumber asli"
+      }
+    },
+    {
+      "test": "entry to source heading",
+      "result": {
+        "hash": "#sumber/R001",
+        "id": "reading-title",
+        "label": null,
+        "open": true,
+        "text": "Rekam sumber"
+      }
+    },
+    {
+      "test": "source to entry heading",
+      "result": {
+        "hash": "#catatan/dalihan-na-tolu",
+        "id": "reading-title",
+        "label": null,
+        "open": true,
+        "text": "Dalihan Na Tolu: membaca hubungan kekerabatan"
+      }
+    },
+    {
+      "test": "reverse tab reaches close",
+      "result": {
+        "hash": "#catatan/dalihan-na-tolu",
+        "id": "",
+        "label": "Tutup bacaan",
+        "open": true,
+        "text": ""
+      }
+    },
+    {
+      "test": "close returns original card",
+      "result": {
+        "hash": "#entri",
+        "id": "",
+        "label": "Baca catatan Dalihan Na Tolu: membaca hubungan kekerabatan",
+        "open": false,
+        "text": "Baca catatan"
+      }
+    },
+    {
+      "test": "bibliography heading",
+      "result": {
+        "hash": "#entri",
+        "id": "reading-title",
+        "label": null,
+        "open": true,
+        "text": "Daftar sumber"
+      }
+    },
+    {
+      "test": "bibliography returns opener",
+      "result": {
+        "hash": "#entri",
+        "id": "open-sources",
+        "label": null,
+        "open": false,
+        "text": "Daftar sumber"
+      }
+    }
+  ],
+  "responsive": [
+    {
+      "dialogScrollWidth": 280,
+      "dialogWidth": 280,
+      "focus": "reading-title",
+      "outline": "solid",
+      "pageWidth": 320,
+      "titleVisible": true,
+      "width": 320
+    },
+    {
+      "dialogScrollWidth": 350,
+      "dialogWidth": 350,
+      "focus": "reading-title",
+      "outline": "solid",
+      "pageWidth": 390,
+      "titleVisible": true,
+      "width": 390
+    },
+    {
+      "dialogScrollWidth": 726,
+      "dialogWidth": 726,
+      "focus": "reading-title",
+      "outline": "solid",
+      "pageWidth": 768,
+      "titleVisible": true,
+      "width": 768
+    },
+    {
+      "dialogScrollWidth": 758,
+      "dialogWidth": 758,
+      "focus": "reading-title",
+      "outline": "solid",
+      "pageWidth": 1280,
+      "titleVisible": true,
+      "width": 1280
+    }
+  ],
+  "snapshotSha256": {
+    "app.js": "4993f0768dd9449b64f9c5851f45bf219622915ee4d826204a9a600f7757b141",
+    "styles.css": "4b3b42a3ccf2a00039bd21f3319e2a218e516f5694693f06b3627226f6abc7ba",
+    "index.html": "7fb39b2d89c4f475d7f0264ca6197db6d54ca0251268b32d6eea8566eb4f0ff1",
+    "data/content.js": "8968c9f560860d7c5612e7c5e15cf30ee96f4809fb11d5fc28ebdc2f77ee2d6a",
+    "scripts/check.mjs": "7ae1330457ba2351386ae8cc80b4aa98a546f2f77e59e624306219f3aa1b5399"
+  },
+  "validation": {
+    "generator": {
+      "entries": 17,
+      "sources": 23,
+      "themes": 10,
+      "marga": 8
+    },
+    "integrityChecksPassed": 566,
+    "diffCheck": "passed",
+    "ciForThisChange": "GitHub Actions validate passed on run 41373282855 for code head d5dd51b.",
+    "deployment": "not performed",
+    "pullRequest": {
+      "number": 36,
+      "codeHead": "d5dd51b20717eaa81a2ca760cfbe82fb691e98be",
+      "state": "open",
+      "mergeable": true,
+      "merged": false,
+      "deployment": "not performed"
+    }
+  }
+}

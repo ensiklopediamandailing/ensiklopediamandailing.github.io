@@ -3,7 +3,7 @@ window.MANDAILING_CONTENT = {
   "project": {
     "title": "Ensiklopedia Suku Mandailing",
     "version": "0.1",
-    "updatedOn": "2026-11-01",
+    "updatedOn": "2026-11-02",
     "blueprintDate": "2026-10-26",
     "founder": "Ahmad Saleh",
     "blueprintUrl": null,
@@ -388,7 +388,7 @@ window.MANDAILING_CONTENT = {
       "id": "dalihan-na-tolu",
       "title": "Dalihan Na Tolu: membaca hubungan kekerabatan",
       "category": "adat",
-      "summary": "Pengantar penelitian tentang mora, kahanggi, dan anak boru dalam hubungan keluarga serta konteks adat.",
+      "summary": "Satu kajian tutur di Pasar Maga menjadi rujukan terbatas untuk membaca hubungan kekerabatan; cakupan lokalnya tetap disebut.",
       "status": "Ringkasan terbatas",
       "art": "dnt",
       "artText": "DNT",
@@ -406,14 +406,21 @@ window.MANDAILING_CONTENT = {
       ],
       "body": [
         {
-          "heading": "Pengantar yang terus diteliti",
+          "heading": "Konteks sampel yang ditelaah",
           "paragraphs": [
-            "Kajian tutur di Pasar Maga menjadi salah satu rujukan awal untuk memahami hubungan kekerabatan. Penjelasan pada halaman ini bersifat pengantar dan belum ditinjau komunitas.",
-            "Dalam rancangan ensiklopedia, peran dicatat menurut pihak acuan, keluarga, dan konteks peristiwa. Peran tersebut tidak dilekatkan secara permanen pada seluruh marga."
+            "Artikel Zulkarnain, Asmara, dan Sutatminingsih (2023) menjadi salah satu rujukan awal tentang tutur dalam komunitas Mandailing. Inventaris sumber mencatat observasi Markobar pada satu acara perkawinan di Pasar Maga pada 7 Juni 2019.",
+            "Bagian PDF hlm. 4–8 dicatat sebagai sampel yang dibaca, mencakup metode, hasil, dan simpulan. Rincian ini memberi konteks pada lokasi dan acara yang diteliti, bukan gambaran semua tempat atau generasi."
+          ]
+        },
+        {
+          "heading": "Batas pembacaan dan penafsiran",
+          "paragraphs": [
+            "Jumlah informan tidak dinyatakan pada bagian yang ditelaah, dan label pendekatan di abstrak serta metode tidak konsisten. Karena itu catatan ini tidak menetapkan satu aturan tetap untuk semua hubungan kekerabatan.",
+            "Dalam rancangan ensiklopedia, peran dicatat menurut pihak acuan, keluarga, dan konteks peristiwa. Peran tersebut tidak dilekatkan secara permanen pada seluruh marga; pembandingan lokasi dan tinjauan penutur masih diperlukan."
           ]
         }
       ],
-      "limit": "Jumlah informan tidak dinyatakan; label pendekatan di abstrak dan metode tidak konsisten. Satu konteks lokal; perlu pembandingan dan tinjauan penutur."
+      "limit": "R001 berstatus Bagian tertentu: sampel PDF hlm. 4–8 dan satu konteks lokal. Jumlah informan tidak dinyatakan pada bagian yang ditelaah; label pendekatan di abstrak dan metode tidak konsisten. Perlu pembandingan dan tinjauan penutur."
     },
     {
       "id": "inventaris-marga",
@@ -729,6 +736,265 @@ window.MANDAILING_CONTENT = {
       ],
       "limit": "Status ini menyatakan identifikasi serta atribusi media. Bukan pengesahan sejarah bangunan atau seluruh makna budayanya.",
       "mediaId": "bagas"
+    },
+    {
+      "id": "islamisasi-mandailing-natal",
+      "title": "Rujukan awal tentang Islamisasi Mandailing Natal",
+      "category": "agama",
+      "summary": "Inventaris proyek mencatat satu artikel berstatus abstrak atau cuplikan; belum ada kesimpulan proyek tentang kronologi.",
+      "status": "Inventaris sumber",
+      "art": "sejarah",
+      "artText": "Rujukan",
+      "artCaption": "AGAMA · SUMBER",
+      "sourceIds": [
+        "R015"
+      ],
+      "tags": [
+        "Islamization",
+        "Mandailing Natal",
+        "Padri War",
+        "kronologi",
+        "historiografi"
+      ],
+      "body": [
+        {
+          "heading": "Rekaman bibliografis",
+          "paragraphs": [
+            "Dalam inventaris proyek, R015 tercatat sebagai artikel Amliansyah dan Siti Fatimah berjudul “Islamization of Mandailing Natal After the Padri War,” pada Science and Environmental Journal for Postgraduate 4(1), halaman 71–75. Catatan inventaris mempertahankan tahun volume 2021 dan tanggal publikasi laman 18 Mei 2022 sebagai dua rekaman metadata, bukan menyatukannya.",
+            "Catatan ini membantu pembaca menemukan rujukan untuk tema agama; isinya tidak merangkum hasil penelitian atau menyatakan kronologi."
+          ]
+        },
+        {
+          "heading": "Batas pembacaan",
+          "paragraphs": [
+            "Inventaris menandai R015 sebagai abstrak atau cuplikan. Teks lengkap dan arsip yang dirujuk belum ditelaah. Perbedaan kronologi yang tercatat tetap menunggu pemeriksaan teks penuh dan arsip.",
+            "Proyek belum menarik kesimpulan tentang waktu, pelaku, jalur, atau bentuk perubahan praktik agama dari R015."
+          ]
+        }
+      ],
+      "limit": "R015 tetap berstatus Abstrak atau cuplikan. Teks lengkap dan arsip belum diperiksa; catatan ini adalah inventaris rujukan, bukan ringkasan temuan atau kesimpulan sejarah."
+    },
+    {
+      "id": "rujukan-buku-pelajaran-mandailing-1873",
+      "title": "Rujukan bibliografis tentang buku pelajaran Mandailing",
+      "category": "sejarah",
+      "summary": "Inventaris proyek mencatat sebuah artikel yang judulnya menyebut buku pelajaran Mandailing; analisisnya belum ditelaah.",
+      "status": "Inventaris sumber",
+      "art": "sejarah",
+      "artText": "Teks",
+      "artCaption": "SEJARAH · SUMBER",
+      "sourceIds": [
+        "R011"
+      ],
+      "tags": [
+        "Mandailing",
+        "sejarah teks",
+        "buku pelajaran",
+        "1873",
+        "bibliografi"
+      ],
+      "body": [
+        {
+          "heading": "Rekaman bibliografis",
+          "paragraphs": [
+            "Inventaris proyek mencatat artikel Susan Rodgers (2002) berjudul “Compromise and contestation in colonial Sumatra An 1873 Mandailing schoolbook on the Wonders of the West,” pada Bijdragen tot de Taal Land en Volkenkunde 158(3), 479 sampai 512. Tautan penerbit dan judul terindeks dicatat pada R011.",
+            "Kartu ini membantu menemukan rujukan untuk ditelaah; isinya tidak merangkum argumen artikel atau kandungan buku pelajaran yang disebut pada judulnya."
+          ]
+        },
+        {
+          "heading": "Batas pembacaan",
+          "paragraphs": [
+            "R011 berstatus Metadata dan katalog. Teks lengkap penerbit memiliki batas akses dan analisis rinci belum dilakukan. Rekaman buku pelajaran primer dan rincian edisinya juga perlu diperiksa sebelum digunakan untuk klaim sejarah.",
+            "Proyek belum menarik kesimpulan tentang pendidikan, bahasa, atau pandangan sosial dari R011."
+          ]
+        }
+      ],
+      "limit": "R011 tetap berstatus Metadata dan katalog. Artikel, buku pelajaran primer, serta rincian edisinya belum diperiksa; kartu ini hanya inventaris bibliografis dan tidak menetapkan kesimpulan sejarah."
+    },
+    {
+      "id": "rujukan-politik-tapanuli-1915-1940",
+      "title": "Rujukan bibliografis tentang kehidupan politik Tapanuli",
+      "category": "sejarah",
+      "summary": "Inventaris proyek mencatat edisi Indonesia dalam katalog; isi buku dan arsip yang dirujuk belum diperiksa.",
+      "status": "Inventaris sumber",
+      "art": "sejarah",
+      "artText": "Katalog",
+      "artCaption": "SEJARAH · SUMBER",
+      "sourceIds": [
+        "R012"
+      ],
+      "tags": [
+        "Tapanuli",
+        "sejarah politik",
+        "1915–1940",
+        "Lance Castles",
+        "bibliografi"
+      ],
+      "body": [
+        {
+          "heading": "Rekaman bibliografis",
+          "paragraphs": [
+            "Inventaris proyek mencatat buku Lance Castles edisi 2001 berjudul “Kehidupan politik suatu keresidenan di Sumatra Tapanuli 1915 1940,” diterbitkan Kepustakaan Populer Gramedia bersama Yayasan Adikarya IKAPI dan Ford Foundation. Katalog CiNii Books mencantumkan NCID BB25205194.",
+            "Anotasi inventaris menyebut judul Inggris The political life of a Sumatran residency sebagai sumber terjemahan. Catatan ini tidak menyatakan bahwa edisi Indonesia atau naskah Inggris telah diperiksa."
+          ]
+        },
+        {
+          "heading": "Batas pembacaan",
+          "paragraphs": [
+            "R012 berstatus Metadata dan katalog; isi buku dan rujukan arsipnya belum diperiksa. Tahun 2001 adalah tahun edisi yang dicatat, bukan tanggal peristiwa yang dibahas.",
+            "Keterangan administratif tentang Tapanuli tidak dipakai sebagai kategori etnis tunggal. Proyek belum menarik kesimpulan tentang kehidupan politik Mandailing dari R012."
+          ]
+        }
+      ],
+      "limit": "R012 tetap berstatus Metadata dan katalog. Isi edisi Indonesia, naskah Inggris, serta arsip belum diperiksa; kartu ini hanya inventaris bibliografis dan tidak menetapkan klaim sejarah atau kategori etnis."
+    },
+    {
+      "id": "rujukan-aksara-batak-unicode",
+      "title": "Rujukan teknis tentang aksara Batak dan Unicode",
+      "category": "bahasa",
+      "summary": "Inventaris mencatat proposal awal pengodean aksara Batak dan telaah terbatas bagian Mandailing; proposal ini bukan spesifikasi Unicode saat ini.",
+      "status": "Inventaris sumber",
+      "art": "bahasa",
+      "artText": "Aksara",
+      "artCaption": "BAHASA · AKSARA",
+      "sourceIds": [
+        "R017"
+      ],
+      "tags": [
+        "aksara",
+        "Batak",
+        "Mandailing",
+        "Unicode",
+        "pengodean"
+      ],
+      "body": [
+        {
+          "heading": "Rekaman teknis yang ditelaah sebagian",
+          "paragraphs": [
+            "R017 tercatat sebagai “Preliminary proposal for encoding the Batak script in the UCS” oleh Michael Everson (2007), dokumen JTC1 SC2 WG2 N3293 dan Unicode L2 07 233.",
+            "Inventaris proyek mencatat pembacaan terbatas pada halaman 1–2, khususnya §2.1 Mandailing, lalu pembandingan dengan bagan resmi Unicode 18.0.0 untuk blok Batak U+1BC0–U+1BFF. Keterangan ini menyatakan lingkup telaah sebelumnya, bukan verifikasi ulang dalam kartu ini."
+          ]
+        },
+        {
+          "heading": "Batas penggunaan",
+          "paragraphs": [
+            "R017 adalah proposal awal dan kontribusi individual, bukan spesifikasi saat ini atau bukti asal aksara pada naskah tertentu. Untuk penerapan teknis, inventaris mengarahkan pembaca ke daftar kode resmi dan data karakter Unicode; bentuk glyph pada bagan bukan pola preskriptif untuk menyalin naskah.",
+            "Variasi ejaan dan pembacaan memerlukan penelaahan ahli atau penutur. Proyek tidak menarik kesimpulan tentang asal-usul aksara dari proposal ini."
+          ]
+        }
+      ],
+      "limit": "R017 tetap berstatus Bagian tertentu; hanya halaman 1–2 dan §2.1 Mandailing tercatat telah ditelaah. Proposal tidak menggantikan data Unicode terkini atau membuktikan asal aksara."
+    },
+    {
+      "id": "kerangka-unesco-warisan-takbenda",
+      "title": "Rujukan UNESCO tentang pelindungan warisan budaya takbenda",
+      "category": "adat",
+      "summary": "Inventaris mencatat Konvensi UNESCO 2003; rujukan ini tidak membuktikan status penetapan bagi objek Mandailing tertentu.",
+      "status": "Inventaris sumber",
+      "art": "sejarah",
+      "artText": "UNESCO",
+      "artCaption": "ADAT · KERANGKA",
+      "sourceIds": [
+        "R018"
+      ],
+      "tags": [
+        "UNESCO",
+        "warisan budaya takbenda",
+        "pelindungan",
+        "adat",
+        "bibliografi"
+      ],
+      "body": [
+        {
+          "heading": "Rekaman institusional",
+          "paragraphs": [
+            "R018 tercatat sebagai “Convention for the Safeguarding of the Intangible Cultural Heritage”, oleh UNESCO pada 2003. Inventaris proyek mengenali teks konvensi dan tanggal adopsi serta menyediakan tautan ke laman resmi.",
+            "Kartu ini menunjuk lokasi rujukan untuk kerangka pelestarian; isinya tidak merangkum pasal atau menetapkan penerapan konvensi pada kelompok atau objek Mandailing tertentu."
+          ]
+        },
+        {
+          "heading": "Batas pembacaan",
+          "paragraphs": [
+            "R018 tetap berstatus Metadata dan katalog. Teks lengkap dan pasal yang relevan belum diperiksa dalam pekerjaan ini; laman yang tercatat memerlukan JavaScript.",
+            "Konvensi ini bukan bukti bahwa unsur budaya Mandailing tertentu telah tercatat atau ditetapkan sebagai Warisan Budaya Takbenda. Status nasional atau registrasi khusus harus diperiksa pada rekaman terpisah."
+          ]
+        }
+      ],
+      "limit": "R018 tetap Metadata dan katalog. Teks penuh dan pasal belum diperiksa; tidak ada klaim bahwa objek Mandailing tertentu memperoleh penetapan warisan budaya."
+    },
+    {
+      "id": "rujukan-umum-budaya-mandailing",
+      "title": "Rujukan pengantar lintas topik tentang Budaya Mandailing",
+      "category": "adat",
+      "summary": "Inventaris mencatat buku pengantar lintas topik; isi per bab belum ditelaah dan buku ini tidak menopang klaim asal-usul marga.",
+      "status": "Inventaris sumber",
+      "art": "sejarah",
+      "artText": "Rujukan",
+      "artCaption": "BUDAYA · SUMBER",
+      "sourceIds": [
+        "R003"
+      ],
+      "tags": [
+        "Budaya Mandailing",
+        "Askolani Nasution",
+        "pengantar",
+        "bibliografi",
+        "adat"
+      ],
+      "body": [
+        {
+          "heading": "Rekaman bibliografis",
+          "paragraphs": [
+            "Inventaris proyek mencatat buku Askolani Nasution (2019) berjudul “Budaya Mandailing”, dengan Direktorat Jenderal Kebudayaan dan metadata repositori BPNB Aceh. Berkas PDF teridentifikasi sepanjang 97 halaman.",
+            "Anotasi inventaris memposisikan buku ini sebagai rujukan pengantar untuk istilah dan topik lintas bab. Kartu ini tidak merangkum isi buku atau mengaitkan satu bab tertentu dengan suatu klaim."
+          ]
+        },
+        {
+          "heading": "Batas pembacaan",
+          "paragraphs": [
+            "R003 tetap berstatus Metadata dan katalog; isi belum dibaca per topik atau dibandingkan dengan kajian khusus dan pengetahuan lokal. Status buku pengantar tidak cukup untuk membuktikan asal-usul marga.",
+            "Metadata mencatat ISBN 9786029457872. Izin reproduksi setiap foto atau objek perlu diperiksa terpisah sebelum digunakan."
+          ]
+        }
+      ],
+      "limit": "R003 tetap Metadata dan katalog. Isi buku belum dibaca; catatan ini hanya inventaris umum dan tidak mengesahkan klaim tentang adat, marga, atau budaya."
+    },
+    {
+      "id": "rujukan-statistik-mandailing-natal-2026",
+      "title": "Rujukan statistik Kabupaten Mandailing Natal 2026",
+      "category": "sejarah",
+      "summary": "Inventaris mencatat publikasi resmi BPS sebagai konteks administratif; belum ada angka yang diekstrak.",
+      "status": "Inventaris sumber",
+      "art": "sejarah",
+      "artText": "BPS",
+      "artCaption": "DATA · WILAYAH",
+      "sourceIds": [
+        "R016"
+      ],
+      "tags": [
+        "BPS",
+        "Mandailing Natal",
+        "statistik",
+        "administrasi",
+        "bibliografi"
+      ],
+      "body": [
+        {
+          "heading": "Rekaman publikasi",
+          "paragraphs": [
+            "R016 tercatat sebagai “Kabupaten Mandailing Natal Dalam Angka 2026”, diterbitkan BPS Kabupaten Mandailing Natal pada 2026. Kartu ini menunjuk laman publikasi resmi; belum ada angka yang diekstrak atau dimasukkan ke ensiklopedia.",
+            "Inventaris memakai publikasi ini sebagai calon sumber konteks administratif, sosial, dan ekonomi kontemporer, bukan sebagai jumlah penduduk etnis Mandailing."
+          ]
+        },
+        {
+          "heading": "Batas penggunaan angka",
+          "paragraphs": [
+            "R016 tetap berstatus Metadata dan katalog. Tahun pada judul publikasi dapat berbeda dari tahun observasi pada tiap tabel. Sebelum memakai angka, catat tabel, tahun data, definisi variabel, dan instansi penghasilnya.",
+            "Data kabupaten tidak identik dengan jumlah etnis Mandailing. Kartu ini tidak menyajikan statistik atau menarik kesimpulan demografis."
+          ]
+        }
+      ],
+      "limit": "R016 tetap Metadata dan katalog; tidak ada tabel atau angka yang diperiksa. Tahun data, definisi, dan sumber penghasil wajib dicatat untuk setiap statistik yang kelak digunakan."
     }
   ],
   "media": {

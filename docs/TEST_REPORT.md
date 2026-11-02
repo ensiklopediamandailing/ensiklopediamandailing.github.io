@@ -64,3 +64,100 @@ PR #31 menambahkan tautan dari artikel ke rekam sumber, daftar balik ke catatan 
 Pemeriksaan integritas lokal lulus 477 pemeriksaan: 10 catatan, 10 tema, dan 23 sumber. CI PR #31, pemeriksaan validate pada [run 41360415504](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41360415504), sukses. Runner mencatat peringatan Node.js 20 dan pemberitahuan migrasi ubuntu-latest ke Ubuntu 26; keduanya non-blocking.
 
 PR #31 digabung squash pada SHA 2c881c98e494da58fba8029001f3478cc0421275. Pemeriksaan browser dan GitHub Pages pasca-merge belum dicatat pada pembaruan ini. Pemetaan lintas Kamus–Ensiklopedia dan semua tahap editorial yang memerlukan verifikasi tetap ditunda.
+
+## Kartu inventaris sumber R015 pada tema Agama — 2 November 2026
+
+Generator `npm run content:generate` menghasilkan 11 catatan, 23 sumber, 10 tema, dan 8 nama marga. Kartu `islamisasi-mandailing-natal` memakai status **Inventaris sumber** dan menautkan R015. Isinya hanya memaparkan metadata yang sudah tercatat pada inventaris, membedakan tahun volume 2021 dari tanggal publikasi laman 18 Mei 2022, serta menahan kesimpulan kronologi.
+
+`npm run check` lulus 488 pemeriksaan integritas pada snapshot lokal: ID, referensi, kategori, aset, tanggal, dan pemeriksaan dasar lain. `git diff --check` juga lulus. Ringkasan status pada data: 6 Ringkasan terbatas, 4 Inventaris sumber, dan 1 Dokumentasi visual beratribusi; 16 dari 23 ID sumber tercantum pada setidaknya satu catatan.
+
+Batas: R015 tetap berstatus Abstrak atau cuplikan. Teks penuh dan arsip belum diperiksa; kartu ini tidak merangkum temuan atau menetapkan kronologi. Pemeriksaan ini tidak mencakup pembaca layar, browser/Pages, telaah komunitas, atau uji Apps Script. CI PR #36 lulus pada run 41368261488 (pemeriksaan validate; 2 November 2026).
+
+## Kartu inventaris sumber R011 pada tema Sejarah — 2 November 2026
+
+Generator `npm run content:generate` menghasilkan 12 catatan, 23 sumber, 10 tema, dan 8 nama marga. Kartu `rujukan-buku-pelajaran-mandailing-1873` berstatus **Inventaris sumber** dan menautkan R011. Teks judul, penulis, tahun, nama terbitan, volume, nomor, halaman, dan URL mengikuti metadata yang sudah tersimpan pada inventaris proyek.
+
+`npm run check` lulus 499 pemeriksaan integritas; `git diff --check` lulus. Snapshot memiliki 6 Ringkasan terbatas, 5 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Tujuh belas dari 23 ID sumber muncul pada catatan; enam belum tertaut.
+
+Batas: R011 tetap berstatus Metadata dan katalog. Artikel penuh dan buku pelajaran primer belum diperiksa; kartu tidak merangkum analisisnya atau menarik kesimpulan sejarah. Pemeriksaan lokal ini tidak mencakup aksesibilitas pembaca layar, browser/Pages, telaah komunitas, atau uji Apps Script. CI `validate` lulus pada [run 41368857650](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41368857650) untuk commit konten `b3c47fd`; run tersebut menguji generator dan data R011/R015 sebelum pembaruan catatan CI ini.
+
+## Kartu inventaris sumber R012 pada tema Sejarah — 2 November 2026
+
+Generator `npm run content:generate` menghasilkan 13 catatan, 23 sumber, 10 tema, dan 8 nama marga. Kartu `rujukan-politik-tapanuli-1915-1940` berstatus **Inventaris sumber** dan menautkan R012. Kartu mempertahankan 2001 sebagai tahun edisi yang dicatat, tidak menganggapnya tanggal peristiwa, serta tidak memakai wilayah administratif sebagai kategori etnis.
+
+`npm run check` lulus 510 pemeriksaan integritas; `git diff --check` lulus. Snapshot memiliki 6 Ringkasan terbatas, 6 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Delapan belas dari 23 ID sumber muncul pada catatan; lima belum tertaut.
+
+Batas: R012 tetap berstatus Metadata dan katalog. Isi buku, naskah Inggris, dan arsip belum diperiksa; kartu hanya memakai metadata dan anotasi inventaris, tidak merangkum isi atau menetapkan klaim sejarah. Pemeriksaan lokal tidak mencakup pembaca layar, browser/Pages, telaah komunitas, atau uji Apps Script end-to-end. CI `validate` lulus pada [run 41369349707](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41369349707) untuk commit konten `ffa4fa9` yang menambahkan kartu R012.
+
+## Kartu inventaris sumber R017 pada tema Bahasa & sastra — 2 November 2026
+
+Generator `npm run content:generate` menghasilkan 14 catatan, 23 sumber, 10 tema, dan 8 nama marga. Kartu `rujukan-aksara-batak-unicode` menautkan R017 dengan status catatan **Inventaris sumber**. Status sumber R017 tetap **Bagian tertentu**; inventaris proyek hanya mencatat telaah halaman 1–2, terutama §2.1 Mandailing, serta pembandingan dengan bagan Unicode 18.0.0.
+
+`npm run check` lulus 521 pemeriksaan integritas; `git diff --check` lulus. Snapshot memuat 6 Ringkasan terbatas, 7 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Sembilan belas dari 23 ID sumber tertaut; empat belum tertaut.
+
+Batas: proposal R017 adalah kontribusi awal, bukan spesifikasi Unicode saat ini atau bukti asal aksara pada naskah tertentu. Pembaruan ini tidak memeriksa ulang PDF. Pemeriksaan lokal tidak mencakup browser/Pages, telaah komunitas, aksesibilitas pembaca layar, atau uji Apps Script end-to-end. CI `validate` lulus pada [run 41369696427](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41369696427) untuk commit konten `2217447`.
+
+## Kartu inventaris sumber R018 pada tema Adat — 2 November 2026
+
+Generator `npm run content:generate` menghasilkan 15 catatan, 23 sumber, 10 tema, dan 8 nama marga. Kartu `kerangka-unesco-warisan-takbenda` menautkan R018 sebagai rujukan institusional dan berstatus **Inventaris sumber**. Status R018 tetap **Metadata dan katalog**.
+
+`npm run check` lulus 532 pemeriksaan integritas; `git diff --check` lulus. Snapshot memuat 6 Ringkasan terbatas, 8 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Dua puluh dari 23 ID sumber tertaut; tiga belum tertaut.
+
+Batas: teks penuh dan pasal konvensi belum diperiksa. Kartu tidak menyatakan bahwa unsur budaya Mandailing tertentu telah tercatat atau ditetapkan sebagai warisan budaya. Pemeriksaan lokal tidak mencakup browser/Pages, telaah komunitas, aksesibilitas pembaca layar, atau uji Apps Script end-to-end. CI `validate` lulus pada [run 41370233614](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41370233614) untuk commit konten `1b2e8e9`.
+
+## Kartu inventaris sumber R003 dan R016 — 2 November 2026
+
+Generator `npm run content:generate` menghasilkan 17 catatan, 23 sumber, 10 tema, dan 8 nama marga. Kartu `rujukan-umum-budaya-mandailing` mencatat R003 sebagai rujukan pengantar lintas topik; kartu tidak merangkum buku atau menyatakan klaim asal-usul. Kartu `rujukan-statistik-mandailing-natal-2026` mengindeks publikasi BPS R016 tanpa mengekstrak angka.
+
+`npm run check` lulus 554 pemeriksaan integritas; `git diff --check` lulus. Snapshot memuat 6 Ringkasan terbatas, 10 Inventaris sumber, dan 1 Dokumentasi visual beratribusi. Dua puluh dua dari 23 ID sumber tertaut; R019 tetap menjadi rujukan metode internal yang tidak ditautkan pada catatan publik.
+
+Batas: R003 dan R016 tetap Metadata dan katalog. Isi buku R003 dan tabel/angka R016 belum diperiksa. Data kabupaten tidak dianggap sebagai jumlah etnis Mandailing. CI `validate` lulus pada [run 41370647363](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41370647363) untuk commit konten `3e1fa3a`.
+
+## Pemeriksaan kelengkapan tautan sumber — 2 November 2026
+
+Pemeriksaan `scripts/check.mjs` kini menghitung ID yang dipakai oleh catatan publik dan menolak sumber yang tidak tertaut tanpa pengecualian tertulis pada `docs/CONTENT_COVERAGE.md`. Untuk snapshot ini, satu-satunya pengecualian adalah R019 sebagai rujukan metode internal; pemeriksaan ini hanya menilai kelengkapan relasi ID, bukan dukungan bukti.
+
+Salinan kerja lokal lulus `npm run check` dengan 556 pemeriksaan integritas dan `git diff --check`. Salinan itu masih memiliki perubahan lokal; pemeriksaan head PR dibuktikan oleh CI validate yang sukses pada [run 41371664312](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41371664312) untuk commit `4ba7748`.
+
+Pemeriksaan ini tidak menilai ketepatan klaim budaya atau kelengkapan telaah sumber. Pembacaan penuh, tinjauan komunitas, browser/Pages, audit pembaca layar, dan uji Apps Script end-to-end tetap belum dilakukan.
+
+## Status baca sumber pada kartu — 2 November 2026
+
+Kartu catatan kini menampilkan kedalaman baca untuk sumber yang tertaut, terpisah dari status editorial catatan. Jika beberapa sumber memiliki status baca berbeda, semua status unik dicantumkan; kartu dokumentasi visual tidak menampilkan status baca sumber. Nilai berasal dari inventaris yang ada dan tidak dinaikkan.
+
+Pemeriksaan lokal lulus 558 pemeriksaan integritas dan `git diff --check`. GitHub Actions validate lulus pada [run 41372278166](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41372278166) untuk commit `bc1fd3c`. Pemeriksaan statis tidak membuktikan tampilan pada semua ukuran layar atau audit pembaca layar; pemeriksaan tersebut masih terbuka.
+
+## Pencarian metadata sumber — 2 November 2026
+
+Pencarian catatan kini mencakup ID, judul, penulis, tahun, penerbit, status baca, dan lokasi pemeriksaan untuk sumber yang ditautkan. Ini menyelaraskan fitur pencarian dengan label “Cari … sumber” tanpa mengubah isi, relasi, atau status editorial sumber. Versi cache `app.js` diperbarui.
+
+`npm run check` lulus 560 pemeriksaan integritas; `git diff --check` lulus. Pemeriksaan integritas memastikan metadata sumber masuk ke indeks pencarian dan versi cache menunjuk berkas antarmuka yang baru. GitHub Actions `validate` lulus pada [run 41372768652](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41372768652) untuk head PR `c32b3c7`, yang membawa perubahan antarmuka, pemeriksaan, dan laporan awal.
+
+Perubahan ini tidak memverifikasi isi sumber, klaim budaya, atau ketepatan relasi sumber. Pembacaan penuh, telaah komunitas, pengujian browser/Pages, audit pembaca layar, dan uji Apps Script end-to-end tetap belum dilakukan.
+
+
+## Fokus dialog bacaan — sesi otomatis 2 November 2026
+
+Judul dialog kini menerima fokus saat bacaan berganti, dan penutupan tautan langsung mengarahkan fokus ke pencarian. Uji keyboard, navigasi catatan–sumber, bibliografi, serta lebar 320/390/768/1280 px dicatat pada [audit fokus dialog](audits/2026-11-02-dialog-focus.md) beserta hasil terstruktur dan hash berkas. Generator lulus; worktree gabungan lulus 566 pemeriksaan integritas dan `git diff --check`. Perubahan filter editorial dari pekerjaan lain dipertahankan. Hasil ini adalah uji lokal, belum CI/Pages atau uji pembaca layar aktual. Tidak ada status budaya, sumber, atau intake yang dinaikkan.
+
+## Filter status editorial dan integrasi audit fokus — 2 November 2026
+
+Katalog kini menyediakan filter status editorial yang nilainya dibentuk dari status catatan aktif dan dapat digabung dengan pencarian serta filter tema. Hapus filter dan pintasan tema juga mengembalikan status ke “Semua status”. Tidak ada nilai status editorial yang diubah. Perubahan fokus dialog—fokus ke judul saat bacaan dibuka atau berganti, kembali ke pembuka, serta fallback ke kotak pencarian untuk fragmen langsung—disertakan bersama audit dan hasil terstruktur.
+
+`node --check app.js`, `npm run check` (566 pemeriksaan integritas), dan `git diff --check` lulus. CI `validate` lulus pada [run 41373282855](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41373282855) untuk head kode PR `d5dd51b`. Hash SHA-256 di hasil audit cocok dengan snapshot berkas lokal yang juga cocok dengan berkas kode pada head tersebut. Audit mencatat uji keyboard dan ukuran 320/390/768/1280 px di browser lokal.
+
+Uji browser/Pages setelah penerbitan, uji pembaca layar/VoiceOver, dan pemeriksaan di Safari/Firefox/perangkat fisik belum dilakukan. PR #36 tetap terbuka, mergeable, belum digabung atau diterbitkan. Pembacaan sumber penuh, tinjauan komunitas/penutur, serta uji Apps Script end-to-end tetap terbuka.
+
+## Uji perilaku pencarian dan filter — 2 November 2026
+
+Logika pencarian/filter dipisahkan ke `entry-filter.js` agar fungsi yang dipakai halaman dapat dieksekusi langsung oleh pemeriksaan Node tanpa browser. Pemeriksaan kini menguji bahwa semua catatan kembali tanpa filter, tiap status menghasilkan catatan yang tepat, filter ID sumber dapat digabung dengan tema dan status, dan status yang tidak dikenal tidak menghasilkan catatan. Pemisahan ini juga membantu menangkap dan memperbaiki rujukan variabel pencarian lama pada penghitung hasil.
+
+`node --check app.js`, `node --check entry-filter.js`, `npm run check` (575 pemeriksaan integritas), dan `git diff --check` lulus. GitHub Actions `validate` lulus pada [run 41373985440](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41373985440) untuk head kode PR `cfa60b5`. Konten dan status editorial tidak berubah.
+
+## Perincian terbatas artikel Dalihan Na Tolu — 2 November 2026
+
+Artikel `dalihan-na-tolu` kini menyebut konteks yang sudah dicatat pada inventaris R001: satu observasi Markobar di acara perkawinan Pasar Maga pada 7 Juni 2019 dan sampel baca PDF halaman 4–8. Batas jumlah informan dan ketidakkonsistenan label pendekatan tetap dijelaskan. Status artikel **Ringkasan terbatas** dan status baca R001 **Bagian tertentu** tidak berubah; tidak ada pembacaan sumber baru atau generalisasi lintas tempat dan generasi.
+
+Generator menghasilkan 17 catatan, 23 sumber, 10 tema, dan 8 nama marga. `npm run check` lulus 577 pemeriksaan integritas; `node --check app.js`, `node --check entry-filter.js`, `node --check data/content.js`, dan `git diff --check` lulus. Pemeriksaan baru mengunci status/link R001 serta batas halaman dan konteks lokal agar pembaruan mendatang tidak menaikkan status secara tidak sengaja.
+
+Batas: hasil ini adalah pemeriksaan lokal. Filter editorial belum diuji di browser, tidak ada pemeriksaan ulang PDF atau telaah penutur, dan uji Apps Script end-to-end, pembaca layar, serta browser/Pages belum dilakukan. GitHub Actions `validate` lulus pada [run 41374690900](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41374690900) untuk head `aa3dc42`, yang memuat perubahan artikel dan pemeriksaan R001.

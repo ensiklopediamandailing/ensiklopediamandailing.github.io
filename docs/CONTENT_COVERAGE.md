@@ -1,42 +1,59 @@
 # Peta cakupan konten — 2 November 2026
 
-Snapshot struktur data Ensiklopedia pada `main` (SHA `16b8835aae83251a2ea92cd7fbb35f63910f4332`). Sumber angka: `data/content.js` dan hubungan `sourceIds` yang disimpan pada catatan. Ini audit struktur, bukan penilaian kebenaran sumber atau isi budaya.
+Snapshot struktur `data/content.js` setelah pembaruan generator. Angka menunjukkan isi dan relasi ID yang tampil pada data; audit ini bukan validasi kebenaran sejarah atau budaya.
 
 ## Catatan menurut tema
 
 | Tema | Catatan | ID catatan |
 | --- | ---: | --- |
-| Sejarah | 2 | `jejak-material`, `asal-usul-kuala-lumpur` |
-| Adat | 1 | `dalihan-na-tolu` |
+| Sejarah | 5 | `jejak-material`, `asal-usul-kuala-lumpur`, `rujukan-buku-pelajaran-mandailing-1873`, `rujukan-politik-tapanuli-1915-1940`, `rujukan-statistik-mandailing-natal-2026` |
+| Adat | 3 | `dalihan-na-tolu`, `kerangka-unesco-warisan-takbenda`, `rujukan-umum-budaya-mandailing` |
 | Marga | 1 | `inventaris-marga` |
-| Bahasa & sastra | 2 | `kamus-angkola-mandailing`, `sumber-tertulis` |
+| Bahasa & sastra | 3 | `kamus-angkola-mandailing`, `sumber-tertulis`, `rujukan-aksara-batak-unicode` |
 | Kesenian | 1 | `gordang-sambilan` |
 | Arsitektur | 1 | `bagas-godang` |
 | Kuliner | 0 | — |
 | Pengetahuan lokal | 1 | `etnobotani-tanjung-julu` |
-| Agama | 0 | — |
+| Agama | 1 | `islamisasi-mandailing-natal` |
 | Diaspora | 1 | `diaspora-dan-kampung` |
 
-Total: 10 catatan pada 8 dari 10 tema.
+Total 17 catatan pada 9 dari 10 tema. Catatan baru pada tema Adat dan Sejarah berstatus **Inventaris sumber**; tema Kuliner masih kosong.
 
 ## Status editorial dan baca
 
-| Kelompok | Jumlah |
+| Status catatan | Jumlah |
 | --- | ---: |
 | Ringkasan terbatas | 6 |
-| Inventaris sumber | 3 |
+| Inventaris sumber | 10 |
 | Dokumentasi visual beratribusi | 1 |
 
-Dari 23 rekaman sumber: 9 berstatus **Bagian tertentu**, 12 **Metadata dan katalog**, dan 2 **Abstrak atau cuplikan**. Tidak ada rekaman berstatus teks penuh.
+Dari 23 rekaman sumber, 9 berstatus **Bagian tertentu**, 12 **Metadata dan katalog**, 2 **Abstrak atau cuplikan**, dan 0 **Teks penuh**. Belum ada catatan yang ditinjau komunitas.
 
-## Hubungan sumber di data
+## Relasi sumber
 
-Lima belas ID sumber muncul pada setidaknya satu `sourceIds` catatan: 7 berstatus Bagian tertentu, 7 Metadata dan katalog, dan 1 Abstrak atau cuplikan. Delapan ID tidak ditautkan oleh `sourceIds` catatan publik pada snapshot ini: `R003`, `R011`, `R012`, `R015`, `R016`, `R017`, `R018`, dan `R019`. Ini hanya menghitung relasi data; sumber tersebut tidak dinyatakan tak berguna atau tidak relevan.
+Dua puluh dua ID sumber muncul pada sekurangnya satu catatan: 8 berstatus Bagian tertentu, 12 Metadata dan katalog, dan 2 Abstrak atau cuplikan. Satu ID, `R019`, belum ditautkan oleh `sourceIds`; R019 menjadi rujukan pedoman metode internal.
 
-Catatan `bagas-godang` memakai rekaman media beratribusi dan tidak memiliki `sourceIds`; hitungan itu mengikuti skema yang ada.
+Pemeriksaan `scripts/check.mjs` memastikan setiap sumber yang belum tertaut memiliki pengecualian tertulis pada audit cakupan. Saat ini satu-satunya pengecualian adalah R019. Pemeriksaan ini menguji kelengkapan relasi ID, bukan relevansi sumber atau dukungan bukti.
+
+Catatan `dalihan-na-tolu` menggunakan R001 sebagai **Ringkasan terbatas**. Pembaruan generator menyebutkan bahwa inventaris mencatat observasi Markobar pada satu acara perkawinan di Pasar Maga (7 Juni 2019) serta sampel PDF hlm. 4–8. R001 tetap **Bagian tertentu**; halaman tidak menggeneralisasi pengamatan itu atau menetapkan satu aturan kekerabatan bagi seluruh Mandailing. Tidak ada pembacaan tambahan atau perubahan status sumber pada pembaruan ini.
+
+Kartu `islamisasi-mandailing-natal` menautkan R015 sebagai rekaman bibliografis untuk tema Agama. R015 tetap berstatus Abstrak atau cuplikan. Tautan itu tidak menyatakan bahwa abstrak mendukung suatu kronologi atau kesimpulan sejarah; kartu hanya menginventaris metadata dan mencatat kebutuhan pemeriksaan teks lengkap serta arsip.
+
+Kartu `rujukan-buku-pelajaran-mandailing-1873` menautkan R011 sebagai rekaman bibliografis untuk tema Sejarah. R011 tetap berstatus Metadata dan katalog. Artikel dan buku pelajaran primer belum diperiksa; kartu tidak merangkum analisis atau menetapkan kesimpulan tentang periode kolonial.
+
+Kartu `rujukan-politik-tapanuli-1915-1940` menautkan R012 sebagai rekaman katalog untuk tema Sejarah. R012 tetap berstatus Metadata dan katalog; buku, naskah Inggris, dan arsip belum diperiksa. Tahun edisi 2001 tidak dipakai sebagai tanggal peristiwa, dan kategori administratif Tapanuli tidak diperlakukan sebagai identitas etnis.
+
+Kartu `rujukan-aksara-batak-unicode` menautkan R017 untuk tema Bahasa & sastra. R017 tetap berstatus Bagian tertentu dan hanya pembacaan halaman 1–2, khususnya §2.1 Mandailing, yang tercatat. Proposal awal tersebut bukan spesifikasi Unicode saat ini atau bukti asal aksara pada naskah tertentu.
+
+Kartu `kerangka-unesco-warisan-takbenda` menautkan R018 sebagai rujukan institusional untuk tema Adat. R018 tetap Metadata dan katalog; konvensi ini tidak membuktikan status penetapan bagi unsur Mandailing tertentu.
+
+Kartu `rujukan-umum-budaya-mandailing` menautkan R003 pada tema Adat sebagai rujukan umum lintas topik. Buku tetap Metadata dan katalog; isi per bab belum ditelaah.
+
+Kartu `rujukan-statistik-mandailing-natal-2026` menautkan R016 pada tema Sejarah sebagai rujukan data administratif. Publikasi tetap Metadata dan katalog; belum ada tabel atau angka yang diekstrak, dan data kabupaten tidak diperlakukan sebagai jumlah etnis Mandailing.
 
 ## Batas penggunaan
 
-- Hubungan `sourceIds` menunjukkan ID yang dicantumkan pada catatan. Hubungan itu tidak membuktikan semua klaim catatan ditopang oleh seluruh isi sumber.
-- Jumlah tema kosong dan sumber yang belum ditautkan dapat membantu menyusun antrean editorial setelah sumber diperiksa; angka ini bukan izin untuk mengisi tema dengan klaim tanpa bukti.
-- Snapshot ini tidak menambah atau mengubah konten, sumber, status editorial, atau status baca. Verifikasi sumber, tinjauan komunitas, uji aksesibilitas, dan uji kontribusi tetap pekerjaan terpisah.
+- `sourceIds` menunjukkan rekaman yang dicantumkan pada sebuah catatan. Relasi tersebut tidak membuktikan bahwa setiap klaim didukung oleh keseluruhan sumber.
+- Status Inventaris sumber berarti rujukan dikenali dan dicatat; status ini bukan ringkasan isi atau pengesahan klaim.
+- Tema kosong dan sumber yang belum ditautkan membantu menyusun pekerjaan editorial berikutnya, tetapi tidak memberi dasar untuk menulis klaim tanpa bukti.
+- Snapshot ini tidak menambahkan atau menaikkan status baca sumber. Tinjauan komunitas, pembacaan penuh, pemeriksaan browser/Pages, aksesibilitas, dan uji kontribusi tetap pekerjaan terpisah.

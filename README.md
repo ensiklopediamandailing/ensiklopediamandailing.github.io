@@ -12,7 +12,7 @@ Tidak ada dependensi JavaScript, instalasi paket, atau proses build. Buka `index
 python3 -m http.server 8080
 ```
 
-Buka `http://localhost:8080`. GitHub Pages menggunakan branch `main`, direktori `/ (root)`. Berkas `.nojekyll` mempertahankan perilaku situs statis tanpa pemrosesan Jekyll. Commit perubahan ke `main` untuk memicu publikasi ulang melalui konfigurasi Pages yang sudah tersedia. Status publikasi dapat diperiksa pada tab **Actions → pages build and deployment**. Tidak ada kunci API atau layanan server tambahan yang diperlukan.
+Buka `http://localhost:8080`. GitHub Pages menggunakan branch `main`, direktori `/ (root)`. Berkas `.nojekyll` mempertahankan perilaku situs statis tanpa pemrosesan Jekyll. Setelah PR lolos pemeriksaan yang disyaratkan dan tinjauan selesai, pengelola menggabungkan perubahan ke `main`; pembaruan pada branch itu memicu publikasi ulang melalui konfigurasi Pages yang tersedia. Periksa hasil publikasi pada tab **Actions → pages build and deployment**. Tidak ada kunci API atau layanan server tambahan yang diperlukan.
 
 ## Susunan kode
 
@@ -21,6 +21,7 @@ Buka `http://localhost:8080`. GitHub Pages menggunakan branch `main`, direktori 
 | `index.html` | Struktur semantik, metadata, navigasi, bagian editorial, dan formulir draf |
 | `styles.css` | Palet, tipografi sistem, tata letak, keadaan fokus, dan aturan responsif |
 | `app.js` | Pencarian, filter, menu ponsel, tab kekerabatan, dialog bacaan, serta draf lokal |
+| `entry-filter.js` | Pencarian dan penyaringan catatan yang dapat diuji terpisah dari antarmuka |
 | `data/content.js` | Data publik: tema, catatan, marga, peran, sumber, dan kredit media |
 | `assets/` | Foto WebP lokal, favicon, serta catatan hak penggunaan |
 | `docs/reference-inventory.json` | Inventaris bibliografis dan status baca sumber proyek |
@@ -56,7 +57,7 @@ Halaman tidak mengirim analitik atau memuat font/CDN pihak ketiga. Tautan sumber
 ## Asumsi dan status editorial
 
 - Dasar isi adalah cetak biru 26 Oktober 2026: 16 bab rencana, 19 rekaman referensi awal, dan 8 nama marga dari judul katalog. Angka ini bukan ukuran kelengkapan ensiklopedia.
-- Sepuluh catatan yang tersedia merupakan ringkasan terbatas, inventaris sumber, atau dokumentasi visual beratribusi. Status baca dan batas pemeriksaan dicatat; belum ada tinjauan komunitas atau pembacaan penuh seluruh referensi.
+- Tujuh belas catatan yang tersedia mencakup enam ringkasan terbatas, sepuluh inventaris sumber, dan satu dokumentasi visual beratribusi. Status baca dan batas pemeriksaan dicatat; belum ada tinjauan komunitas atau pembacaan penuh seluruh referensi.
 - Tema yang belum memiliki catatan menampilkan keadaan kosong yang menjelaskan rencana kajian.
 - Kontak pengiriman belum ditetapkan dalam dokumen proyek. Halaman menampilkan status kanal sedang disiapkan.
 - Nama pemrakarsa mengikuti dokumen proyek. Tidak ada mitra, testimoni, statistik pengunjung, atau silsilah yang direkayasa.
