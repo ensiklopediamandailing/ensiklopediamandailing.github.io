@@ -120,3 +120,9 @@ Pemeriksaan `scripts/check.mjs` kini menghitung ID yang dipakai oleh catatan pub
 Salinan kerja lokal lulus `npm run check` dengan 556 pemeriksaan integritas dan `git diff --check`. Salinan itu masih memiliki perubahan lokal; pemeriksaan head PR dibuktikan oleh CI validate yang sukses pada [run 41371664312](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41371664312) untuk commit `4ba7748`.
 
 Pemeriksaan ini tidak menilai ketepatan klaim budaya atau kelengkapan telaah sumber. Pembacaan penuh, tinjauan komunitas, browser/Pages, audit pembaca layar, dan uji Apps Script end-to-end tetap belum dilakukan.
+
+## Status baca sumber pada kartu — 2 November 2026
+
+Kartu catatan kini menampilkan kedalaman baca untuk sumber yang tertaut, terpisah dari status editorial catatan. Jika beberapa sumber memiliki status baca berbeda, semua status unik dicantumkan; kartu dokumentasi visual tidak menampilkan status baca sumber. Nilai berasal dari inventaris yang ada dan tidak dinaikkan.
+
+Pemeriksaan lokal lulus 558 pemeriksaan integritas dan `git diff --check`. GitHub Actions validate lulus pada [run 41372278166](https://github.com/ensiklopediamandailing/ensiklopediamandailing.github.io/actions/runs/41372278166) untuk commit `bc1fd3c). Pemeriksaan statis tidak membuktikan tampilan pada semua ukuran layar atau audit pembaca layar; pemeriksaan tersebut masih terbuka.
